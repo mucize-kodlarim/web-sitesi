@@ -9,7 +9,6 @@ window.MK = {
   eposta: "bilgi@mucizekodlarim.com",
   instagram: "mucizekodlarim",
   konum: "İstanbul, Türkiye",
-  kartSatinAl: "",                     // Sezgisel Kartlar satış bağlantısı (boşsa WhatsApp'a gider)
 
   /* Hizmetler: menü, form ve takvim bunları kullanır.
      ucret boşsa sitede "bilgi için sorun" yazar. Örnek: ucret: "12.500 TL" */

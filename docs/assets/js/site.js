@@ -41,7 +41,6 @@
         <div class="dd"><button type="button" aria-expanded="false">Danışmanlık</button>
           <div class="mega sm"><div><h6>Birebir seanslar</h6>${DN.map(mItem).join('')}
             <a href="${L('danismanliklar/')}" style="--c:var(--muted)"><i></i><span>Tüm danışmanlıklar<small>karşılaştır</small></span></a></div></div></div>
-        <a href="${L('sezgisel-kartlar/')}" data-s="sezgisel-kartlar">Sezgisel Kartlar</a>
         <a href="${L('hakkimda/')}" data-s="hakkimda">Hakkımda</a>
         <a href="${L('blog-yazilari/')}" data-s="blog">Blog</a>
         <a href="${L('iletisim/')}" data-s="iletisim">İletişim</a>
@@ -57,7 +56,6 @@
     <a class="l" href="${L('seminerler/')}#takvim">Eğitim takvimi <small>tarih · ücret</small></a>
     <h6>Danışmanlık</h6>${DN.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>birebir</small></a>`).join('')}
     <h6>Keşfet</h6>
-    <a class="l" href="${L('sezgisel-kartlar/')}">Sezgisel Kartlar <small>deste</small></a>
     <a class="l" href="${L('hakkimda/')}">Hakkımda <small>Melike Kaan</small></a>
     <a class="l" href="${L('blog-yazilari/')}">Blog <small>yazılar</small></a>
     <a class="l" href="${L('iletisim/')}">İletişim <small>whatsapp · e-posta</small></a>
@@ -76,7 +74,7 @@
           <p class="f-ozet">ThetaHealing®, JAAS ve Spiritüel Dowsing eğitimleri ve birebir danışmanlık · İstanbul &amp; online</p></div>
         <div><h6>Keşfet</h6><ul>
           <li><a href="${L('seminerler/')}">Eğitimler</a></li><li><a href="${L('danismanliklar/')}">Danışmanlık</a></li>
-          <li><a href="${L('sezgisel-kartlar/')}">Sezgisel Kartlar</a></li><li><a href="${L('hakkimda/')}">Hakkımda</a></li>
+          <li><a href="${L('hakkimda/')}">Hakkımda</a></li>
           <li><a href="${L('blog-yazilari/')}">Blog</a></li></ul></div>
         <div><h6>İletişim</h6><ul>
           <li><a href="${wa('Merhaba, bilgi almak istiyorum.')}" target="_blank" rel="noopener">WhatsApp</a></li>
@@ -94,10 +92,6 @@
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = wa(a.dataset.wa); a.target = '_blank'; a.rel = 'noopener'; });
   document.querySelectorAll('[data-eposta]').forEach(a => { a.href = 'mailto:' + MK.eposta; });
   document.querySelectorAll('[data-insta]').forEach(a => { a.href = 'https://instagram.com/' + MK.instagram; a.target = '_blank'; a.rel = 'noopener'; });
-  document.querySelectorAll('[data-kart-satin]').forEach(a => {
-    if (MK.kartSatinAl) { a.href = MK.kartSatinAl; a.target = '_blank'; a.rel = 'noopener'; }
-    else { a.href = wa('Merhaba, Sezgisel Kartlar destesini almak istiyorum.'); a.target = '_blank'; a.rel = 'noopener'; }
-  });
 
   /* ---------- takvim, tarih ve ücret ---------- */
   const bugun = new Date(); bugun.setHours(0, 0, 0, 0);
@@ -134,7 +128,7 @@
     sel.innerHTML = '<option value="">Seç…</option>' +
       '<optgroup label="Eğitimler">' + EG.map(h => `<option value="${h.kod}">${h.ad}</option>`).join('') + '</optgroup>' +
       '<optgroup label="Danışmanlık">' + DN.map(h => `<option value="${h.kod}">${h.ad}</option>`).join('') + '</optgroup>' +
-      '<option value="kartlar">Sezgisel Kartlar</option><option value="diger">Diğer / emin değilim</option>';
+      '<option value="diger">Diğer / emin değilim</option>';
     sel.value = q || f.dataset.ilgi || '';
     f.addEventListener('submit', e => {
       e.preventDefault();
