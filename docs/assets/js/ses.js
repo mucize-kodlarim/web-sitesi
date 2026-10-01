@@ -168,7 +168,7 @@
   /* ---------- düğme ---------- */
   const kutu = document.createElement('div');
   kutu.className = 'ses';
-  kutu.innerHTML = `<button class="ses-btn" type="button" aria-pressed="false" aria-label="Arka plan sesini aç"><span class="bars"><i></i><i></i><i></i><i></i></span></button>
+  kutu.innerHTML = `<button class="ses-btn" type="button" aria-pressed="false" aria-label="Arka plan sesini aç"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="yazi">Müzik</span></button>
     <div class="ses-menu" role="group" aria-label="Ses sahnesi">${Object.entries(SAHNELER).map(([k, s]) => `<button type="button" data-s="${k}">${s.ad}</button>`).join('')}</div>`;
   document.body.appendChild(kutu);
   const btn = kutu.querySelector('.ses-btn');
