@@ -1,0 +1,6 @@
+# Kurulum notları ve iç kararlar GitHub'a gitmez (depo herkese açık)
+kurulum/
+# İşletim sistemi artıkları
+.DS_Store
+Thumbs.db
+desktop.ini
