@@ -82,8 +82,14 @@ Adresler eski siteyle aynıdır (Google sıralaması kaybolmasın). **Sayfa klas
 4. **Sorumluluk reddi** ("tıbbi muayene, teşhis ve tedavinin yerine geçmez") her sayfanın altında kalır.
 5. **Form sağlık/inanç bilgisi sormaz** (KVKK özel nitelikli veri). Yalnız ad, iletişim, ilgilenilen hizmet.
 6. **Yayın = Push.** GitHub Desktop'ta "Push origin" demek siteyi 1–2 dakikada canlıya alır.
-   Push'tan önce: (a) değişikliği tarayıcıda göster, (b) "Melike Hanım onayladı mı?" diye sor.
-   Onay yoksa commit yapabilirsin ama **Push'u önerme.**
+   Push'tan önce değişikliği **her zaman tarayıcıda göster** ve neyi değiştirdiğini maddeler hâlinde yaz.
+   **Melike Hanım'ın kalıcı onayı (2026-10-01):** Neziha Hanım'ın sıradan içerik değişiklikleri için
+   ayrıca onay sorulmaz; gösterdikten sonra Push edilebilir. Şunlar bu onayın **dışındadır**, yine
+   Melike Hanım'a sorulur:
+   - sağlık iddiası içerebilecek metinler ve `kurulum/ICERIK-INCELEME.md` kararları (kural 1)
+   - ücret, tarih, kontenjan gibi **yeni bilgiler** — uydurma yok, Melike Hanım'dan gelmeli (kural 2)
+   - logo değişikliği, sayfa silme, sayfa adresi (klasör adı) değiştirme
+   - alan adı ve DNS işleri (bunlar Hilal Hanım'la yapılır)
 7. Kişi bilgisi (danışan adı, telefon) bu depoya girmez. Depo herkese açıktır.
 
 ### Her değişiklikten sonra kontrol
