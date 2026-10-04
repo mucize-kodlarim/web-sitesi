@@ -22,7 +22,8 @@
     '<div id="glow" aria-hidden="true"></div>');
 
   /* ---------- üst menü ---------- */
-  const logo = '<svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e08cc4"/><stop offset=".5" stop-color="#f3d9a4"/><stop offset="1" stop-color="#a9c98a"/></linearGradient></defs><path d="M10 3c0 7 12 7 12 13S10 22 10 29M22 3c0 7-12 7-12 13s12 6 12 13" stroke="url(#lg)" stroke-width="2" stroke-linecap="round"/><path d="M12 8h8M11.5 16h9M12 24h8" stroke="url(#lg)" stroke-width="1.4" opacity=".6"/></svg>';
+  /* logo: Hilal Hanım 01 · MK monogramı (DENEME 2026-10-03; eski DNA sarmalı SVG git geçmişinde) */
+  const logo = `<img class="logo-mk" src="${K}assets/img/logo-mk.png" alt="" aria-hidden="true">`;
   const mItem = h => `<a href="${L(h.yol)}" style="--c:${renk(h)}"><i></i><span>${h.menuAd}<small>${h.menuNot}</small></span></a>`;
   const theta = EG.filter(e => e.grup === 'theta'), diger = EG.filter(e => e.grup !== 'theta');
   const ust = document.getElementById('ust');
@@ -31,12 +32,12 @@
     <div class="bar">
       <a class="brand" href="${L('')}">${logo}Mucize Kodlarım</a>
       <nav class="links" aria-label="Ana menü">
-        <div class="dd"><button type="button" aria-expanded="false">Eğitimler</button>
+        <div class="dd"><button type="button" aria-expanded="false">Seminerler</button>
           <div class="mega">
             <div><h6>ThetaHealing® · modül yolu</h6>${theta.map(mItem).join('')}</div>
-            <div><h6>Diğer eğitimler</h6>${diger.map(mItem).join('')}
-              <a href="${L('seminerler/')}#takvim" style="--c:var(--gold)"><i></i><span>Eğitim takvimi<small>tarih · ücret · kontenjan</small></span></a>
-              <a href="${L('seminerler/')}" style="--c:var(--muted)"><i></i><span>Tüm eğitimler<small>hepsi tek sayfada</small></span></a></div>
+            <div><h6>Diğer seminerler</h6>${diger.map(mItem).join('')}
+              <a href="${L('seminerler/')}#takvim" style="--c:var(--gold)"><i></i><span>Seminer takvimi<small>tarih · ücret · kontenjan</small></span></a>
+              <a href="${L('seminerler/')}" style="--c:var(--muted)"><i></i><span>Tüm seminerler<small>hepsi tek sayfada</small></span></a></div>
           </div></div>
         <div class="dd"><button type="button" aria-expanded="false">Danışmanlık</button>
           <div class="mega sm"><div><h6>Birebir seanslar</h6>${DN.map(mItem).join('')}
@@ -51,9 +52,9 @@
   </header>
   <div class="mnav" id="mnav" aria-hidden="true">
     <div class="mtop"><span class="brand">Mucize Kodlarım</span><button class="x" type="button" aria-label="Menüyü kapat">✕</button></div>
-    <h6>ThetaHealing® eğitimleri</h6>${theta.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>${h.modul}</small></a>`).join('')}
-    <h6>Diğer eğitimler</h6>${diger.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>sertifikalı</small></a>`).join('')}
-    <a class="l" href="${L('seminerler/')}#takvim">Eğitim takvimi <small>tarih · ücret</small></a>
+    <h6>ThetaHealing® seminerleri</h6>${theta.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>${h.modul}</small></a>`).join('')}
+    <h6>Diğer seminerler</h6>${diger.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>sertifikalı</small></a>`).join('')}
+    <a class="l" href="${L('seminerler/')}#takvim">Seminer takvimi <small>tarih · ücret</small></a>
     <h6>Danışmanlık</h6>${DN.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>birebir</small></a>`).join('')}
     <h6>Keşfet</h6>
     <a class="l" href="${L('hakkimda/')}">Hakkımda <small>Melike Kaan</small></a>
@@ -71,9 +72,9 @@
     <div class="wrap">
       <div class="fgrid">
         <div><a class="brand" href="${L('')}">Mucize Kodlarım</a>
-          <p class="f-ozet">ThetaHealing®, JAAS ve Spiritüel Dowsing eğitimleri ve birebir danışmanlık · İstanbul &amp; online</p></div>
+          <p class="f-ozet">ThetaHealing®, JAAS ve Spiritüel Dowsing seminerleri ve birebir danışmanlık · İstanbul &amp; online</p></div>
         <div><h6>Keşfet</h6><ul>
-          <li><a href="${L('seminerler/')}">Eğitimler</a></li><li><a href="${L('danismanliklar/')}">Danışmanlık</a></li>
+          <li><a href="${L('seminerler/')}">Seminerler</a></li><li><a href="${L('danismanliklar/')}">Danışmanlık</a></li>
           <li><a href="${L('hakkimda/')}">Hakkımda</a></li>
           <li><a href="${L('blog-yazilari/')}">Blog</a></li></ul></div>
         <div><h6>İletişim</h6><ul>
@@ -102,7 +103,7 @@
     const tek = box.dataset.takvim;
     const list = tek ? T.filter(t => t.egitim === tek) : T;
     if (!list.length) {
-      box.innerHTML = `<div class="row bos"><div class="d">✦</div><div><h5>Yeni dönem tarihleri yakında</h5><p>Takvim açıklanınca burada görünecek. Şimdiden yer ayırtmak için yazabilirsin.</p></div><a class="btn btn-ghost" href="${wa('Merhaba, eğitim tarihleri hakkında bilgi almak istiyorum.')}" target="_blank" rel="noopener">WhatsApp'tan sor</a></div>`;
+      box.innerHTML = `<div class="row bos"><div class="d">✦</div><div><h5>Yeni dönem tarihleri yakında</h5><p>Takvim açıklanınca burada görünecek. Şimdiden yer ayırtmak için yazabilirsin.</p></div><a class="btn btn-ghost" href="${wa('Merhaba, seminer tarihleri hakkında bilgi almak istiyorum.')}" target="_blank" rel="noopener">WhatsApp'tan sor</a></div>`;
       return;
     }
     box.innerHTML = list.map(t => {
@@ -126,7 +127,7 @@
   document.querySelectorAll('form.basvuru').forEach(f => {
     const sel = f.querySelector('select');
     sel.innerHTML = '<option value="">Seç…</option>' +
-      '<optgroup label="Eğitimler">' + EG.map(h => `<option value="${h.kod}">${h.ad}</option>`).join('') + '</optgroup>' +
+      '<optgroup label="Seminerler">' + EG.map(h => `<option value="${h.kod}">${h.ad}</option>`).join('') + '</optgroup>' +
       '<optgroup label="Danışmanlık">' + DN.map(h => `<option value="${h.kod}">${h.ad}</option>`).join('') + '</optgroup>' +
       '<option value="diger">Diğer / emin değilim</option>';
     sel.value = q || f.dataset.ilgi || '';

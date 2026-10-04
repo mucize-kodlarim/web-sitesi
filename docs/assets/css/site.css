@@ -419,3 +419,138 @@ select optgroup{background:#123620;color:var(--muted)}
 .ses-menu button:hover{color:var(--text)}
 .ses-menu button[aria-pressed="true"]{color:#1a0f22;background:var(--grad)}
 @media (prefers-reduced-motion:reduce){.ses.acik .bars i{height:10px}.ses-btn{animation:none!important}}
+
+/* eğitim sayfası görseli (başlığın altında) */
+.egitim-gorsel{position:relative;margin:34px 0 0;height:clamp(200px,30vw,340px);border-radius:28px;overflow:hidden;border:1px solid var(--line);background:#0a2a17}
+.egitim-gorsel img{width:100%;height:100%;object-fit:cover}
+.egitim-gorsel:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,32,17,0) 55%,rgba(7,32,17,.55))}
+/* eğitim görseli başlığın yanında, orta boy (Çorakçı/Beyga düzeni) */
+.sayfa-bas:has(.egitim-gorsel){display:grid;grid-template-columns:minmax(0,1fr) 400px;column-gap:48px;align-items:start}
+.sayfa-bas:has(.egitim-gorsel)>*:not(.egitim-gorsel){grid-column:1}
+.sayfa-bas .egitim-gorsel{grid-column:2;grid-row:1 / span 6;align-self:center;margin:0;height:auto;aspect-ratio:4/3}
+.egitim-gorsel img.yakin{transform:scale(2);transform-origin:50% 84%;filter:brightness(1.2)}
+@media(max-width:860px){
+  .sayfa-bas:has(.egitim-gorsel){display:block}
+  .sayfa-bas .egitim-gorsel{margin:26px 0 0;aspect-ratio:16/9;max-width:520px}
+}
+
+/* ana sayfa: fotoğraflı eğitim ve atölye kartları */
+.bolum-bas .buyuk{font-size:clamp(40px,5vw,64px)}
+.atolye-bas{margin-top:70px}
+.kartlar{display:grid;gap:20px;margin-top:34px}
+.kartlar.k3{grid-template-columns:repeat(4,1fr)}
+.kartlar.k4{grid-template-columns:repeat(4,1fr)}
+.ek{display:flex;flex-direction:column;border-radius:var(--r);border:1px solid var(--line);background:var(--panel);overflow:hidden;transition:.3s}
+a.ek:hover{border-color:rgba(224,140,196,.45);transform:translateY(-3px);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.ek-gorsel{position:relative;aspect-ratio:16/9;overflow:hidden;background:radial-gradient(circle at 60% 40%,rgba(224,140,196,.18),transparent 60%),linear-gradient(160deg,#123a22,#0a2214)}
+.ek-gorsel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.9);transition:filter .4s,transform .6s}
+.ek-gorsel img.yakin{object-position:center 88%;transform:scale(1.6);transform-origin:50% 84%;filter:brightness(1.15)}
+.ek-gorsel:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,32,17,0) 50%,rgba(7,32,17,.55))}
+a.ek:hover .ek-gorsel img{filter:saturate(1) brightness(1)}
+.ek-govde{display:flex;flex-direction:column;flex:1;padding:20px 22px 22px}
+.ek-govde small{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.ek-govde h4{font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.15;margin:6px 0 8px}
+.ek-govde p{color:var(--muted);font-size:14.5px;line-height:1.6;margin-bottom:14px}
+.ek-devam{margin-top:auto;font:500 13px var(--sans);color:var(--text);opacity:.85}
+a.ek:hover .ek-devam{color:var(--orchid);opacity:1}
+.ek-bos{border-style:dashed}
+.ek-bos .ek-gorsel{background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 10px,transparent 10px 20px),linear-gradient(160deg,#123a22,#0a2214)}
+@media(max-width:1000px){.kartlar.k3,.kartlar.k4{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.kartlar.k3,.kartlar.k4{grid-template-columns:1fr}}
+
+/* DENEME (Neziha 2026-10-03): kartlar Melike Hoca fotoğrafının arkasındaki gezegen moru — beğenilmezse bu bloğu sil */
+.ek{background:linear-gradient(165deg,rgba(138,62,116,.55),rgba(74,32,66,.72));border-color:rgba(224,140,196,.28);box-shadow:0 14px 40px rgba(0,0,0,.3)}
+.ek-govde p{color:#d9cfe0}
+.ek-bos{background:linear-gradient(165deg,rgba(138,62,116,.32),rgba(74,32,66,.45))}
+
+/* DENEME (Neziha 2026-10-03): eğitim sayfası — görsel solda başta, başlık ve yazılar sağında. Önce yalnız Basic DNA; onaylanınca hepsine */
+.sayfa-bas.gorsel-solda{grid-template-columns:440px minmax(0,1fr);column-gap:52px;align-items:center}
+.sayfa-bas.gorsel-solda>.iz{grid-column:1 / -1;grid-row:1;margin-bottom:18px}
+.sayfa-bas.gorsel-solda>*:not(.egitim-gorsel):not(.iz){grid-column:2}
+.sayfa-bas.gorsel-solda .egitim-gorsel{grid-column:1;grid-row:2 / span 4;align-self:stretch;aspect-ratio:auto;min-height:300px}
+.sayfa-bas.gorsel-solda h1{margin:10px 0 14px}
+@media(max-width:860px){.sayfa-bas.gorsel-solda .egitim-gorsel{min-height:0;aspect-ratio:16/9;margin:0 0 22px}}
+@media(max-width:860px){.sayfa-bas.gorsel-solda{display:flex;flex-direction:column;align-items:stretch}.sayfa-bas.gorsel-solda>*{order:2}.sayfa-bas.gorsel-solda>.iz{order:0}.sayfa-bas.gorsel-solda .egitim-gorsel{order:1}.sayfa-bas.gorsel-solda .cta{align-self:flex-start}}
+
+/* ana sayfa blog kutuları: görseller + Instagram logosu */
+.post .im img{width:100%;height:100%;object-fit:cover;display:block}
+.post.post-insta .im{display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,rgba(224,140,196,.28),transparent 62%),linear-gradient(160deg,#3a1d4a,#1b2a1c)}
+.post.post-insta .im .ig{width:84px;height:84px;filter:drop-shadow(0 10px 28px rgba(214,36,159,.45));transition:transform .35s}
+.post.post-insta:hover .im .ig{transform:scale(1.08)}
+
+/* ana sayfa 02: danışmanlık / eğitim kutularında Melike Hoca fotoğrafı */
+.path-foto{margin:-40px -40px 26px;height:330px;overflow:hidden;position:relative}
+.path-foto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.path-foto:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,32,17,0) 60%,rgba(7,32,17,.45))}
+.path:hover .path-foto img{transform:scale(1.03)}
+@media(max-width:600px){.path-foto{margin:-28px -24px 22px;height:220px}}
+
+/* kart alt satırı: fiyat + detaylar; 4 modül paketi kolaj görseli */
+.ek-alt{margin-top:auto;padding-top:14px;border-top:1px solid rgba(224,140,196,.18);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ek-alt .ek-devam{margin-top:0}
+.ek-fiyat{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--gold);white-space:nowrap}
+.ek-kolaj{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px}
+.ek-kolaj img{position:static;width:100%;height:100%;object-fit:cover;min-height:0}
+.ek-kolaj img.yakin{transform:none;object-position:center 92%}
+.ek-paket{border-color:rgba(243,217,164,.45)}
+
+/* DENEME (Neziha 2026-10-03): eğitim sayfalarındaki yazı ve yan kutular da kartlar gibi gezegen moru */
+.gorsel-solda + .detay .metin,
+.gorsel-solda + .detay .kutu{background:linear-gradient(165deg,rgba(138,62,116,.55),rgba(74,32,66,.72));border-color:rgba(224,140,196,.28);box-shadow:0 14px 40px rgba(0,0,0,.3)}
+.gorsel-solda + .detay .metin ul.konular li{background:rgba(255,255,255,.05);border-color:rgba(224,140,196,.2)}
+.gorsel-solda + .detay .metin p,.gorsel-solda + .detay .metin li{color:#e6dcea}
+
+/* logo: MK monogramı (Hilal Hanım 01) */
+.brand img.logo-mk{width:58px;height:40px;filter:drop-shadow(0 0 6px rgba(243,217,164,.25));object-fit:cover;flex:none}
+
+/* DENEME (Neziha 2026-10-03): 01+02 tek bölüm; danışmanlık/eğitim kutuları daha kompakt, zemin atölye kutusu gibi çizgili yeşil */
+.ikinci-bas{margin-top:64px}
+#yollar .paths{margin-top:30px;gap:18px}
+#yollar .path{padding:26px 28px 26px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 10px,transparent 10px 20px),linear-gradient(160deg,#123a22,#0a2214)}
+#yollar .path-foto{margin:-26px -28px 18px;height:230px}
+#yollar .path h3{font-size:30px;margin:8px 0 6px}
+#yollar .path p{font-size:15px;line-height:1.6}
+#yollar .path ul{margin:14px 0 18px;gap:6px}
+#yollar .path li{font-size:14.5px}
+#yollar .path .btn{padding:11px 18px;font-size:13.5px}
+@media(max-width:600px){#yollar .path-foto{margin:-26px -28px 16px;height:200px}}
+#yollar .paths{max-width:1000px}
+#yollar .path-foto{height:200px}
+/* DENEME: 01+02 bölümü daha sıkı, kutular daha dar */
+#yollar{padding-top:40px}
+#yollar .ikinci-bas{margin-top:34px}
+#yollar .paths{max-width:860px;margin-top:24px}
+#yollar .path-foto{height:180px}
+#yollar .path h3{font-size:28px}
+
+/* Neziha 2026-10-03: tıklanan her düğme dolgulu ve renkli (eski çerçeveli düğmeler de) */
+.btn-ghost{background:var(--grad);color:#1a0f22;border:0;font-weight:500}
+.btn-ghost:hover{box-shadow:0 0 34px 2px rgba(224,140,196,.45);transform:translateY(-1px)}
+
+/* DENEME (Neziha 2026-10-04): danışmanlık/seminer kutusunda fotoğraf YANDA mı ÜSTTE mi — karar verilince seçici ve kullanılmayan düzen silinecek */
+/* yanda: kutular alt alta, fotoğraf solda tam boy dikey */
+#yollar.foto-yan .paths{grid-template-columns:1fr;max-width:860px}
+#yollar.foto-yan .path{display:grid;grid-template-columns:260px 1fr;column-gap:30px;padding:26px 30px 26px 0;align-content:start}
+#yollar.foto-yan .path>*:not(.path-foto){grid-column:2}
+#yollar.foto-yan .path-foto{grid-column:1;grid-row:1 / span 6;margin:-26px 0 -26px 0;height:auto;min-height:340px}
+#yollar.foto-yan .path-foto img{object-position:50% 30% !important}
+#yollar.foto-yan .path-foto:after{background:linear-gradient(90deg,rgba(7,32,17,0) 70%,rgba(7,32,17,.4))}
+#yollar.foto-yan .path .btn{justify-self:start}
+@media(max-width:700px){#yollar.foto-yan .path{display:block;padding:26px 28px}#yollar.foto-yan .path-foto{margin:-26px -28px 18px;min-height:0;height:300px}}
+/* üstte: fotoğraf alanı daha uzun */
+#yollar.foto-yan .path.b .path-foto img{object-position:45% 60% !important}
+/* Neziha 2026-10-04: "Yanda" seçildi — kutular yine yan yana, kompakt */
+#yollar.foto-yan .paths{grid-template-columns:1fr 1fr;max-width:1180px}
+#yollar.foto-yan .path{grid-template-columns:190px 1fr;column-gap:22px;padding:20px 22px 20px 0}
+#yollar.foto-yan .path-foto{margin:-20px 0 -20px 0;min-height:290px}
+#yollar.foto-yan .path .k{font-size:11px}
+#yollar.foto-yan .path h3{font-size:25px;margin:4px 0 6px}
+#yollar.foto-yan .path p{font-size:14px;line-height:1.55}
+#yollar.foto-yan .path ul{margin:10px 0 14px;gap:4px}
+#yollar.foto-yan .path li{font-size:13.5px}
+@media(max-width:1000px){#yollar.foto-yan .paths{grid-template-columns:1fr;max-width:640px}}
+
+/* Neziha 2026-10-04: Seminerler başlığı yukarı, kart fotoğrafları daha uzun */
+#yollar{padding-bottom:40px}
+#yol{padding-top:40px}
+.ek-gorsel{aspect-ratio:4/3}
