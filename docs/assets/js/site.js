@@ -84,7 +84,7 @@
           <li>${MK.konum || ''}</li></ul></div>
       </div>
       <p class="disc">Bu sitedeki teknikler tıbbi muayene, teşhis ve tedavinin yerine geçmez. Teşhis ve tedavi mutlaka bir hekim tarafından yapılmalıdır. Buradaki bilgiler bir uzmanla görüşmenin yerini tutmaz.</p>
-      <p class="copy">© ${new Date().getFullYear()} Kerime Melike Kaan · Mucize Kodlarım · <a href="${L('kvkk-aydinlatma-metni/')}">KVKK Aydınlatma Metni</a></p>
+      <p class="copy">© ${new Date().getFullYear()} Kerime Melike Kaan · Mucize Kodlarım · <a href="${L('kvkk-aydinlatma-metni/')}">KVKK Aydınlatma Metni</a> · <a href="${L('cerez-bilgilendirmesi/')}">Çerez Bilgilendirmesi</a> · <a href="${L('on-bilgilendirme-formu/')}">Ön Bilgilendirme Formu</a> · <a href="${L('mesafeli-hizmet-sozlesmesi/')}">Mesafeli Hizmet Sözleşmesi</a> · <a href="${L('cayma-iptal-kosullari/')}">Cayma, İptal ve Erteleme</a></p>
     </div>
   </footer>
   <div class="toast" id="toast" role="status"></div>`;
@@ -148,6 +148,20 @@
 
   /* ---------- chatbot (Mucize Asistan, Replit) ---------- */
   const bot = document.createElement('script'); bot.src = 'https://mucize-kodlarim-asistan.replit.app/widget.js'; bot.defer = true; document.body.appendChild(bot);
+  /* DENEME (Neziha 2026-10-05): asistan düğmesinde fotoğraf yerine MK logosu — beğenilmezse bu bloğu sil */
+  let botTur = 0; const botLogo = setInterval(() => {
+    const av = document.getElementById('mucize-assistant-widget-host')?.shadowRoot?.querySelector('.mk-avatar');
+    const im = av && av.querySelector('img');
+    if (im) {
+      im.src = K + 'assets/img/logo-mk.png';
+      im.style.cssText = 'width:44px;height:30px;object-fit:cover;border-radius:0;filter:drop-shadow(0 0 6px rgba(243,217,164,.25))'; // menüdeki logoyla aynı
+      av.style.background = '#0b2414'; av.style.borderColor = 'rgba(243,217,164,.85)';
+      const st = document.createElement('style'); st.textContent = '.mk-launcher:focus,.mk-launcher:focus-visible{outline:none !important}' // Neziha: seçili çerçevesi olmasın
+        + '.mk-launcher-label{background:linear-gradient(120deg,#e08cc4 0%,#f3d9a4 50%,#a9c98a 100%) !important;color:#1a0f22 !important;border:0 !important;font:500 12px/1.2 Sora,system-ui,sans-serif !important;padding:8px 14px !important;box-shadow:0 4px 14px rgba(0,0,0,.25) !important}'; // sitedeki düğmelerle aynı
+      av.getRootNode().appendChild(st);
+    }
+    if (im || ++botTur > 40) clearInterval(botLogo);
+  }, 250);
 
   /* ---------- nöral ağ arka planı ---------- */
   const cv = document.getElementById('net'), cx = cv.getContext('2d'); let W, Hh, P = [];
