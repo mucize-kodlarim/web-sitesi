@@ -159,6 +159,15 @@
       const st = document.createElement('style'); st.textContent = '.mk-launcher:focus,.mk-launcher:focus-visible{outline:none !important}' // Neziha: seçili çerçevesi olmasın
         + '.mk-launcher-label{background:linear-gradient(120deg,#e08cc4 0%,#f3d9a4 50%,#a9c98a 100%) !important;color:#1a0f22 !important;border:0 !important;font:500 12px/1.2 Sora,system-ui,sans-serif !important;padding:8px 14px !important;box-shadow:0 4px 14px rgba(0,0,0,.25) !important}'; // sitedeki düğmelerle aynı
       av.getRootNode().appendChild(st);
+      // "Sorunuz mu var? Yazın" + yazıyor baloncuğu (Neziha 2026-10-12)
+      st.textContent += '.mk-launcher-label{display:flex !important;flex-direction:column;align-items:center;gap:5px;border-radius:16px !important;padding:8px 14px 7px !important}'
+        + '.mk-sor{display:flex;align-items:center;gap:6px;font:400 11px/1 Sora,system-ui,sans-serif;color:#3a2440;white-space:nowrap}'
+        + '.mk-yaz{display:inline-flex;gap:3px;align-items:center;justify-content:center;height:23px;padding:0 6px;border-radius:12px 12px 12px 5px;background:rgba(255,255,255,.9);box-shadow:0 1px 4px rgba(0,0,0,.12)}'
+        + '.mk-yaz i{width:5px;height:5px;border-radius:50%;background:#c97fb2;animation:mk-nokta 1.3s infinite ease-in-out}'
+        + '.mk-yaz i:nth-child(2){animation-delay:.18s}.mk-yaz i:nth-child(3){animation-delay:.36s}'
+        + '@keyframes mk-nokta{0%,60%,100%{transform:translateY(0);opacity:.45}30%{transform:translateY(-3px);opacity:1}}';
+      const lb = av.getRootNode().querySelector('.mk-launcher-label');
+      if (lb && !av.getRootNode().querySelector('.mk-sor')) lb.insertAdjacentHTML('beforeend','<span class="mk-sor" aria-hidden="true">Sorunuz mu var? Yazın <span class="mk-yaz"><i></i><i></i><i></i></span></span>');
     }
     if (im || ++botTur > 40) clearInterval(botLogo);
   }, 250);
