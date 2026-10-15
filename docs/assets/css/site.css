@@ -740,3 +740,24 @@ body.wa-sec-acik{overflow:hidden}
 .iz a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.25);text-underline-offset:3px}
 .iz a:hover{color:var(--orchid)}
 .iz span:not(:last-child){color:var(--muted)}
+
+.cc>svg{display:block}
+
+/* Neziha 2026-10-15: iletişim kutuları yatay ve küçük (simge solda, yazı sağda); bilgisayarda tek sıra, tablette 3 + 2, telefonda ikişerli */
+.contact{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:36px}
+.contact>.cc{flex:0 0 calc((100% - 48px) / 5);min-width:0;display:grid;grid-template-columns:26px 1fr;column-gap:12px;align-items:center;padding:14px 16px;border-radius:18px}
+.contact .cc>svg,.contact .cc>.wa-ik.buyuk{grid-row:1 / span 3;width:26px;height:26px;margin:0}
+.contact .cc>small,.contact .cc>b,.contact .cc>span:not(.wa-ik){grid-column:2}
+.contact .cc small{font-size:9.5px;letter-spacing:.1em}
+.contact .cc b{font-size:17px;margin:2px 0 0;line-height:1.2;overflow-wrap:anywhere}
+.contact .cc span:not(.wa-ik){font-size:12px;line-height:1.35}
+.contact .cc:hover{transform:translateY(-2px)}
+@media (max-width:1180px){.contact>.cc{flex-basis:calc((100% - 24px) / 3)}}
+@media (max-width:640px){
+  .contact{gap:8px}
+  .contact>.cc{flex-basis:100%;grid-template-columns:24px auto 1fr;grid-template-rows:auto auto;column-gap:14px;padding:10px 16px;border-radius:14px}
+  .contact .cc>svg,.contact .cc>.wa-ik.buyuk{grid-row:1 / span 2;grid-column:1;width:24px;height:24px}
+  .contact .cc>small{grid-column:2;grid-row:1;font-size:8.5px}
+  .contact .cc>b{grid-column:2;grid-row:2;font-size:16px;margin:0;overflow-wrap:normal;white-space:nowrap}
+  .contact .cc>span:not(.wa-ik){grid-column:3;grid-row:1 / span 2;justify-self:end;text-align:right;font-size:11.5px}
+}@media (max-width:640px){.contact .cc[data-eposta]>span:not(.wa-ik){display:none}.contact .cc[data-eposta]>b::after{content:'mucizekodlarim.com'}}

@@ -8,6 +8,7 @@ window.MK = {
   whatsapp: "905067772520",            // başında + olmadan, ülke koduyla
   eposta: "bilgi@mucizekodlarim.com",
   instagram: "mucizekodlarim",
+  instagramKanal: "https://www.instagram.com/channel/AbZeMXIVuyYAeLh4/",   // MucizeBenim duyuru kanalı
   konum: "Online",
 
   /* Hizmetler: menü, form ve takvim bunları kullanır.
