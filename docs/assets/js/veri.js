@@ -9,6 +9,7 @@ window.MK = {
   eposta: "bilgi@mucizekodlarim.com",
   instagram: "mucizekodlarim",
   instagramKanal: "https://www.instagram.com/channel/AbZeMXIVuyYAeLh4/",   // MucizeBenim duyuru kanalı
+  telegram: "https://t.me/+ug4TLPV7Vqs0NGE8",   // genel Telegram grubu (herkese açık; mezun grupları sitede yok)
   konum: "Online",
 
   /* Hizmetler: menü, form ve takvim bunları kullanır.

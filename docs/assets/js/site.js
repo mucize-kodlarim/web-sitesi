@@ -88,7 +88,7 @@
         <div><h6>İletişim</h6><ul>
           <li><a href="#" data-wa-sec>WhatsApp</a></li>
           <li><a href="mailto:${MK.eposta}">${MK.eposta}</a></li>
-          <li><a href="https://instagram.com/${MK.instagram}" target="_blank" rel="noopener">Instagram · @${MK.instagram}</a></li>${MK.instagramKanal ? `<li><a href="${MK.instagramKanal}" target="_blank" rel="noopener">MucizeBenim kanalı</a></li>` : ''}
+          <li><a href="https://instagram.com/${MK.instagram}" target="_blank" rel="noopener">Instagram · @${MK.instagram}</a></li>${MK.instagramKanal ? `<li><a href="${MK.instagramKanal}" target="_blank" rel="noopener">MucizeBenim kanalı</a></li>` : ''}${MK.telegram ? `<li><a href="${MK.telegram}" target="_blank" rel="noopener">Telegram grubu</a></li>` : ''}
           <li>${MK.konum || ''}</li></ul></div>
       </div>
       <p class="disc">Bu sitedeki teknikler tıbbi muayene, teşhis ve tedavinin yerine geçmez. Teşhis ve tedavi mutlaka bir hekim tarafından yapılmalıdır. Buradaki bilgiler bir uzmanla görüşmenin yerini tutmaz.</p>
@@ -130,6 +130,7 @@
   document.querySelectorAll('[data-eposta]').forEach(a => { a.href = 'mailto:' + MK.eposta; });
   document.querySelectorAll('[data-insta]').forEach(a => { a.href = 'https://instagram.com/' + MK.instagram; a.target = '_blank'; a.rel = 'noopener'; });
   document.querySelectorAll('[data-insta-kanal]').forEach(a => { if (MK.instagramKanal) { a.href = MK.instagramKanal; a.target = '_blank'; a.rel = 'noopener'; } else a.remove(); });
+  document.querySelectorAll('[data-telegram]').forEach(a => { if (MK.telegram) { a.href = MK.telegram; a.target = '_blank'; a.rel = 'noopener'; } else a.remove(); });
 
   /* ---------- takvim, tarih ve ücret ---------- */
   const bugun = new Date(); bugun.setHours(0, 0, 0, 0);
@@ -189,7 +190,7 @@
 
 
   /* ---------- arka plan sesi (assets/js/ses.js) ---------- */
-  const sesJs = document.createElement('script'); sesJs.src = K + 'assets/js/ses.js?v=20261015d'; document.body.appendChild(sesJs);
+  const sesJs = document.createElement('script'); sesJs.src = K + 'assets/js/ses.js?v=20261015e'; document.body.appendChild(sesJs);
 
   /* ---------- chatbot (Mucize Asistan, Replit) ---------- */
   const bot = document.createElement('script'); bot.src = 'https://mucize-kodlarim-asistan.replit.app/widget.js'; bot.defer = true; document.body.appendChild(bot);

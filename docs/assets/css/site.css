@@ -745,13 +745,14 @@ body.wa-sec-acik{overflow:hidden}
 
 /* Neziha 2026-10-15: iletişim kutuları yatay ve küçük (simge solda, yazı sağda); bilgisayarda tek sıra, tablette 3 + 2, telefonda ikişerli */
 .contact{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:36px}
-.contact>.cc{flex:0 0 calc((100% - 48px) / 5);min-width:0;display:grid;grid-template-columns:26px 1fr;column-gap:12px;align-items:center;padding:14px 16px;border-radius:18px}
+.contact>.cc{flex:0 0 calc((100% - 60px) / 6);min-width:0;display:grid;grid-template-columns:26px 1fr;column-gap:12px;align-items:center;padding:14px 16px;border-radius:18px}
 .contact .cc>svg,.contact .cc>.wa-ik.buyuk{grid-row:1 / span 3;width:26px;height:26px;margin:0}
 .contact .cc>small,.contact .cc>b,.contact .cc>span:not(.wa-ik){grid-column:2}
 .contact .cc small{font-size:9.5px;letter-spacing:.1em}
 .contact .cc b{font-size:17px;margin:2px 0 0;line-height:1.2;overflow-wrap:anywhere}
 .contact .cc span:not(.wa-ik){font-size:12px;line-height:1.35}
 .contact .cc:hover{transform:translateY(-2px)}
+@media (min-width:1181px){.contact>.cc{grid-template-columns:22px 1fr;column-gap:10px;padding:13px 12px}.contact .cc>svg,.contact .cc>.wa-ik.buyuk{width:22px;height:22px}.contact .cc b{font-size:15.5px}.contact .cc span:not(.wa-ik){font-size:11px;white-space:nowrap;letter-spacing:-.01em}}
 @media (max-width:1180px){.contact>.cc{flex-basis:calc((100% - 24px) / 3)}}
 @media (max-width:640px){
   .contact{gap:8px}
