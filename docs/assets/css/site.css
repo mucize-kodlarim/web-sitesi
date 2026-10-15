@@ -584,6 +584,8 @@ a.ek:hover .ek-devam{color:var(--orchid);opacity:1}
 /* kartlardaki "Detaylar →" da diğer düğmeler gibi (Neziha 2026-10-12) */
 .ek-devam,.ek-alt .ek-devam{display:inline-flex;align-items:center;align-self:flex-start;padding:9px 16px;border-radius:999px;background:var(--grad);color:#1a0f22;font:500 13px/1 var(--sans);opacity:1;white-space:nowrap;transition:.25s}
 a.ek:hover .ek-devam{color:#1a0f22;box-shadow:0 0 18px rgba(224,140,196,.45);transform:translateY(-1px)}
+/* telefonda müzik düğmesi daha küçük (Neziha 2026-10-13) */
+@media (max-width:640px){.ses{left:10px;bottom:10px}.ses-btn{height:40px;padding:0 13px 0 11px;gap:7px;font-size:11px}.ses-btn .bars{height:14px}}
 /* kanca bölümleri (kimin için / kazanımlar) */
 .metin p.kanca{font-family:var(--serif);font-size:23px;line-height:1.35;color:#fff;margin:0 0 12px}
 .metin ul.kanca-liste{gap:6px;margin:0 0 10px}
@@ -591,3 +593,96 @@ a.ek:hover .ek-devam{color:#1a0f22;box-shadow:0 0 18px rgba(224,140,196,.45);tra
 .metin p.kanca-son{font-weight:500;color:var(--gold);margin:4px 0 0}
 .metin h4.konu-bas{font:500 13px/1.3 var(--sans,Sora,sans-serif);letter-spacing:.06em;text-transform:uppercase;color:var(--sage,#a9c98a);margin:16px 0 6px}
 @media (max-width:700px){.bilgi-izgara{grid-template-columns:1fr}.metin ul.konular{columns:1}}
+
+/* müzik düğmesi: asistanla eş, theta dalgalı rozet (Neziha 2026-10-13) */
+.ses{align-items:flex-end}
+.ses-btn,.ses.acik .ses-btn,.ses.bekliyor .ses-btn,.ses:not(.acik):not(.bekliyor) .ses-btn{flex-direction:column;align-items:center;height:auto;padding:0;gap:4px;border:0;background:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;animation:none}
+.ses-rozet{width:58px;height:58px;border-radius:50%;background:#0b2414;border:2px solid rgba(243,217,164,.85);display:grid;place-items:center;overflow:hidden;box-shadow:0 7px 23px rgba(0,0,0,.4);transition:.25s}
+.ses-btn:hover .ses-rozet{box-shadow:0 7px 23px rgba(0,0,0,.4),0 0 22px rgba(243,217,164,.45)}
+.ses:not(.acik):not(.bekliyor) .ses-rozet{animation:sesparla 3s ease-in-out infinite}
+.ses.bekliyor .ses-rozet{animation:sesparla 2s ease-in-out infinite}
+.ses.acik .ses-rozet{box-shadow:0 0 24px rgba(224,140,196,.45)}
+.ses-rozet svg{width:40px;height:22px;overflow:hidden}
+.ses-rozet .dalga{fill:none;stroke:#f3d9a4;stroke-width:2.2;stroke-linecap:round;transform-box:fill-box;transform-origin:center;transform:scaleY(.38);transition:transform .6s ease}
+.ses.acik .ses-rozet .dalga{animation:sesakis 2.4s linear infinite}
+@keyframes sesakis{from{transform:translateX(0) scaleY(1)}to{transform:translateX(-20px) scaleY(1)}}
+.ses-btn .yazi{background:var(--grad);color:#1a0f22;font:500 12.5px/1.2 var(--sans);letter-spacing:0;padding:8px 16px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.ses-menu{margin-bottom:2px}
+@media (max-width:640px){.ses{left:10px;bottom:10px}.ses-rozet{width:42px;height:42px}.ses-rozet svg{width:30px;height:17px}.ses-btn .yazi{font-size:10.5px;padding:5px 10px}.ses.acik .ses-btn .yazi{display:inline}}
+@media (prefers-reduced-motion:reduce){.ses.acik .ses-rozet .dalga{animation:none;transform:none}}
+/* müzik rozeti: altın DNA sarmalı + dönen ışık halkaları (Neziha 2026-10-13, Pinterest esinli, kendi çizimimiz) */
+.ses-rozet{background:radial-gradient(circle at 50% 45%,#2a3a1c 0%,#0b2414 70%)}
+.ses-rozet svg{width:46px;height:46px;overflow:visible}
+.ses-rozet .ses-yorunge ellipse{fill:none;stroke:#f3d9a4;stroke-opacity:.8;stroke-width:1}
+.ses-rozet .ses-yorunge circle{fill:#fff3c4;filter:drop-shadow(0 0 2px #f3d9a4)}
+.ses-rozet .ses-yorunge{transform-box:view-box;transform-origin:24px 24px}
+.ses-rozet .ses-sarmal path{fill:none;stroke:url(#sesAltin);stroke-width:2;stroke-linecap:round}
+.ses-rozet .ses-sarmal path.basamak{stroke-width:1;stroke-opacity:.75}
+.ses-rozet .ses-sarmal{filter:drop-shadow(0 0 2.5px rgba(243,217,164,.7))}
+.ses-rozet .ses-isik{opacity:.55;transform-box:view-box;transform-origin:24px 24px;transition:opacity .6s}
+.ses.acik .ses-rozet .ses-isik{opacity:1;animation:sesnefes 3s ease-in-out infinite}
+.ses.acik .ses-rozet .ses-yorunge{animation:sesdon 7s linear infinite}
+.ses.acik .ses-rozet .ses-yorunge.iki{animation:sesdon 10s linear infinite reverse}
+.ses.acik .ses-rozet .ses-sarmal{animation:sesparilti 2.4s ease-in-out infinite}
+@keyframes sesdon{to{transform:rotate(360deg)}}
+@keyframes sesnefes{50%{transform:scale(1.12);opacity:.75}}
+@keyframes sesparilti{50%{filter:drop-shadow(0 0 5px rgba(255,236,180,.95))}}
+@media (max-width:640px){.ses-rozet svg{width:34px;height:34px}}
+@media (prefers-reduced-motion:reduce){.ses.acik .ses-rozet .ses-yorunge,.ses.acik .ses-rozet .ses-isik,.ses.acik .ses-rozet .ses-sarmal{animation:none}}
+/* müzik rozeti: Neziha'nın seçtiği altın DNA görseli (2026-10-13) */
+.ses-rozet{position:relative;background:#0b2414}
+.ses-rozet .ses-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 48%;transform:scale(1.25);transition:transform .8s ease,filter .8s ease}
+.ses.acik .ses-rozet .ses-foto{animation:sesfoto 4s ease-in-out infinite}
+@keyframes sesfoto{0%,100%{transform:scale(1.25);filter:brightness(1)}50%{transform:scale(1.38);filter:brightness(1.25)}}
+@media (prefers-reduced-motion:reduce){.ses.acik .ses-rozet .ses-foto{animation:none}}
+/* müzik kartı: uzun dikdörtgen görsel + yazı kartın içinde (Neziha 2026-10-15) */
+.ses-rozet{width:64px;height:96px;border-radius:16px;border:1.5px solid rgba(243,217,164,.85);box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 18px rgba(243,217,164,.18)}
+.ses-rozet .ses-foto{transform:none;object-position:50% 40%}
+.ses.acik .ses-rozet .ses-foto{animation:sesfoto2 4s ease-in-out infinite}
+@keyframes sesfoto2{0%,100%{transform:scale(1);filter:brightness(1)}50%{transform:scale(1.08);filter:brightness(1.22)}}
+.ses-rozet::after{content:"";position:absolute;inset:auto 0 0 0;height:46%;background:linear-gradient(to top,rgba(5,16,10,.92),rgba(5,16,10,0));pointer-events:none}
+.ses-btn .ses-rozet .yazi{position:absolute;left:0;right:0;bottom:7px;z-index:1;background:none;box-shadow:none;padding:0;text-align:center;font:italic 600 15px/1 var(--serif);letter-spacing:.02em;color:#fbe7b9;text-shadow:0 1px 6px rgba(0,0,0,.7)}
+@media (max-width:640px){.ses-rozet{width:46px;height:70px;border-radius:12px}.ses-btn .ses-rozet .yazi{font-size:12px;bottom:5px}}
+/* frekans menüsü: kartın üstünde açılan liste (Neziha 2026-10-15) */
+.ses{position:fixed}
+.ses-menu{position:absolute;left:0;bottom:calc(100% + 10px);display:flex;flex-direction:column;gap:2px;width:210px;max-height:min(62vh,460px);overflow-y:auto;padding:10px;border-radius:16px;border:1px solid rgba(243,217,164,.45);background:rgba(7,28,15,.94);box-shadow:0 14px 40px rgba(0,0,0,.5);transform:translateY(6px);margin:0}
+.ses.acik .ses-menu{transform:none}
+.ses-menu .ses-baslik{font:600 15px var(--serif);color:var(--gold);padding:2px 8px 6px;letter-spacing:.02em}
+.ses-menu button{display:flex;justify-content:space-between;align-items:baseline;gap:10px;width:100%;text-align:left;font:500 13px/1.2 var(--sans);color:#e9e2ee;padding:8px 10px;border-radius:10px}
+.ses-menu button small{font:400 11px var(--mono);color:var(--dim);white-space:nowrap}
+.ses-menu button:hover{background:rgba(243,217,164,.1);color:#fff}
+.ses-menu button[aria-pressed="true"]{background:var(--grad);color:#1a0f22}
+.ses-menu button[aria-pressed="true"] small{color:#3a2440}
+@media (max-width:640px){.ses-menu{width:185px;max-height:55vh;padding:8px}.ses-menu button{font-size:12.5px;padding:7px 9px}}
+/* üst menü: daha belirgin + renkli simgeler (Neziha 2026-10-15) */
+.links{font-size:15px;color:#e9e2ee;gap:22px}
+.links>a,.dd>button{display:inline-flex;align-items:center;gap:8px;font-weight:500;letter-spacing:.01em}
+.links>a:hover,.dd>button:hover,.links a.aktif{color:#fff}
+.nav-ik{display:inline-grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff8 0,var(--ik) 55%,color-mix(in srgb,var(--ik) 70%,#000) 100%);box-shadow:0 0 0 1px rgba(255,255,255,.18) inset,0 0 12px color-mix(in srgb,var(--ik) 45%,transparent);transition:transform .25s,box-shadow .25s}
+.nav-ik svg{width:15px;height:15px;fill:none;stroke:#1a0f22;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.links>a:hover .nav-ik,.dd>button:hover .nav-ik,.dd.acik>button .nav-ik{transform:scale(1.1);box-shadow:0 0 0 1px rgba(255,255,255,.3) inset,0 0 16px color-mix(in srgb,var(--ik) 70%,transparent)}
+.mnav h6{display:flex;align-items:center;gap:10px}
+.mnav h6 .nav-ik{width:22px;height:22px}
+.mnav .l .l-ad{display:inline-flex;align-items:center;gap:10px}
+.mnav .l .nav-ik{width:22px;height:22px}
+@media (max-width:1180px){.links{gap:16px;font-size:14.5px}.nav-ik{width:22px;height:22px}}
+/* blog yazısı üst görseli */
+.yazi-gorsel{margin:0 0 26px;border-radius:20px;overflow:hidden;aspect-ratio:16/7;border:1px solid var(--line)}
+.yazi-gorsel img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:640px){.yazi-gorsel{aspect-ratio:16/10;border-radius:14px}}
+/* telefon menüsü açıkken asistan ve müzik gizli */
+body.menu-acik #mucize-assistant-widget-host,body.menu-acik .ses{display:none !important}
+/* orta genişlikte (tablet/küçük dizüstü) menü sığsın */
+@media (max-width:1080px){.links{gap:12px;font-size:13.5px}.links>a,.dd>button{gap:6px}.nav-ik{width:20px;height:20px}.nav-ik svg{width:13px;height:13px}.nav-cta{padding:12px 16px;font-size:13px}}
+@media (max-width:999px){.links,.nav .btn{display:none}.menu-t{display:block}}
+/* ana sayfa takvim bölümü: gereksiz boşluklar alındı (Neziha 2026-10-15) */
+section:has(+ #takvim){padding-bottom:40px}
+#takvim{padding:40px 0}
+#takvim + section{padding-top:40px}
+#takvim .cal{margin-top:20px}
+#takvim .row.bos{grid-template-columns:36px 1fr auto;padding:18px 16px}
+@media (max-width:900px){#takvim .row.bos{grid-template-columns:30px 1fr}}
+#takvim .row.bos p{color:#d3cadb;font-size:13.5px}
+/* kart renkleri tek tip (Neziha 2026-10-15): yer tutucu + atölye kutuları seminer kartlarıyla aynı mor; 4 Modül kenarı da aynı */
+.ek-bos{background:linear-gradient(165deg,rgba(138,62,116,.55),rgba(74,32,66,.72));border-style:solid;border-color:rgba(224,140,196,.28)}
+.ek-paket{border-color:rgba(224,140,196,.28)}

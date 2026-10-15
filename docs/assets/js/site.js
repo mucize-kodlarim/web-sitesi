@@ -27,24 +27,32 @@
   const mItem = h => `<a href="${L(h.yol)}" style="--c:${renk(h)}"><i></i><span>${h.menuAd}<small>${h.menuNot}</small></span></a>`;
   const theta = EG.filter(e => e.grup === 'theta'), diger = EG.filter(e => e.grup !== 'theta');
   const ust = document.getElementById('ust');
-  if (ust) ust.outerHTML = `
+  /* menü simgeleri (Neziha 2026-10-15): renkli yuvarlak + ince çizgi simge */
+  const IKS = {
+    seminer: ['#e08cc4', '<path d="M8 3c0 4.5 8 4.5 8 9s-8 4.5-8 9M16 3c0 4.5-8 4.5-8 9s8 4.5 8 9"/><path d="M9 6h6M9 18h6" stroke-width="1.3"/>'],
+    danis:   ['#a9c98a', '<path d="M12 19s-6.5-4-6.5-8.5A3.6 3.6 0 0 1 12 8.3a3.6 3.6 0 0 1 6.5 2.2C18.5 15 12 19 12 19z"/>'],
+    hakkimda:['#f3d9a4', '<path d="M12 18c-3.5 0-6-2-6.5-4.5 2 .3 3.8 1.2 4.6 2.4M12 18c3.5 0 6-2 6.5-4.5-2 .3-3.8 1.2-4.6 2.4M12 18c-1.8-2-2.4-5.4 0-9 2.4 3.6 1.8 7 0 9z"/>'],
+    blog:    ['#c9a6e8', '<path d="M18 5c-6 0-10 4.5-11 12M18 5c.5 5-3 9-8.5 9.5M8.5 13.5 6 19"/>'],
+    iletisim:['#bfe0a6', '<path d="M5 6.5h14v9H10l-3.5 3v-3H5z"/><path d="M8.5 10.5h7M8.5 13h4.5"/>']
+  };
+  const ik = k => `<span class="nav-ik" style="--ik:${IKS[k][0]}" aria-hidden="true"><svg viewBox="0 0 24 24">${IKS[k][1]}</svg></span>`;  if (ust) ust.outerHTML = `
   <header class="wrap nav">
     <div class="bar">
       <a class="brand" href="${L('')}">${logo}Mucize Kodlarım</a>
       <nav class="links" aria-label="Ana menü">
-        <div class="dd"><button type="button" aria-expanded="false">Seminerler</button>
+        <div class="dd"><button type="button" aria-expanded="false">${ik('seminer')}Seminerler</button>
           <div class="mega">
             <div><h6>ThetaHealing® · modül yolu</h6>${theta.map(mItem).join('')}</div>
             <div><h6>Diğer seminerler</h6>${diger.map(mItem).join('')}
-              <a href="${L('seminerler/')}#takvim" style="--c:var(--gold)"><i></i><span>Seminer takvimi<small>tarih · ücret · kontenjan</small></span></a>
+              <a href="${L('seminerler/')}#takvim" style="--c:var(--gold)"><i></i><span>Takvim<small>tarih · ücret · kontenjan</small></span></a>
               <a href="${L('seminerler/')}" style="--c:var(--muted)"><i></i><span>Tüm seminerler<small>hepsi tek sayfada</small></span></a></div>
           </div></div>
-        <div class="dd"><button type="button" aria-expanded="false">Danışmanlık</button>
+        <div class="dd"><button type="button" aria-expanded="false">${ik('danis')}Danışmanlık</button>
           <div class="mega sm"><div><h6>Birebir seanslar</h6>${DN.map(mItem).join('')}
             <a href="${L('danismanliklar/')}" style="--c:var(--muted)"><i></i><span>Tüm danışmanlıklar<small>karşılaştır</small></span></a></div></div></div>
-        <a href="${L('hakkimda/')}" data-s="hakkimda">Hakkımda</a>
-        <a href="${L('blog-yazilari/')}" data-s="blog">Blog</a>
-        <a href="${L('iletisim/')}" data-s="iletisim">İletişim</a>
+        <a href="${L('hakkimda/')}" data-s="hakkimda">${ik('hakkimda')}Hakkımda</a>
+        <a href="${L('blog-yazilari/')}" data-s="blog">${ik('blog')}Blog</a>
+        <a href="${L('iletisim/')}" data-s="iletisim">${ik('iletisim')}İletişim</a>
       </nav>
       <a class="btn btn-main nav-cta" href="${L('iletisim/')}#basvuru">Ön Başvuru →</a>
       <button class="menu-t" type="button" aria-label="Menüyü aç">☰</button>
@@ -52,14 +60,14 @@
   </header>
   <div class="mnav" id="mnav" aria-hidden="true">
     <div class="mtop"><span class="brand">Mucize Kodlarım</span><button class="x" type="button" aria-label="Menüyü kapat">✕</button></div>
-    <h6>ThetaHealing® seminerleri</h6>${theta.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>${h.modul}</small></a>`).join('')}
-    <h6>Diğer seminerler</h6>${diger.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>sertifikalı</small></a>`).join('')}
-    <a class="l" href="${L('seminerler/')}#takvim">Seminer takvimi <small>tarih · ücret</small></a>
-    <h6>Danışmanlık</h6>${DN.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>birebir</small></a>`).join('')}
+    <h6>${ik('seminer')}ThetaHealing® seminerleri</h6>${theta.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>${h.modul}</small></a>`).join('')}
+    <h6>${ik('seminer')}Diğer seminerler</h6>${diger.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>sertifikalı</small></a>`).join('')}
+    <a class="l" href="${L('seminerler/')}#takvim">Takvim <small>tarih · ücret</small></a>
+    <h6>${ik('danis')}Danışmanlık</h6>${DN.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>birebir</small></a>`).join('')}
     <h6>Keşfet</h6>
-    <a class="l" href="${L('hakkimda/')}">Hakkımda <small>Melike Kaan</small></a>
-    <a class="l" href="${L('blog-yazilari/')}">Blog <small>yazılar</small></a>
-    <a class="l" href="${L('iletisim/')}">İletişim <small>whatsapp · e-posta</small></a>
+    <a class="l" href="${L('hakkimda/')}"><span class="l-ad">${ik('hakkimda')}Hakkımda</span> <small>Melike Kaan</small></a>
+    <a class="l" href="${L('blog-yazilari/')}"><span class="l-ad">${ik('blog')}Blog</span> <small>yazılar</small></a>
+    <a class="l" href="${L('iletisim/')}"><span class="l-ad">${ik('iletisim')}İletişim</span> <small>whatsapp · e-posta</small></a>
     <a class="btn btn-main" href="${L('iletisim/')}#basvuru">Ön Başvuru →</a>
   </div>`;
   const aktif = B.dataset.sayfa;
@@ -165,7 +173,9 @@
         + '.mk-yaz{display:inline-flex;gap:3px;align-items:center;justify-content:center;height:23px;padding:0 6px;border-radius:12px 12px 12px 5px;background:rgba(255,255,255,.9);box-shadow:0 1px 4px rgba(0,0,0,.12)}'
         + '.mk-yaz i{width:5px;height:5px;border-radius:50%;background:#c97fb2;animation:mk-nokta 1.3s infinite ease-in-out}'
         + '.mk-yaz i:nth-child(2){animation-delay:.18s}.mk-yaz i:nth-child(3){animation-delay:.36s}'
-        + '@keyframes mk-nokta{0%,60%,100%{transform:translateY(0);opacity:.45}30%{transform:translateY(-3px);opacity:1}}';
+        + '@keyframes mk-nokta{0%,60%,100%{transform:translateY(0);opacity:.45}30%{transform:translateY(-3px);opacity:1}}'
+        // telefonda daha küçük (Neziha 2026-10-13)
+        + '@media (max-width:640px){.mk-launcher{right:10px !important;bottom:10px !important;width:auto !important;gap:3px !important}.mk-avatar{width:42px !important;height:42px !important;flex-basis:42px !important}.mk-avatar img{width:32px !important;height:22px !important}.mk-launcher-label{font-size:10.5px !important;padding:5px 10px 5px !important;gap:3px !important;border-radius:12px !important}.mk-sor{font-size:9.5px !important;gap:4px !important}.mk-yaz{height:17px !important;padding:0 5px !important}.mk-yaz i{width:4px !important;height:4px !important}}';
       const lb = av.getRootNode().querySelector('.mk-launcher-label');
       if (lb && !av.getRootNode().querySelector('.mk-sor')) lb.insertAdjacentHTML('beforeend','<span class="mk-sor" aria-hidden="true">Sorunuz mu var? Yazın <span class="mk-yaz"><i></i><i></i><i></i></span></span>');
     }
@@ -249,10 +259,10 @@
   }));
   document.addEventListener('click', closeDD);
   const mn = document.getElementById('mnav');
-  const closeM = () => { if (!mn) return; mn.classList.remove('open'); mn.setAttribute('aria-hidden', 'true'); B.style.overflow = ''; };
+  const closeM = () => { if (!mn) return; mn.classList.remove('open'); mn.setAttribute('aria-hidden', 'true'); B.style.overflow = ''; B.classList.remove('menu-acik'); };
   addEventListener('keydown', e => { if (e.key === 'Escape') { closeDD(); closeM(); } });
   const mt = document.querySelector('.menu-t');
-  if (mt) mt.addEventListener('click', () => { mn.classList.add('open'); mn.setAttribute('aria-hidden', 'false'); B.style.overflow = 'hidden'; });
+  if (mt) mt.addEventListener('click', () => { mn.classList.add('open'); mn.setAttribute('aria-hidden', 'false'); B.style.overflow = 'hidden'; B.classList.add('menu-acik'); });
   if (mn) { mn.querySelector('.x').addEventListener('click', closeM); mn.querySelectorAll('a').forEach(a => a.addEventListener('click', closeM)); }
 
   /* ---------- aynı sayfadaki hedefe gidince parlama ---------- */

@@ -1,16 +1,25 @@
 /* ============================================================
    MUCİZE KODLARIM — arka plan ses manzarası
-   Ses dosyası YOK: dalga, kuş ve piyano sesleri tarayıcıda anlık üretilir
+   Ses dosyası YOK: frekans sesleri tarayıcıda anlık üretilir
    (telif sorunu yok, site hafif kalır, her dinleyişte biraz farklı çalar).
    Varsayılan KAPALI. Ziyaretçi sol alttaki düğmeyle açar; tercih hatırlanır.
    Ses seviyesi: aşağıdaki SEVIYE (0–1). Sahne adları: SAHNELER.
    ============================================================ */
 (function () {
   const SEVIYE = 0.55;
+  // Frekans sahneleri (Neziha 2026-10-15). Duygu adları gelenekseldir; sağlık iddiası yazılmaz.
   const SAHNELER = {
-    dalga:  { ad: 'Dalga',  kazanc: 1,   katman: ['dalga', 'piyanoSeyrek'] },
-    kus:    { ad: 'Kuşlar', kazanc: 2.6, katman: ['ruzgar', 'kus', 'piyanoSeyrek'] },
-    piyano: { ad: 'Piyano', kazanc: 1.9, katman: ['ped', 'piyano'] }
+    bolluk:    { ad: 'Bolluk',     hz: '888 Hz',   kazanc: 3.4, katman: [['ton', 888]] },
+    sevgi:     { ad: 'Sevgi',      hz: '528 Hz',   kazanc: 2.2, katman: [['ton', 528]] },
+    mutluluk:  { ad: 'Mutluluk',   hz: '432 Hz',   kazanc: 2.2, katman: [['akor', 432]] },
+    uyum:      { ad: 'Uyum',       hz: '639 Hz',   kazanc: 3.6, katman: [['ton', 639]] },
+    guven:     { ad: 'Güven',      hz: '174 Hz',   kazanc: 2, katman: [['ton', 174]] },
+    tazelenme: { ad: 'Tazelenme',  hz: '285 Hz',   kazanc: 2, katman: [['ton', 285]] },
+    ifade:     { ad: 'İfade',      hz: '741 Hz',   kazanc: 3.4, katman: [['ton', 741]] },
+    butunluk:  { ad: 'Bütünlük',   hz: '963 Hz',   kazanc: 3.8, katman: [['ton', 963]] },
+    cakra:     { ad: 'Çakralar',   hz: '7 çakra',  kazanc: 2, katman: ['cakra'] },
+    theta:     { ad: 'Theta',      hz: 'kulaklıkla', kazanc: 2.4, katman: [['binaural', 6], ['akor', 216, true]] },
+    alfa:      { ad: 'Alfa',       hz: 'kulaklıkla', kazanc: 2.2, katman: [['binaural', 10], ['akor', 216, true]] }
   };
   const rnd = (a, b) => a + Math.random() * (b - a);
   const sec = a => a[Math.floor(Math.random() * a.length)];
@@ -23,13 +32,13 @@
   }
   function yanki(ctx) {                       // 3,5 sn yumuşak oda yankısı
     const n = Math.floor(ctx.sampleRate * 3.5), b = ctx.createBuffer(2, n, ctx.sampleRate);
-    for (let c = 0; c < 2; c++) { const d = b.getChannelData(c); for (let i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, 2.6); }
+    for (let c = 0; c < 2; c++) { const d = b.getChannelData(c); let y = 0; for (let i = 0; i < n; i++) { y += ((Math.random() * 2 - 1) - y) * .18; d[i] = y * Math.pow(1 - i / n, 2.6) * Math.min(1, i / (ctx.sampleRate * .03)) * 1.8; } }
     const k = ctx.createConvolver(); k.buffer = b; return k;
   }
   function kur(ctx, hedef) {
     const ana = ctx.createGain(); ana.gain.value = 0; ana.connect(hedef);
     const kuru = ctx.createGain(); kuru.gain.value = 1; kuru.connect(ana);
-    const yk = yanki(ctx), islak = ctx.createGain(); islak.gain.value = .55; yk.connect(islak); islak.connect(ana);
+    const yk = yanki(ctx), islak = ctx.createGain(); islak.gain.value = .4; yk.connect(islak); islak.connect(ana);
     return { ctx, ana, kuru, yk, noise: gurultu(ctx), kaynaklar: [] };
   }
   function surekliGurultu(g, tStart) {
@@ -38,6 +47,65 @@
 
   /* ---------- katmanlar: her biri planla(t) ile t anına kadar olayları sıraya koyar ---------- */
   const KATMAN = {
+    ton(g, t0, f) {                            // saf frekans + yumuşak alt ses + ara ara çan
+      const ctx = g.ctx, kis = f > 600 ? .5 : f < 200 ? 1.3 : 1;
+      const dal = ctx.createGain(); dal.gain.value = .75; dal.connect(g.kuru); dal.connect(g.yk);
+      const lfo = ctx.createOscillator(); lfo.frequency.value = .07; const lg = ctx.createGain(); lg.gain.value = .22;
+      lfo.connect(lg); lg.connect(dal.gain); lfo.start(t0); g.kaynaklar.push(lfo);
+      [[f, .05, -.35], [f, .05, .35], [f / 2, .035, 0]].forEach(([fr, ses, pan]) => {
+        const o = ctx.createOscillator(), e = ctx.createGain(), p = ctx.createStereoPanner();
+        o.type = 'sine'; o.frequency.value = fr; e.gain.value = ses * kis; p.pan.value = pan;
+        o.connect(e); e.connect(p); p.connect(dal); o.start(t0); g.kaynaklar.push(o);
+      });
+      let t = t0 + rnd(4, 7);
+      return { planla(son) {
+        while (t < son) {
+          const o = ctx.createOscillator(), e = ctx.createGain();
+          o.type = 'sine'; o.frequency.value = f * 2;
+          e.gain.setValueAtTime(0, t); e.gain.linearRampToValueAtTime(.016 * kis, t + .02); e.gain.exponentialRampToValueAtTime(.0001, t + 4);
+          o.connect(e); e.connect(g.yk); e.connect(g.kuru); o.start(t); o.stop(t + 4.1);
+          t += rnd(8, 13);
+        }
+      } };
+    },
+    binaural(g, t0, fark) {                    // sol 200 Hz, sağ 200+fark Hz (kulaklıkla)
+      const ctx = g.ctx, m = ctx.createChannelMerger(2), e = ctx.createGain(); e.gain.value = .07;
+      m.connect(e); e.connect(g.kuru);
+      [[200, 0], [200 + fark, 1]].forEach(([fr, ch]) => { const o = ctx.createOscillator(); o.frequency.value = fr; o.connect(m, 0, ch); o.start(t0); g.kaynaklar.push(o); });
+      return { planla() {} };
+    },
+    akor(g, t0, kok, hafif) {                  // aydınlık, yavaşça değişen majör akorlar
+      const ctx = g.ctx, ORAN = [[1, 5 / 4, 3 / 2, 2], [4 / 3, 5 / 3, 2, 8 / 3], [3 / 2, 15 / 8, 9 / 4, 3], [1, 5 / 4, 3 / 2, 15 / 8]];
+      const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 1400; lp.connect(g.yk); lp.connect(g.kuru);
+      const ses = hafif ? .009 : .02; let t = t0, i = 0;
+      return { planla(son) {
+        while (t < son) {
+          ORAN[i % ORAN.length].forEach(r => {
+            const o = ctx.createOscillator(), e = ctx.createGain(), fr = kok * r / (r > 2 ? 2 : 1);
+            o.type = 'triangle'; o.frequency.value = fr; o.detune.value = rnd(-5, 5);
+            e.gain.setValueAtTime(0, t); e.gain.linearRampToValueAtTime(ses, t + 4); e.gain.setValueAtTime(ses, t + 10); e.gain.linearRampToValueAtTime(0, t + 14);
+            o.connect(e); e.connect(lp); o.start(t); o.stop(t + 14.2);
+          });
+          i++; t += 10;
+        }
+      } };
+    },
+    cakra(g, t0) {                             // kökten taca 7 çakra frekansı, her biri ~45 sn
+      const ctx = g.ctx, FR = [396, 417, 528, 639, 741, 852, 963], SURE = 45;
+      let t = t0, i = 0;
+      return { planla(son) {
+        while (t < son) {
+          const f = FR[i % FR.length], kis = f > 600 ? .5 : 1;
+          [[f, .06], [f / 2, .035]].forEach(([fr, ses]) => {
+            const o = ctx.createOscillator(), e = ctx.createGain();
+            o.type = 'sine'; o.frequency.value = fr;
+            e.gain.setValueAtTime(0, t); e.gain.linearRampToValueAtTime(ses * kis, t + 5); e.gain.setValueAtTime(ses * kis, t + SURE - 1); e.gain.linearRampToValueAtTime(0, t + SURE + 4);
+            o.connect(e); e.connect(g.kuru); e.connect(g.yk); o.start(t); o.stop(t + SURE + 4.2);
+          });
+          i++; t += SURE;
+        }
+      } };
+    },
     dalga(g, t0) {
       const ctx = g.ctx, src = surekliGurultu(g, t0);
       const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 500; lp.Q.value = .3;
@@ -134,42 +202,49 @@
 
   function sahneKur(ctx, hedef, ad, t0) {
     const g = kur(ctx, hedef);
-    const kat = SAHNELER[ad].katman.map(k => KATMAN[k](g, t0));
+    const kat = SAHNELER[ad].katman.map(k => Array.isArray(k) ? KATMAN[k[0]](g, t0, ...k.slice(1)) : KATMAN[k](g, t0));
     return { g, kat, planla: son => kat.forEach(k => k.planla(son)) };
   }
 
   /* ---------- canlı çalma ---------- */
-  let ctx = null, aktif = null, zaman = null, durum = 'kapali', sahne = 'dalga';
-  try { sahne = localStorage.getItem('mk-sahne') || 'dalga'; } catch (e) {}
-  if (!SAHNELER[sahne]) sahne = 'dalga';
+  let ctx = null, aktif = null, zaman = null, durum = 'kapali', sahne = 'sevgi';
+  try { sahne = localStorage.getItem('mk-sahne') || 'sevgi'; } catch (e) {}
+  if (!SAHNELER[sahne]) sahne = 'sevgi';
 
   function yaz(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
   function sondur(s, sure) {
     if (!s) return; const t = ctx.currentTime;
     s.g.ana.gain.cancelScheduledValues(t); s.g.ana.gain.setValueAtTime(s.g.ana.gain.value, t); s.g.ana.gain.linearRampToValueAtTime(0, t + sure);
-    setTimeout(() => { s.g.kaynaklar.forEach(k => { try { k.stop(); } catch (e) {} }); s.g.ana.disconnect(); }, sure * 1000 + 200);
+    setTimeout(() => { s.g.kaynaklar.forEach(k => { try { k.stop(); } catch (e) {} }); try { s.g.ana.disconnect(); } catch (e) {} }, sure * 1000 + 60);
   }
   function cal(ad) {
     if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
     if (ctx.state === 'suspended') ctx.resume();
-    const eski = aktif;
-    aktif = sahneKur(ctx, ctx.destination, ad, ctx.currentTime + .05);
-    aktif.g.ana.gain.linearRampToValueAtTime(SEVIYE * SAHNELER[ad].kazanc, ctx.currentTime + 2.5);
-    aktif.planla(ctx.currentTime + 8);
-    if (eski) sondur(eski, 2);
+    if (aktif) { sondur(aktif, .25); aktif = null; }       // önceki ses hemen susar
+    const t0 = ctx.currentTime + (zaman ? .3 : .05);
+    aktif = sahneKur(ctx, ctx.destination, ad, t0);
+    aktif.g.ana.gain.setValueAtTime(0, t0);                    // sıfırdan, çıtırtısız başla
+    aktif.g.ana.gain.linearRampToValueAtTime(SEVIYE * SAHNELER[ad].kazanc, t0 + 2);
+    aktif.planla(t0 + 8);
     clearInterval(zaman); zaman = setInterval(() => aktif && aktif.planla(ctx.currentTime + 8), 1000);
-    sahne = ad; durum = 'acik'; yaz('mk-sahne', ad); yaz('mk-ses', 'acik'); ciz();
+    sahne = ad; durum = 'acik'; yaz('mk-sahne', ad); yaz('mk-ses', 'acik'); yaz('mk-calan', kimlik + ':' + Date.now()); ciz();
   }
-  function dur() {
-    clearInterval(zaman); sondur(aktif, 1.2); aktif = null;
-    durum = 'kapali'; yaz('mk-ses', 'kapali'); ciz();
+  function dur(sessiz) {
+    clearInterval(zaman); zaman = null; sondur(aktif, .6); aktif = null;
+    durum = 'kapali'; if (!sessiz) yaz('mk-ses', 'kapali'); ciz();
   }
+  /* Sekmeler arası: aynı anda yalnız bir sekme çalar; bir sekmede kapatılınca hepsi susar */
+  const kimlik = Math.random().toString(36).slice(2);
+  addEventListener('storage', e => {
+    if (e.key === 'mk-calan' && aktif && e.newValue && !e.newValue.startsWith(kimlik)) dur(true);
+    if (e.key === 'mk-ses' && e.newValue === 'kapali' && (aktif || durum === 'bekliyor')) dur(true);
+  });
 
   /* ---------- düğme ---------- */
   const kutu = document.createElement('div');
   kutu.className = 'ses';
-  kutu.innerHTML = `<button class="ses-btn" type="button" aria-pressed="false" aria-label="Arka plan sesini aç"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="yazi">Müzik</span></button>
-    <div class="ses-menu" role="group" aria-label="Ses sahnesi">${Object.entries(SAHNELER).map(([k, s]) => `<button type="button" data-s="${k}">${s.ad}</button>`).join('')}</div>`;
+  kutu.innerHTML = `<button class="ses-btn" type="button" aria-pressed="false" aria-label="Arka plan sesini aç"><span class="ses-rozet" aria-hidden="true"><img class="ses-foto" src="${(document.body.dataset.kok || './')}assets/img/muzik-rozet.jpg" alt=""><span class="yazi">Müzik</span></span></button>
+    <div class="ses-menu" role="group" aria-label="Frekans seçimi"><b class="ses-baslik">Frekanslar</b>${Object.entries(SAHNELER).map(([k, s]) => `<button type="button" data-s="${k}">${s.ad}<small>${s.hz}</small></button>`).join('')}</div>`;
   document.body.appendChild(kutu);
   const btn = kutu.querySelector('.ses-btn');
   function ciz() {
