@@ -188,8 +188,11 @@
   });
 
 
+  /* DENEME (Neziha 2026-10-15): zümrüt zemin önizlemesi ?zemin=zumrut — karar verilince kaldır */
+  { const zm = new URLSearchParams(location.search).get('zemin'); if (zm === 'zumrut' || zm === 'zumrut2' || zm === 'ordek') B.classList.add('zemin-' + zm); }
+
   /* ---------- arka plan sesi (assets/js/ses.js) ---------- */
-  const sesJs = document.createElement('script'); sesJs.src = K + 'assets/js/ses.js?v=20261015'; document.body.appendChild(sesJs);
+  const sesJs = document.createElement('script'); sesJs.src = K + 'assets/js/ses.js?v=20261015b'; document.body.appendChild(sesJs);
 
   /* ---------- chatbot (Mucize Asistan, Replit) ---------- */
   const bot = document.createElement('script'); bot.src = 'https://mucize-kodlarim-asistan.replit.app/widget.js'; bot.defer = true; document.body.appendChild(bot);
