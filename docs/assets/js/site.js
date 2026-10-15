@@ -192,7 +192,7 @@
   { const zm = new URLSearchParams(location.search).get('zemin'); if (zm === 'zumrut' || zm === 'zumrut2' || zm === 'ordek') B.classList.add('zemin-' + zm); }
 
   /* ---------- arka plan sesi (assets/js/ses.js) ---------- */
-  const sesJs = document.createElement('script'); sesJs.src = K + 'assets/js/ses.js?v=20261015b'; document.body.appendChild(sesJs);
+  const sesJs = document.createElement('script'); sesJs.src = K + 'assets/js/ses.js?v=20261015c'; document.body.appendChild(sesJs);
 
   /* ---------- chatbot (Mucize Asistan, Replit) ---------- */
   const bot = document.createElement('script'); bot.src = 'https://mucize-kodlarim-asistan.replit.app/widget.js'; bot.defer = true; document.body.appendChild(bot);
@@ -204,7 +204,7 @@
       im.src = K + 'assets/img/logo-mk.png';
       im.style.cssText = 'width:44px;height:30px;object-fit:cover;border-radius:0;filter:drop-shadow(0 0 6px rgba(243,217,164,.25))'; // menüdeki logoyla aynı
       av.style.background = '#0b2414'; av.style.borderColor = 'rgba(243,217,164,.85)';
-      const st = document.createElement('style'); st.textContent = '.mk-launcher:focus,.mk-launcher:focus-visible{outline:none !important}' // Neziha: seçili çerçevesi olmasın
+      const st = document.createElement('style'); st.textContent = '.mk-prompt{display:none !important}' /* Replit'in kendi üst balonu: Neziha istemiyor, yazı kutunun içinde (2026-10-15) */ + '.mk-launcher:focus,.mk-launcher:focus-visible{outline:none !important}' // Neziha: seçili çerçevesi olmasın
         + '.mk-launcher-label{background:linear-gradient(120deg,#e08cc4 0%,#f3d9a4 50%,#a9c98a 100%) !important;color:#1a0f22 !important;border:0 !important;font:500 12px/1.2 Sora,system-ui,sans-serif !important;padding:8px 14px !important;box-shadow:0 4px 14px rgba(0,0,0,.25) !important}'; // sitedeki düğmelerle aynı
       av.getRootNode().appendChild(st);
       // "Sorunuz mu var? Yazın" + yazıyor baloncuğu (Neziha 2026-10-12)
