@@ -671,7 +671,7 @@ a.ek:hover .ek-devam{color:#1a0f22;box-shadow:0 0 18px rgba(224,140,196,.45);tra
 .yazi-gorsel img{width:100%;height:100%;object-fit:cover;display:block}
 @media (max-width:640px){.yazi-gorsel{aspect-ratio:16/10;border-radius:14px}}
 /* telefon menüsü açıkken asistan ve müzik gizli */
-body.menu-acik #mucize-assistant-widget-host,body.menu-acik .ses{display:none !important}
+body.menu-acik #mucize-assistant-widget-host,body.menu-acik .ses,body.wa-sec-acik #mucize-assistant-widget-host,body.wa-sec-acik .ses{display:none !important}
 /* orta genişlikte (tablet/küçük dizüstü) menü sığsın */
 @media (max-width:1080px){.links{gap:12px;font-size:13.5px}.links>a,.dd>button{gap:6px}.nav-ik{width:20px;height:20px}.nav-ik svg{width:13px;height:13px}.nav-cta{padding:12px 16px;font-size:13px}}
 @media (max-width:999px){.links,.nav .btn{display:none}.menu-t{display:block}}
@@ -686,3 +686,57 @@ section:has(+ #takvim){padding-bottom:40px}
 /* kart renkleri tek tip (Neziha 2026-10-15): yer tutucu + atölye kutuları seminer kartlarıyla aynı mor; 4 Modül kenarı da aynı */
 .ek-bos{background:linear-gradient(165deg,rgba(138,62,116,.55),rgba(74,32,66,.72));border-style:solid;border-color:rgba(224,140,196,.28)}
 .ek-paket{border-color:rgba(224,140,196,.28)}
+/* Neziha 2026-10-15: ön başvuru formu (ad, e-posta, telefon + ülke kodu, KVKK ve isteğe bağlı ileti onayı) */
+form.basvuru .f-ikili{display:grid;grid-template-columns:1fr;gap:14px}
+form.basvuru .f-alan{display:grid;gap:8px;min-width:0}
+form.basvuru .f-et{font:500 12px var(--mono);color:var(--muted)}
+form.basvuru .f-tel{display:grid;grid-template-columns:auto 1fr;gap:8px}
+form.basvuru .f-tel select{padding:14px 10px;font-size:14px}
+form.basvuru input,form.basvuru select{min-width:0;width:100%}
+form.basvuru label.onay{display:flex;gap:12px;align-items:flex-start;font:300 13.5px/1.55 var(--sans);color:var(--muted);cursor:pointer}
+form.basvuru label.onay input{flex:none;width:18px;height:18px;margin:2px 0 0;padding:0;accent-color:var(--orchid);cursor:pointer}
+form.basvuru label.onay a{color:var(--text);text-decoration:underline}
+form.basvuru input:user-invalid,form.basvuru select:user-invalid{border-color:#e07a8c}
+
+/* WhatsApp simgesi */
+.wa-ik{display:inline-flex;flex:none;width:20px;height:20px;vertical-align:-4px;margin-right:8px}
+.wa-ik svg{width:100%;height:100%}
+.wa .wa-ik{width:28px;height:28px;margin:0}
+.cc .wa-ik.buyuk{display:block;width:34px;height:34px;margin:0 0 22px}
+.btn .wa-ik{margin-right:2px}
+.f-ozet+ul .wa-ik,footer .wa-ik{width:16px;height:16px;vertical-align:-3px;margin-right:6px}
+
+/* WhatsApp konu seçimi */
+.wa-sec{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(4,12,8,.72);backdrop-filter:blur(6px)}
+.wa-sec.acik{display:flex}
+.wa-sec-kutu{position:relative;width:100%;max-width:440px;max-height:calc(100vh - 32px);overflow:auto;padding:28px 24px 22px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(160deg,#16301f,#0d2215)}
+.wa-sec-kutu h4{display:flex;align-items:center;gap:4px;margin:0 30px 16px 0;font:600 22px var(--serif);line-height:1.25}
+.wa-sec-kutu h4 .wa-ik{width:26px;height:26px}
+.wa-sec-x{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--muted);font-size:14px;cursor:pointer}
+.wa-sec-liste{display:grid;gap:8px}
+.wa-sec-liste small{margin-top:8px;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.wa-sec-liste a{display:block;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:15px;transition:.2s}
+.wa-sec-liste a:hover{border-color:#25D366;background:rgba(37,211,102,.08)}
+body.wa-sec-acik{overflow:hidden}
+
+/* Neziha 2026-10-15: telefonda iletişim kartları tek sütun, kart görselleri daha basık */
+@media (max-width:640px){
+  .contact{grid-template-columns:1fr;gap:12px}
+  .cc{display:grid;grid-template-columns:38px 1fr;column-gap:16px;align-items:center;padding:16px 20px}
+  .cc>svg,.cc>.wa-ik.buyuk{grid-row:1 / span 3;width:32px;height:32px;margin:0}
+  .cc>small,.cc>b,.cc>span:not(.wa-ik){grid-column:2}
+  .cc b{font-size:21px;margin:2px 0}
+  .ek-gorsel{aspect-ratio:16/9}
+  .orbit{width:min(440px,calc(100% - 88px))}
+}
+
+/* Neziha 2026-10-15: Melike Hoca fotoğrafı zeminsiz (ana sayfa + Hakkımda), alt kenar zemine karışır */
+.about .ph,.hk-foto{background:none;border:0;border-radius:0}
+.about .ph .spi,.hk-foto .spi{display:none}
+.about .ph img,.hk-foto img{-webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent 100%);mask-image:linear-gradient(to bottom,#000 80%,transparent 100%)}
+
+/* Neziha 2026-10-15: üstteki yol yazısı (Ana sayfa / Hakkımda) daha kalın ve belirgin */
+.iz{font:500 13.5px var(--mono);color:var(--text);letter-spacing:.02em}
+.iz a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.25);text-underline-offset:3px}
+.iz a:hover{color:var(--orchid)}
+.iz span:not(:last-child){color:var(--muted)}

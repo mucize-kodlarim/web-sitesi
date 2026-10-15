@@ -80,13 +80,13 @@
     <div class="wrap">
       <div class="fgrid">
         <div><a class="brand" href="${L('')}">Mucize Kodlarım</a>
-          <p class="f-ozet">ThetaHealing®, JAAS ve Spiritüel Dowsing seminerleri ve birebir danışmanlık · İstanbul &amp; online</p></div>
+          <p class="f-ozet">ThetaHealing®, JAAS ve Spiritüel Dowsing seminerleri ve birebir danışmanlık · online</p></div>
         <div><h6>Keşfet</h6><ul>
           <li><a href="${L('seminerler/')}">Seminerler</a></li><li><a href="${L('danismanliklar/')}">Danışmanlık</a></li>
           <li><a href="${L('hakkimda/')}">Hakkımda</a></li>
           <li><a href="${L('blog-yazilari/')}">Blog</a></li></ul></div>
         <div><h6>İletişim</h6><ul>
-          <li><a href="${wa('Merhaba, bilgi almak istiyorum.')}" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="#" data-wa-sec>WhatsApp</a></li>
           <li><a href="mailto:${MK.eposta}">${MK.eposta}</a></li>
           <li><a href="https://instagram.com/${MK.instagram}" target="_blank" rel="noopener">Instagram · @${MK.instagram}</a></li>
           <li>${MK.konum || ''}</li></ul></div>
@@ -98,7 +98,35 @@
   <div class="toast" id="toast" role="status"></div>`;
 
   /* ---------- iletişim bağlantıları ---------- */
+  /* ---------- WhatsApp: her düğme kendi konusunu sorar, genel soru yok (Neziha 2026-10-15) ---------- */
+  const WAIK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path fill="#fff" d="M17.3 14.6c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3z"/></svg>';
+  const konu = h => h.tur === 'egitim' ? (/semineri$/i.test(h.ad) ? h.ad : h.ad + ' semineri') : h.ad;
+  const waMsg = kod => { const h = H.find(x => x.kod === kod); return h ? `Merhaba, ${konu(h)} hakkında bilgi almak istiyorum.` : 'Merhaba, hangi seminer ya da danışmanlığın bana uygun olduğu hakkında bilgi almak istiyorum.'; };
+  const ikEkle = a => { if (!a.querySelector('.wa-ik')) a.insertAdjacentHTML('afterbegin', `<span class="wa-ik">${WAIK}</span>`); };
+  document.querySelectorAll('[data-wa-kod]').forEach(a => { a.dataset.wa = waMsg(a.dataset.waKod); });
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = wa(a.dataset.wa); a.target = '_blank'; a.rel = 'noopener'; });
+  /* konusu belli olmayan yerler: önce konu seçtirilir */
+  let secKutu = null;
+  const secAc = () => {
+    if (!secKutu) {
+      const sat = h => `<a href="${wa(waMsg(h.kod))}" target="_blank" rel="noopener">${h.ad}</a>`;
+      secKutu = document.createElement('div'); secKutu.className = 'wa-sec';
+      secKutu.innerHTML = `<div class="wa-sec-kutu" role="dialog" aria-modal="true" aria-label="WhatsApp konu seçimi"><button class="wa-sec-x" type="button" aria-label="Kapat">✕</button><h4><span class="wa-ik">${WAIK}</span>Hangi konuda yazmak istiyorsunuz?</h4><div class="wa-sec-liste"><small>Seminerler</small>${EG.map(sat).join('')}<small>Danışmanlık</small>${DN.map(sat).join('')}<small>Emin değilim</small><a href="${wa(waMsg('diger'))}" target="_blank" rel="noopener">Bana uygun olanı öğrenmek istiyorum</a></div></div>`;
+      document.body.appendChild(secKutu);
+      const kapat = () => { secKutu.classList.remove('acik'); B.classList.remove('wa-sec-acik'); };
+      secKutu.addEventListener('click', e => { if (e.target === secKutu || e.target.closest('.wa-sec-x') || e.target.closest('.wa-sec-liste a')) kapat(); });
+      addEventListener('keydown', e => { if (e.key === 'Escape') kapat(); });
+    }
+    secKutu.classList.add('acik'); B.classList.add('wa-sec-acik');
+  };
+  document.querySelectorAll('[data-wa-sec]').forEach(a => { a.href = '#'; a.addEventListener('click', e => { if (a.dataset.secili) return; e.preventDefault(); secAc(); }); });
+  /* WhatsApp simgesi */
+  document.querySelectorAll('[data-wa],[data-wa-sec]').forEach(a => {
+    if (a.classList.contains('cc')) { const s = a.querySelector('svg'); if (s) s.outerHTML = `<span class="wa-ik buyuk">${WAIK}</span>`; }
+    else if (a.classList.contains('wa')) { const s = [...a.querySelectorAll('span')].find(x => /💬/.test(x.textContent)); if (s) s.outerHTML = `<span class="wa-ik">${WAIK}</span>`; else ikEkle(a); }
+    else ikEkle(a);
+  });
+  document.querySelectorAll('form.basvuru button[type="submit"]').forEach(ikEkle);
   document.querySelectorAll('[data-eposta]').forEach(a => { a.href = 'mailto:' + MK.eposta; });
   document.querySelectorAll('[data-insta]').forEach(a => { a.href = 'https://instagram.com/' + MK.instagram; a.target = '_blank'; a.rel = 'noopener'; });
 
@@ -111,7 +139,7 @@
     const tek = box.dataset.takvim;
     const list = tek ? T.filter(t => t.egitim === tek) : T;
     if (!list.length) {
-      box.innerHTML = `<div class="row bos"><div class="d">✦</div><div><h5>Yeni dönem tarihleri yakında</h5><p>Takvim açıklanınca burada görünecek. Şimdiden yer ayırtmak için yazabilirsin.</p></div><a class="btn btn-ghost" href="${wa('Merhaba, seminer tarihleri hakkında bilgi almak istiyorum.')}" target="_blank" rel="noopener">WhatsApp'tan sor</a></div>`;
+      box.innerHTML = `<div class="row bos"><div class="d">✦</div><div><h5>Yeni dönem tarihleri yakında</h5><p>Takvim açıklanınca burada görünecek.</p></div></div>`;
       return;
     }
     box.innerHTML = list.map(t => {
@@ -133,18 +161,26 @@
   /* ---------- ön başvuru formu → WhatsApp ---------- */
   const q = new URLSearchParams(location.search).get('ilgi');
   document.querySelectorAll('form.basvuru').forEach(f => {
-    const sel = f.querySelector('select');
+    const sel = f.querySelector('select[name="ilgi"]');
     sel.innerHTML = '<option value="">Seç…</option>' +
       '<optgroup label="Seminerler">' + EG.map(h => `<option value="${h.kod}">${h.ad}</option>`).join('') + '</optgroup>' +
       '<optgroup label="Danışmanlık">' + DN.map(h => `<option value="${h.kod}">${h.ad}</option>`).join('') + '</optgroup>' +
       '<option value="diger">Diğer / emin değilim</option>';
     sel.value = q || f.dataset.ilgi || '';
+    /* "Hızlı soru" WhatsApp kutusu, İlgilendiğin kutusunda seçilen konuyu sorar */
+    const kutu = f.closest('.apply') && f.closest('.apply').querySelector('a.wa');
+    const esitle = () => {
+      if (!kutu) return;
+      if (sel.value) { kutu.dataset.secili = sel.value; kutu.href = wa(waMsg(sel.value)); kutu.target = '_blank'; kutu.rel = 'noopener'; }
+      else { delete kutu.dataset.secili; if (kutu.hasAttribute('data-wa-sec')) { kutu.href = '#'; kutu.removeAttribute('target'); } else kutu.href = wa(kutu.dataset.wa); }
+    };
+    sel.addEventListener('change', esitle); esitle();
     f.addEventListener('submit', e => {
       e.preventDefault();
       if (!f.reportValidity()) return;
-      const v = n => f.querySelector(`[name="${n}"]`).value.trim();
-      const secilen = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].text : '';
-      const msg = `Merhaba, siteden ön başvuru bırakıyorum.\nAd Soyad: ${v('ad')}\nİletişim: ${v('iletisim')}\nİlgilendiğim: ${secilen}`;
+      const v = n => ((f.querySelector(`[name="${n}"]`) || {}).value || '').trim();
+      const ileti = f.querySelector('[name="ileti"]');
+      const msg = `${waMsg(sel.value || 'diger')}\n\nÖn başvuru formu\nAd Soyad: ${v('ad')}\nTelefon: ${v('kod')} ${v('telefon').replace(/[^0-9]/g, '')}\nE-posta: ${v('eposta')}\nTicari ileti onayı: ${ileti && ileti.checked ? 'Evet' : 'Hayır'}`;
       window.open(wa(msg), '_blank', 'noopener');
       f.classList.add('gonderildi');
     });

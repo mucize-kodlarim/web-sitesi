@@ -8,7 +8,7 @@ window.MK = {
   whatsapp: "905067772520",            // başında + olmadan, ülke koduyla
   eposta: "bilgi@mucizekodlarim.com",
   instagram: "mucizekodlarim",
-  konum: "İstanbul, Türkiye",
+  konum: "Online",
 
   /* Hizmetler: menü, form ve takvim bunları kullanır.
      ucret boşsa sitede "bilgi için sorun" yazar. Örnek: ucret: "12.500 TL" */

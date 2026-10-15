@@ -29,7 +29,7 @@
     <span class="eyebrow">birebir · birebir danışmanlık</span>
     <h1>JAAS Danışmanlık</h1>
     <p class="lead">Bilinçaltındaki blokajlarla JAAS protokolüyle çalıştığımız birebir seans.</p>
-    <div class="cta"><a class="btn btn-main" href="#basvuru">Randevu iste →</a><a class="btn btn-ghost" data-wa="Merhaba, JAAS Danışmanlık hakkında bilgi almak istiyorum." href="#">WhatsApp'tan sor</a></div>
+    <div class="cta"><a class="btn btn-main" href="#basvuru">Randevu iste →</a><a class="btn btn-ghost" data-wa-kod="jaas-danismanlik" href="#">WhatsApp'tan sor</a></div>
   </section>
   <section class="wrap detay" style="padding-top:20px">
     <article class="metin reveal">
@@ -40,7 +40,7 @@
     <aside class="yan">
       <div class="kutu"><h4>Kısaca</h4><dl><div><dt>Süre</dt><dd>60 dakika</dd></div><div><dt>Biçim</dt><dd>Online · Zoom</dd></div><div><dt>Kapsam</dt><dd>Belirlediğin tek konu</dd></div><div><dt>İptal / erteleme</dt><dd>1 gün öncesine kadar</dd></div><div><dt>Ücret</dt><dd class="vurgu" data-ucret="jaas-danismanlik">bilgi için sorun</dd></div></dl>
         <a class="btn btn-main" href="#basvuru">Randevu iste →</a>
-        <a class="btn btn-ghost" data-wa="Merhaba, JAAS Danışmanlık hakkında bilgi almak istiyorum." href="#">WhatsApp'tan sor</a></div>
+        <a class="btn btn-ghost" data-wa-kod="jaas-danismanlik" href="#">WhatsApp'tan sor</a></div>
       <div class="kutu"><h4>Danışmanlıklar</h4><div class="miniyol"><a class="dn" href="../../services/thetahealing-danismanlik/"><b>1</b>ThetaHealing® Danışmanlık</a><a class="aktif dn" href="../../services/jaas-danismanlik/"><b>2</b>JAAS Danışmanlık</a></div></div>
     </aside>
   </section>
@@ -51,13 +51,17 @@
         <span class="eyebrow">Ön başvuru</span>
         <h2>Güncellemeyi <span class="g">başlat.</span></h2>
         <p class="sub">Formu doldur, seninle iletişime geçelim. Burada yalnızca iletişim bilgisi istiyoruz: sağlık ya da özel bilgi sormuyoruz.</p>
-        <a class="wa" data-wa="Merhaba, bilgi almak istiyorum." href="#"><span style="font-size:22px">💬</span><span>Hızlı soru mu? <b>WhatsApp'tan yaz</b>: tarih ve ücret bilgisi için.</span></a>
+        <a class="wa" data-wa-kod="jaas-danismanlik" href="#"><span style="font-size:22px">💬</span><span>Hızlı soru mu? <b>WhatsApp'tan yaz</b>: tarih ve ücret bilgisi için.</span></a>
       </div>
       <form class="basvuru" data-ilgi="jaas-danismanlik" novalidate>
-        <label>Ad Soyad<input name="ad" required autocomplete="name" placeholder="Adın ve soyadın"></label>
-        <label>Telefon ya da e-posta<input name="iletisim" required autocomplete="tel" placeholder="Sana nasıl ulaşalım?"></label>
-        <label>İlgilendiğin<select name="ilgi" required></select></label>
-        <p class="check"><span>Bilgileriniz yalnızca başvurunuza dönüş yapmak için kullanılır. Ayrıntılar için <a href="../../kvkk-aydinlatma-metni/">KVKK Aydınlatma Metni</a>.</span></p>
+        <label>Ad Soyad *<input name="ad" required autocomplete="name" placeholder="Adın ve soyadın"></label>
+        <div class="f-ikili">
+          <label>E-posta *<input name="eposta" type="email" required autocomplete="email" inputmode="email" placeholder="ornek@eposta.com"></label>
+          <div class="f-alan"><span class="f-et" id="tel-et">Telefon *</span><div class="f-tel"><select name="kod" aria-label="Ülke kodu" autocomplete="tel-country-code"><option value="+90" selected>TR +90</option><option value="+49">DE +49</option><option value="+31">NL +31</option><option value="+32">BE +32</option><option value="+33">FR +33</option><option value="+43">AT +43</option><option value="+41">CH +41</option><option value="+44">GB +44</option><option value="+46">SE +46</option><option value="+45">DK +45</option><option value="+1">US/CA +1</option><option value="+994">AZ +994</option><option value="+7">RU/KZ +7</option><option value="+971">AE +971</option><option value="+357">CY +357</option></select><input name="telefon" type="tel" required autocomplete="tel-national" inputmode="tel" pattern="[0-9 ()-]{7,18}" aria-labelledby="tel-et" placeholder="5XX XXX XX XX"></div></div>
+        </div>
+        <label>İlgilendiğin *<select name="ilgi" required></select></label>
+        <label class="onay"><input type="checkbox" name="kvkk" required><span><a href="../../kvkk-aydinlatma-metni/" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni okudum. *</span></label>
+        <label class="onay"><input type="checkbox" name="ileti"><span>(İsteğe bağlı) Seminer, danışmanlık ve duyurularla ilgili tarafıma ticari elektronik ileti gönderilmesini kabul ediyorum.</span></label>
         <button class="btn btn-main" type="submit" style="justify-content:center">Başvurumu gönder →</button>
         <p class="form-not">Gönder'e bastığında WhatsApp açılır; mesajı sen gönderirsin. Sağlık ya da özel bilgi istemiyoruz.</p>
         <p class="tesekkur">✓ Teşekkürler! WhatsApp penceresi açıldı; mesajı gönderdiğinde başvurun bize ulaşır.</p>
