@@ -165,12 +165,12 @@
 
   async function tara() {
     const s = ++surum;
-    const SEV = ['çekirdek', 'genetik', 'tarihsel', 'ruh'];
+    const SEV = ['öz benlik', 'genetik', 'geçmiş', 'ruhsal'];
     goster(`${ust('bilinçaltı taranıyor', '4 / 5')}
       <h2>Bilinçaltın <em>taranıyor…</em></h2>
       ${dna()}
       <div class="hk-tara"><div class="hk-cubuk"><span id="hkc"></span></div><div class="hk-yuzde" id="hky">%0</div>
-      <div class="hk-katman">${SEV.map(x => `<span>${x} seviye</span>`).join('')}</div></div>
+      <div class="hk-katman">${SEV.map(x => `<span>${x}</span>`).join('')}</div></div>
       <p class="kucuk">Hislerine odaklan, derin bir nefes al…</p>`);
     const c = kutu.querySelector('#hkc'), y = kutu.querySelector('#hky'), ks = kutu.querySelectorAll('.hk-katman span');
     for (let p = 0; p <= 100; p += 2) {
