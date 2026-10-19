@@ -190,7 +190,7 @@
 
 
   /* ---------- arka plan sesi (assets/js/ses.js) ---------- */
-  const sesJs = document.createElement('script'); sesJs.src = K + 'assets/js/ses.js?v=20261015e'; document.body.appendChild(sesJs);
+  const sesJs = document.createElement('script'); sesJs.src = K + 'assets/js/ses.js?v=20261020a'; document.body.appendChild(sesJs);
 
   /* ---------- chatbot (Mucize Asistan, Replit) ---------- */
   const bot = document.createElement('script'); bot.src = 'https://mucize-kodlarim-asistan.replit.app/widget.js'; bot.defer = true; document.body.appendChild(bot);
@@ -249,26 +249,95 @@
   const gl = document.getElementById('glow');
   addEventListener('pointermove', e => { gl.style.left = e.clientX + 'px'; gl.style.top = e.clientY + 'px'; });
 
-  /* ---------- terminal yazımı (yalnız ana sayfa) ---------- */
-  const pre = document.getElementById('type');
-  if (pre) {
-    const lines = [['pk', '> bilinçaltı taranıyor…'], ['', '  kalıp bulundu: "yeterince iyi değilim"'], ['', '  kaynak: 0–7 yaş · durum: aktif'], ['gd', '> yeni kod hazırlanıyor…'], ['ok', '  ████████████████████ 100%'], ['ok', '✓ "Değerliyim ve yeterliyim" yüklendi']];
+  /* ---------- bilinçaltı güncellemesi: his yükleme kutusu (yalnız ana sayfa; içerik assets/js/kayitlar.js) ---------- */
+  const hy = document.getElementById('hy');
+  if (hy) {
+    const KY = window.KAYITLAR || [];
     const bekle = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
-    (async function yaz() {
-      for (;;) {
-        pre.innerHTML = '';
-        for (const [c, t] of lines) {
-          const s = document.createElement('span'); if (c) s.className = c; pre.appendChild(s);
-          for (const ch of t) { s.textContent += ch; await bekle(22); }
-          pre.appendChild(document.createTextNode('\n')); await bekle(350);
+    const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+    let tur = 0; // yeni başlangıç eski akışı keser
+    const satir = async (cls, txt) => { const my = tur; const p = el('p', 'hy-s ' + (cls || '')); hy.appendChild(p); for (const ch of txt) { if (my !== tur) break; p.textContent += ch; await bekle(18); } return p; };
+    const yildiz = n => { for (let i = 0; i < n; i++) { const s = el('i', 'hy-yildiz', '✦'); s.style.left = (4 + Math.random() * 92) + '%'; s.style.top = (6 + Math.random() * 88) + '%'; s.style.animationDelay = (Math.random() * .7) + 's'; s.style.fontSize = (9 + Math.random() * 9) + 'px'; hy.parentElement.appendChild(s); setTimeout(() => s.remove(), 2600); } };
+    /* tarama ekranı: DNA sarmalı + tarama ışını + nabız halkaları + zerreler */
+    const dna = () => { const P = 150, A = 34, m = 60; let a = '', b = '', r = ''; for (let x = 0; x <= 1200; x += 6) { const s = Math.sin(2 * Math.PI * x / P); a += (x ? 'L' : 'M') + x + ' ' + (m + A * s).toFixed(1); b += (x ? 'L' : 'M') + x + ' ' + (m - A * s).toFixed(1); } for (let x = 0; x <= 1200; x += 15) { const s = Math.sin(2 * Math.PI * x / P), c = Math.abs(Math.cos(2 * Math.PI * x / P)); r += `<line x1="${x}" y1="${(m + A * s).toFixed(1)}" x2="${x}" y2="${(m - A * s).toFixed(1)}" stroke-opacity="${(.15 + .45 * c).toFixed(2)}"/>`; } return `<g class="hy-basamak" stroke="#f3d9a4" stroke-width="1.2">${r}</g><path d="${a}" stroke="url(#hyg)" stroke-width="2.4" fill="none"/><path d="${b}" stroke="url(#hyg)" stroke-width="2.4" fill="none" stroke-opacity=".55"/>`; };
+    const ekranYap = durum => { const d = el('div', 'hy-ekran ' + durum); d.setAttribute('aria-hidden', 'true');
+      d.innerHTML = `<svg class="hy-dna" viewBox="0 0 600 120" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="hyg" x1="0" x2="1"><stop offset="0" stop-color="#e08cc4"/><stop offset=".5" stop-color="#f3d9a4"/><stop offset="1" stop-color="#a9c98a"/></linearGradient></defs><g class="hy-dna-g">${dna()}</g></svg><div class="hy-halka"><i></i><i></i><i></i></div><div class="hy-isin"></div>`;
+      for (let i = 0; i < 12; i++) { const z = el('b', 'hy-zerre'); z.style.left = (Math.random() * 100) + '%'; z.style.top = (20 + Math.random() * 70) + '%'; z.style.animationDelay = (Math.random() * 4) + 's'; d.appendChild(z); }
+      return d; };
+    const KATMAN = ['öz benlik', 'genetik', 'geçmiş', 'ruhsal'];
+    function listele(akis) {
+      const kutu = el('div', 'hy-secim');
+      KY.forEach((k, i) => { const b = el('button', 'hy-kayit' + (akis ? ' akis' : '') + (i >= 8 ? ' gizli' : ''), k.kayit); b.type = 'button'; if (akis && i < 8) b.style.animationDelay = (i * .11) + 's'; b.addEventListener('click', () => sec(k)); kutu.appendChild(b); });
+      if (KY.length > 8) { const m = el('button', 'hy-daha' + (akis ? ' akis' : ''), 'Daha fazla kayıt ▾'); m.type = 'button'; if (akis) m.style.animationDelay = '.95s'; m.addEventListener('click', () => { kutu.querySelectorAll('.gizli').forEach((x, n) => { x.classList.remove('gizli'); x.classList.add('akis'); x.style.animationDelay = (n * .06) + 's'; }); m.remove(); }); kutu.appendChild(m); }
+      hy.appendChild(kutu);
+    }
+    async function basla(atla) {
+      tur++; const my = tur; hy.innerHTML = '';
+      const E = ekranYap(atla ? 'kucuk' : 'hazir'); hy.appendChild(E);
+      const durum = el('p', 'hy-s pk'); hy.appendChild(durum);
+      const kat = el('div', 'hy-katman'); KATMAN.forEach(k => kat.appendChild(el('span', '', k))); hy.appendChild(kat);
+      const bulundu = () => { durum.className = 'hy-s ok'; durum.textContent = '> ' + KY.length + ' kayıt bulundu · sana tanıdık geleni seç'; kat.querySelectorAll('span').forEach(s => s.classList.add('tamam')); };
+      if (atla) { bulundu(); listele(false); return; }
+      for (const ch of '> bilinçaltı taramaya hazır') { if (my !== tur) return; durum.textContent += ch; await bekle(26); }
+      durum.appendChild(el('span', 'hy-imlec'));
+      const bt = el('a', 'hy-basla', '✦ Taramayı başlat'); bt.href = (document.body.dataset.kok || '') + 'bilincalti-taramasi/'; hy.appendChild(bt);
+      return;   // tarama artık ayrı sayfada (bilincalti-taramasi/)
+      await new Promise(r => { bt.onclick = r; });
+      if (my !== tur) return;
+      bt.remove(); E.classList.replace('hazir', 'tariyor');
+      const sp = kat.querySelectorAll('span');
+      for (let p = 0; p <= 100; p += 2) { if (my !== tur) return; durum.textContent = '> bilinçaltı taranıyor…  %' + p; const n = Math.floor(p / 25); sp.forEach((s, i) => { s.classList.toggle('tamam', i < n); s.classList.toggle('simdi', i === n); }); await bekle(62); }
+      if (my !== tur) return;
+      sp.forEach(s => s.classList.remove('simdi'));
+      E.classList.replace('tariyor', 'kucuk'); yildiz(8);
+      bulundu(); listele(true);
+    }    async function sec(k) {
+      tur++; const my = tur; hy.innerHTML = '';
+      hy.appendChild(ekranYap('kucuk'));
+      await satir('pk', '> kayıt seçildi: "' + k.kayit + '"');
+      await satir('gd', '> yerine gelecek hisler hazırlanıyor…');
+      let evet = 0;
+      for (let i = 0; i < k.his.length; i++) {
+        if (my !== tur) return;
+        await bekle(300);
+        const s = el('div', 'hy-soru');
+        s.appendChild(el('span', 'hy-no', (i + 1) + ' / ' + k.his.length));
+        s.appendChild(el('p', 'hy-cumle', "Yaradan'ın en yüce ve en iyi tanımıyla, " + k.his[i] + ' bilmek ister misin?'));
+        const bt = el('div', 'hy-bt'); const e = el('button', 'hy-evet', 'Evet'); const h = el('button', 'hy-hayir', 'Hayır'); e.type = h.type = 'button'; bt.append(e, h); s.appendChild(bt);
+        hy.querySelectorAll('.hy-soru').forEach(x => x.classList.add('gecti'));
+        hy.appendChild(s);
+        const cevap = await new Promise(r => { e.onclick = () => r(true); h.onclick = () => r(false); });
+        if (my !== tur) return;
+        bt.remove();
+        if (cevap) {
+          const y = el('div', 'hy-yuk'); y.innerHTML = '<span class="hy-kalp" aria-hidden="true">♥</span><span class="hy-cubuk"><b></b></span><span class="hy-yz">yükleniyor…</span>'; s.appendChild(y);
+          await bekle(1800); if (my !== tur) return;
+          y.classList.add('tamam'); y.querySelector('.hy-yz').textContent = '✓ yüklendi'; yildiz(7); evet++;
+        } else {
+          s.appendChild(el('p', 'hy-not', 'Sorun değil, hazır olduğunda buradayız.'));
         }
-        const k = document.createElement('span'); k.className = 'caret'; pre.appendChild(k);
-        if (reduce) return;
-        await bekle(3800);
+        await bekle(700);
       }
-    })();
+      if (my !== tur) return;
+      hy.querySelectorAll('.hy-soru').forEach(x => x.classList.add('gecti'));
+      son(evet);
+    }
+    function son(n) {
+      const kap = el('div', 'hy-son');
+      if (n) { kap.appendChild(el('p', 'hy-baslik', '✨ ' + n + ' yeni his yüklendi')); kap.appendChild(el('p', 'hy-nefes', 'Hislerine odaklan, derin bir nefes al ve rahatla.')); yildiz(16); }
+      else kap.appendChild(el('p', 'hy-baslik', 'Kendine zaman tanı; hazır olduğunda buradayız.'));
+      kap.appendChild(el('p', 'hy-davet', 'Bu kayıtların kök inançlarını bulmak istersen, seminerlerde bu çalışmayı öğrenebilir ya da birebir danışmanlık alabilirsin.'));
+      const yol = el('div', 'hy-yol');
+      yol.innerHTML = `<a class="btn btn-main" href="${L('seminerler/')}">Seminerleri keşfet →</a><a class="btn btn-ghost" href="${L('danismanliklar/')}">Danışmanlık al</a>`;
+      kap.appendChild(yol);
+      const alt = el('div', 'hy-alt');
+      const w = el('a', 'hy-wa', "Merak ettiğin bir şey varsa WhatsApp'tan yaz"); w.href = wa(waMsg('diger')); w.target = '_blank'; w.rel = 'noopener'; w.insertAdjacentHTML('afterbegin', `<span class="wa-ik">${WAIK}</span>`);
+      const y = el('button', 'hy-tekrar', '↺ Başka bir kayıt seç'); y.type = 'button'; y.onclick = () => basla(true);
+      alt.append(w, y); kap.appendChild(alt);
+      hy.appendChild(kap);
+    }
+    basla();
   }
-
   /* ---------- görünür olunca belirme + sayaç ---------- */
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
