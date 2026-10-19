@@ -18,7 +18,8 @@
 .hk>*{position:relative}
 .hk-ust{display:flex;align-items:center;gap:10px;font:500 12px/1 "JetBrains Mono",monospace;color:#a9c98a;letter-spacing:.08em;text-transform:lowercase;margin-bottom:18px}
 .hk-ust i{width:8px;height:8px;border-radius:50%;background:#a9c98a;box-shadow:0 0 10px #a9c98a;animation:hkNabiz 1.6s infinite}
-.hk-ust .adim{margin-left:auto;color:var(--dim,#a597b8)}
+.hk-ust .adim{margin-left:auto;color:var(--dim,#a597b8);white-space:nowrap;flex-shrink:0}
+.hk-ust i{flex-shrink:0}
 @keyframes hkNabiz{50%{opacity:.35}}
 .hk h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(28px,4.4vw,40px);line-height:1.15;margin:0 0 10px;color:var(--text,#f4efe6)}
 .hk h2 em{font-style:italic;color:#e08cc4}
@@ -51,8 +52,8 @@
 .hk-yuzde{font:500 13px "JetBrains Mono",monospace;color:#f3d9a4;margin-top:8px}
 .hk-dna{display:block;width:100%;height:70px;margin:6px 0 4px;opacity:.9}
 .hk-baslik{font:500 12px "JetBrains Mono",monospace;color:#a9c98a;letter-spacing:.08em;text-transform:uppercase;margin:20px 0 8px}
-.hk-cip{display:flex;flex-wrap:wrap;gap:8px}
-.hk-cip span{padding:7px 12px;border-radius:999px;background:rgba(224,140,196,.12);border:1px solid rgba(224,140,196,.35);color:#f4efe6;font-size:14px}
+.hk-cip{display:flex;flex-wrap:wrap;gap:10px;padding:16px;border-radius:18px;border:1px solid rgba(224,140,196,.5);background:rgba(224,140,196,.09);box-shadow:inset 0 0 24px rgba(224,140,196,.08)}
+.hk-cip span{padding:9px 16px;border-radius:999px;background:rgba(224,140,196,.24);border:1px solid #e08cc4;color:#fff;font:600 16px "Sora",sans-serif;box-shadow:0 0 14px rgba(224,140,196,.22)}
 .hk-kayit{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .hk-kayit li{padding:11px 14px 11px 38px;border-radius:12px;background:rgba(5,38,28,.55);border:1px solid rgba(255,255,255,.1);color:#f4efe6;position:relative;font-size:15px;opacity:0;transform:translateY(6px);animation:hkAk .5s forwards}
 .hk-kayit li::before{content:"›";position:absolute;left:15px;top:9px;color:#f3d9a4;font:600 18px "JetBrains Mono",monospace}
