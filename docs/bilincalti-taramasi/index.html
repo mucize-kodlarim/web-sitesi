@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bilinçaltı Haritası · Mucize Kodlarım</title>
+<meta name="description" content="Hayatında seni zorlayan konuyu seç, bilinçaltı haritanı gör ve his yüklemesiyle tanış.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#05261c">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css?v=20261015e">
+<style>
+.hk{position:relative;max-width:860px;margin:0 auto;border:1px solid rgba(243,217,164,.22);border-radius:26px;background:linear-gradient(160deg,rgba(12,61,45,.78),rgba(6,42,32,.9));box-shadow:0 30px 80px rgba(0,0,0,.35);padding:34px 34px 30px;overflow:hidden;min-height:420px}
+.hk::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 260px at 85% -10%,rgba(224,140,196,.16),transparent 60%),radial-gradient(500px 240px at 0% 110%,rgba(169,201,138,.12),transparent 60%);pointer-events:none}
+.hk>*{position:relative}
+.hk-ust{display:flex;align-items:center;gap:10px;font:500 12px/1 "JetBrains Mono",monospace;color:#a9c98a;letter-spacing:.08em;text-transform:lowercase;margin-bottom:18px}
+.hk-ust i{width:8px;height:8px;border-radius:50%;background:#a9c98a;box-shadow:0 0 10px #a9c98a;animation:hkNabiz 1.6s infinite}
+.hk-ust .adim{margin-left:auto;color:var(--dim,#a597b8)}
+@keyframes hkNabiz{50%{opacity:.35}}
+.hk h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(28px,4.4vw,40px);line-height:1.15;margin:0 0 10px;color:var(--text,#f4efe6)}
+.hk h2 em{font-style:italic;color:#e08cc4}
+.hk h2:focus{outline:none}
+.hk p{color:var(--text,#f4efe6);opacity:.9;margin:0 0 14px;line-height:1.7}
+.hk .kucuk{font-size:13px;opacity:.75}
+.hk-giris{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 8px}
+.hk-giris input{flex:1 1 220px;min-width:0;background:rgba(5,38,28,.7);border:1px solid rgba(243,217,164,.35);border-radius:14px;padding:14px 16px;color:#f4efe6;font:500 16px "Sora",sans-serif}
+.hk-giris input:focus{outline:none;border-color:#f3d9a4;box-shadow:0 0 0 3px rgba(243,217,164,.15)}
+.hk-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:13px 24px;font:600 15px "Sora",sans-serif;cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .2s}
+.hk-btn:hover{transform:translateY(-1px)}
+.hk-btn.ana{background:linear-gradient(135deg,#f3d9a4,#e8b97a);color:#05261c;box-shadow:0 8px 24px rgba(243,217,164,.25)}
+.hk-btn.ikinci{background:transparent;border:1px solid rgba(243,217,164,.45);color:#f4efe6}
+.hk-btn.sade{background:transparent;color:#d3cadb;padding:10px 6px;font-weight:500}
+.hk-btn:focus-visible{outline:2px solid #f3d9a4;outline-offset:3px}
+.hk-izgara{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px;margin:18px 0 6px}
+.hk-sec{text-align:left;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:16px;color:#f4efe6;font:500 15px/1.4 "Sora",sans-serif;cursor:pointer;transition:border-color .2s,background .2s,transform .15s}
+.hk-sec:hover,.hk-sec:focus-visible{border-color:#f3d9a4;background:rgba(243,217,164,.08);transform:translateY(-2px);outline:none}
+.hk-sec b{display:block;color:#f3d9a4;font-size:20px;margin-bottom:6px}
+.hk-liste{display:grid;gap:10px;margin:16px 0 6px}
+.hk-liste .hk-sec{padding:14px 18px}
+.hk-tara{margin:22px 0 10px}
+.hk-cubuk{height:6px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden}
+.hk-cubuk span{display:block;height:100%;width:0;background:linear-gradient(90deg,#a9c98a,#f3d9a4,#e08cc4);border-radius:9px;transition:width .2s linear}
+.hk-katman{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.hk-katman span{font:500 12px "JetBrains Mono",monospace;padding:6px 10px;border-radius:8px;border:1px solid rgba(255,255,255,.14);color:#d3cadb;transition:all .3s}
+.hk-katman span.simdi{border-color:#f3d9a4;color:#f3d9a4}
+.hk-katman span.tamam{border-color:#a9c98a;color:#a9c98a}
+.hk-katman span.tamam::before{content:"✓ "}
+.hk-yuzde{font:500 13px "JetBrains Mono",monospace;color:#f3d9a4;margin-top:8px}
+.hk-dna{display:block;width:100%;height:70px;margin:6px 0 4px;opacity:.9}
+.hk-baslik{font:500 12px "JetBrains Mono",monospace;color:#a9c98a;letter-spacing:.08em;text-transform:uppercase;margin:20px 0 8px}
+.hk-cip{display:flex;flex-wrap:wrap;gap:8px}
+.hk-cip span{padding:7px 12px;border-radius:999px;background:rgba(224,140,196,.12);border:1px solid rgba(224,140,196,.35);color:#f4efe6;font-size:14px}
+.hk-kayit{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.hk-kayit li{padding:11px 14px 11px 38px;border-radius:12px;background:rgba(5,38,28,.55);border:1px solid rgba(255,255,255,.1);color:#f4efe6;position:relative;font-size:15px;opacity:0;transform:translateY(6px);animation:hkAk .5s forwards}
+.hk-kayit li::before{content:"›";position:absolute;left:15px;top:9px;color:#f3d9a4;font:600 18px "JetBrains Mono",monospace}
+@keyframes hkAk{to{opacity:1;transform:none}}
+.hk-soru{border:1px solid rgba(243,217,164,.45);border-radius:18px;background:rgba(243,217,164,.06);padding:20px 22px;margin:14px 0;font-size:17px;line-height:1.75;color:#f4efe6}
+.hk-soru b{color:#f3d9a4;font-weight:600}
+.hk-dg{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.hk-yukle{display:flex;align-items:center;gap:16px;margin:18px 0}
+.hk-kalp{font-size:34px;color:#e08cc4;animation:hkKalp 1s infinite;filter:drop-shadow(0 0 10px rgba(224,140,196,.6))}
+@keyframes hkKalp{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}45%{transform:scale(1.18)}}
+.hk-yukle .hk-cubuk{flex:1}
+.hk-ok{color:#a9c98a;font:600 15px "Sora",sans-serif;margin:10px 0}
+.hk-tam{border-left:3px solid #a9c98a;padding:10px 16px;margin:14px 0;color:#f4efe6;font-style:italic;line-height:1.75;background:rgba(169,201,138,.07);border-radius:0 12px 12px 0}
+.hk-yildiz{position:absolute;pointer-events:none;color:#f3d9a4;font-size:16px;text-shadow:0 0 12px #f3d9a4;animation:hkYildiz 1.8s ease-out forwards;z-index:3}
+@keyframes hkYildiz{0%{opacity:0;transform:translateY(0) scale(.4)}20%{opacity:1}100%{opacity:0;transform:translateY(-120px) scale(1.2) rotate(40deg)}}
+.hk-son{text-align:center}
+.hk-son .buyuk{font-size:40px;margin-bottom:6px}
+.hk-cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:20px 0 8px}
+.hk-not{font-size:13.5px;opacity:.8;margin-top:14px}
+.hk-alt{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:22px}
+.hk-gizli{font-size:12.5px;color:#a9c98a;margin-top:6px}
+.hk-sorum{max-width:860px;margin:18px auto 0;font-size:13px;color:#b9adc6;text-align:center;line-height:1.6}
+@media (max-width:640px){
+  .hk{padding:24px 18px 22px;border-radius:20px}
+  .hk-soru{font-size:16px;padding:16px}
+  .hk-izgara{grid-template-columns:1fr 1fr;gap:10px}
+  .hk-sec{padding:13px;font-size:14px}
+  .hk-btn{width:100%}
+  .hk-dg .hk-btn{flex:1 1 40%;width:auto}
+}
+@media (max-width:380px){.hk-izgara{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.hk-kalp,.hk-ust i{animation:none}.hk-kayit li{animation:none;opacity:1;transform:none}}
+</style>
+</head>
+<body data-kok="../" data-sayfa="bilincalti-taramasi">
+<a class="atla" href="#icerik">İçeriğe geç</a>
+<div id="ust"></div>
+<main id="icerik">
+  <section class="wrap sayfa-bas">
+    <nav class="iz" aria-label="Konum"><a href="../">Ana sayfa</a><span>/</span><span>Bilinçaltı Haritası</span></nav>
+    <span class="eyebrow">bilinçaltı taraması</span><h1>Bilinçaltı <em class="g">Haritan.</em></h1>
+    <p class="lead">Hayatında seni zorlayan konuyu seç, altında yatan bilinçaltı kayıtlarını gör ve his yüklemesiyle tanış.</p>
+  </section>
+  <section style="padding-top:6px">
+    <div class="wrap">
+      <div class="hk" id="hk" aria-live="polite"></div>
+      <p class="hk-sorum">Bu çalışma tıbbi muayene, teşhis ve tedavinin yerine geçmez. His yüklemesi kalıcı değildir; kalıcı değişim, kök inançların bulunup dönüştürülmesiyle olur.</p>
+    </div>
+  </section>
+</main>
+<div id="alt"></div>
+<script src="../assets/js/veri.js?v=20261015e"></script>
+<script src="../assets/js/site.js?v=20261015e"></script>
+<script src="harita.js?v=20261020a"></script>
+<script>
+(() => {
+  const H = window.HARITA, kutu = document.getElementById('hk');
+  if (!H || !kutu) return;
+  const yavas = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const bekle = ms => new Promise(r => setTimeout(r, yavas ? 0 : ms));
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const wa = t => 'https://wa.me/' + ((window.MK && MK.whatsapp) || '') + '?text=' + encodeURIComponent(t);
+  const TAM = 'Tüm bunlar senin için mümkün ve güvenli. Tüm bunlara layık ve izinlisin. Dört inanç seviyene, bedenine, alanına, DNA\'larına, hücrelerine, moleküllerine Yaradan tanımıyla yüklensin.';
+  const ORTAK = ad => `${ad}, hayatını neşeyle, kolaylıkla, en iyi ve en yüce şekilde; pozitiflikle, keyifle, bollukla, bereketle, güzellikle, şansla, zenginlikle, mutlulukla, huzurla, sevgiyle, korunarak, kollanarak, desteklenerek, saygınlıkla, başarıyla, dengeyle ve güvende olarak yaşamanın hissi sana <b>Yaradan tanımıyla yüklensin mi ve Yaradan sana öğretsin mi?</b>`;
+  const ORTAK_TAM = 'Tüm bunlar senin için mümkün ve güvenli. Tüm bunlara layık ve izinlisin. Dört inanç seviyene, bedenine, alanına, DNA\'larına, hücrelerine, moleküllerine Yaradan tanımıyla yüklensin. Evet demen yeterli.';
+  const S = { ad: '', k: null, m: null };   // ad yalnız bu sayfanın belleğinde durur; hiçbir yere kaydedilmez ya da gönderilmez
+  let surum = 0;                            // eski animasyonlar yeni ekranı bozmasın
+
+  const ust = (etiket, adim) => `<div class="hk-ust"><i></i><span>${etiket}</span>${adim ? `<span class="adim">${adim}</span>` : ''}</div>`;
+  const goster = (h, odak) => { kutu.innerHTML = h; const f = kutu.querySelector(odak || 'h2'); if (f) { f.setAttribute('tabindex', '-1'); f.focus({ preventScroll: true }); } if (kutu.getBoundingClientRect().top < 0) kutu.scrollIntoView({ behavior: yavas ? 'auto' : 'smooth', block: 'start' }); };
+  const yildiz = (n = 14) => { if (yavas) return; const r = kutu.getBoundingClientRect(); for (let i = 0; i < n; i++) { const y = document.createElement('span'); y.className = 'hk-yildiz'; y.textContent = Math.random() > .5 ? '✦' : '✧'; y.style.left = (8 + Math.random() * 84) + '%'; y.style.top = (55 + Math.random() * 35) + '%'; y.style.animationDelay = (Math.random() * .6) + 's'; y.style.fontSize = (12 + Math.random() * 14) + 'px'; kutu.appendChild(y); setTimeout(() => y.remove(), 2600); } };
+  const dna = () => { let a = '', b = '', r = ''; for (let x = 0; x <= 800; x += 8) { const s = Math.sin(x / 32); a += (x ? 'L' : 'M') + x + ' ' + (35 + 24 * s).toFixed(1); b += (x ? 'L' : 'M') + x + ' ' + (35 - 24 * s).toFixed(1); if (x % 24 === 0) r += `<line x1="${x}" y1="${(35 + 24 * s).toFixed(1)}" x2="${x}" y2="${(35 - 24 * s).toFixed(1)}" stroke-opacity="${(.15 + .4 * Math.abs(Math.cos(x / 32))).toFixed(2)}"/>`; } return `<svg class="hk-dna" viewBox="0 0 800 70" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="hkg"><stop offset="0" stop-color="#a9c98a"/><stop offset=".5" stop-color="#f3d9a4"/><stop offset="1" stop-color="#e08cc4"/></linearGradient></defs><g stroke="#f3d9a4" stroke-width="1">${r}</g><path d="${a}" stroke="url(#hkg)" stroke-width="2" fill="none"/><path d="${b}" stroke="url(#hkg)" stroke-width="2" fill="none" stroke-opacity=".55"/></svg>`; };
+
+  function giris() {
+    surum++;
+    goster(`${ust('bilinçaltı haritası', '1 / 5')}
+      <h2>Sana nasıl <em>hitap edelim?</em></h2>
+      <p>Adını yaz; his yüklemesinde sana adınla seslenelim.</p>
+      <form class="hk-giris" id="hkf" autocomplete="off">
+        <input id="hkad" name="hitap" maxlength="30" placeholder="Adın" aria-label="Adın" autocomplete="off" spellcheck="false">
+        <button class="hk-btn ana" type="submit">Devam →</button>
+      </form>
+      <p class="hk-gizli">🔒 Adın yalnız bu ekranda kullanılır. Hiçbir yere kaydedilmez, kimseye gönderilmez.</p>`, '#hkad');
+    const inp = kutu.querySelector('#hkad'); inp.value = S.ad;
+    kutu.querySelector('#hkf').addEventListener('submit', e => { e.preventDefault(); const v = inp.value.trim().replace(/\s+/g, ' '); if (!v) { inp.focus(); inp.placeholder = 'Lütfen adını yaz'; return; } S.ad = v.charAt(0).toLocaleUpperCase('tr') + v.slice(1); konuSec(); });
+  }
+
+  function konuSec() {
+    surum++;
+    goster(`${ust('konu seçimi', '2 / 5')}
+      <h2>${esc(S.ad)}, hayatında seni en çok <em>zorlayan konu</em> hangisi?</h2>
+      <div class="hk-izgara">${H.map((k, i) => `<button class="hk-sec" data-k="${i}"><b>${k.ikon}</b>${esc(k.ad)}</button>`).join('')}</div>
+      <div class="hk-alt"><button class="hk-btn sade" data-geri>← Geri</button></div>`);
+    kutu.querySelectorAll('[data-k]').forEach(b => b.addEventListener('click', () => { S.k = +b.dataset.k; maddeSec(); }));
+    kutu.querySelector('[data-geri]').addEventListener('click', giris);
+  }
+
+  function maddeSec() {
+    surum++;
+    const k = H[S.k];
+    goster(`${ust(k.ad.toLocaleLowerCase('tr'), '3 / 5')}
+      <h2>Hayatında <em>ne oluyor?</em></h2>
+      <p>Sana en yakın gelen cümleyi seç.</p>
+      <div class="hk-liste">${k.maddeler.map((m, i) => `<button class="hk-sec" data-m="${i}">“${esc(m.baslik)}”</button>`).join('')}</div>
+      <div class="hk-alt"><button class="hk-btn sade" data-geri>← Konulara dön</button></div>`);
+    kutu.querySelectorAll('[data-m]').forEach(b => b.addEventListener('click', () => { S.m = +b.dataset.m; tara(); }));
+    kutu.querySelector('[data-geri]').addEventListener('click', konuSec);
+  }
+
+  async function tara() {
+    const s = ++surum;
+    const SEV = ['çekirdek', 'genetik', 'tarihsel', 'ruh'];
+    goster(`${ust('bilinçaltı taranıyor', '4 / 5')}
+      <h2>Bilinçaltın <em>taranıyor…</em></h2>
+      ${dna()}
+      <div class="hk-tara"><div class="hk-cubuk"><span id="hkc"></span></div><div class="hk-yuzde" id="hky">%0</div>
+      <div class="hk-katman">${SEV.map(x => `<span>${x} seviye</span>`).join('')}</div></div>
+      <p class="kucuk">Hislerine odaklan, derin bir nefes al…</p>`);
+    const c = kutu.querySelector('#hkc'), y = kutu.querySelector('#hky'), ks = kutu.querySelectorAll('.hk-katman span');
+    for (let p = 0; p <= 100; p += 2) {
+      if (s !== surum) return;
+      c.style.width = p + '%'; y.textContent = '%' + p;
+      const i = Math.min(3, Math.floor(p / 25));
+      ks.forEach((e, j) => { e.className = j < i || p === 100 ? 'tamam' : j === i ? 'simdi' : ''; });
+      await bekle(60);
+    }
+    await bekle(350);
+    if (s === surum) harita();
+  }
+
+  function harita() {
+    surum++;
+    const k = H[S.k], m = k.maddeler[S.m];
+    goster(`${ust('tarama tamamlandı · ' + m.kayit.length + ' kayıt bulundu', '4 / 5')}
+      <h2>${esc(S.ad)} için <em>Bilinçaltı Haritası</em></h2>
+      <p><b style="color:#f3d9a4">${esc(k.ad)}</b> · “${esc(m.baslik)}”</p>
+      <div class="hk-baslik">hissettiklerin</div>
+      <div class="hk-cip">${m.duygu.map(d => `<span>${esc(d)}</span>`).join('')}</div>
+      <div class="hk-baslik">bilinçaltı kayıtların</div>
+      <ul class="hk-kayit">${m.kayit.map((x, i) => `<li style="animation-delay:${(i * .35).toFixed(2)}s">“${esc(x)}”</li>`).join('')}</ul>
+      <p class="hk-not">Bu kayıtlar, bu konuyu yaşayan insanlarda sık görülen inançlardır. Senin için hangilerinin geçerli olduğu birebir çalışmada netleşir.</p>
+      <div class="hk-alt"><button class="hk-btn ana" data-ileri>✦ His yüklemesine geç</button><button class="hk-btn sade" data-geri>← Başka bir cümle seç</button></div>`);
+    kutu.querySelector('[data-ileri]').addEventListener('click', hisSor);
+    kutu.querySelector('[data-geri]').addEventListener('click', maddeSec);
+  }
+
+  function hisSor() {
+    surum++;
+    const m = H[S.k].maddeler[S.m];
+    goster(`${ust('his yüklemesi', '5 / 5')}
+      <h2>His <em>yüklemesi</em></h2>
+      <div class="hk-soru">${esc(S.ad)}, Yaradan tanımıyla ${m.his.map(esc).join('; ')} hissi sana <b>Yaradan tanımıyla en iyi, en yüce şekilde yüklensin mi?</b></div>
+      <div class="hk-dg"><button class="hk-btn ana" data-e>Evet</button><button class="hk-btn ikinci" data-h>Hayır</button></div>
+      <div id="hka"></div>`);
+    kutu.querySelector('[data-e]').addEventListener('click', () => yukle(TAM, ortakSor));
+    kutu.querySelector('[data-h]').addEventListener('click', hayir);
+  }
+
+  function ortakSor() {
+    surum++;
+    goster(`${ust('genel his yüklemesi', '5 / 5')}
+      <h2>Ve şimdi <em>hayatının bütününe…</em></h2>
+      <div class="hk-soru">${ORTAK(esc(S.ad))}<br><br>${ORTAK_TAM}</div>
+      <div class="hk-dg"><button class="hk-btn ana" data-e>Evet</button><button class="hk-btn ikinci" data-h>Hayır</button></div>
+      <div id="hka"></div>`);
+    kutu.querySelector('[data-e]').addEventListener('click', () => yukle('', son));
+    kutu.querySelector('[data-h]').addEventListener('click', hayir);
+  }
+
+  async function yukle(tam, sonra) {
+    const s = ++surum;
+    kutu.querySelectorAll('.hk-dg button').forEach(b => b.disabled = true);
+    const a = kutu.querySelector('#hka');
+    a.innerHTML = `<div class="hk-yukle"><span class="hk-kalp" aria-hidden="true">♥</span><div class="hk-cubuk"><span id="hkb"></span></div></div><p class="kucuk">Yükleniyor… derin bir nefes al.</p>`;
+    const c = a.querySelector('#hkb');
+    for (let p = 0; p <= 100; p += 4) { if (s !== surum) return; c.style.width = p + '%'; await bekle(110); }
+    if (s !== surum) return;
+    a.innerHTML = `<p class="hk-ok">✓ Yüklendi</p>${tam ? `<div class="hk-tam">${tam}</div>` : ''}<div class="hk-alt"><button class="hk-btn ana" data-d>Devam →</button></div>`;
+    yildiz(18);
+    a.querySelector('[data-d]').addEventListener('click', sonra);
+    a.querySelector('[data-d]').focus({ preventScroll: true });
+  }
+
+  const davet = () => `<p class="hk-not">His yüklemesi kalıcı değildir. Kalıcı değişim, bu kayıtların kök inançlarının bulunup dönüştürülmesiyle olur. Bunu birebir danışmanlıkta birlikte çalışabilir ya da seminerlerde kendin öğrenebilirsin.</p>
+      <div class="hk-cta">
+        <a class="hk-btn ana" href="../services/thetahealing-danismanlik/">Danışmanlık al</a>
+        <a class="hk-btn ikinci" href="../seminerler/">Seminerleri keşfet →</a>
+        <a class="hk-btn ikinci" href="${wa('Merhaba, ThetaHealing® Danışmanlık hakkında bilgi almak istiyorum.')}" target="_blank" rel="noopener">💬 WhatsApp'tan yaz</a>
+      </div>
+      <div class="hk-alt" style="justify-content:center"><button class="hk-btn sade" data-bas>↺ Başka bir konu seç</button></div>`;
+
+  function son() {
+    surum++;
+    goster(`<div class="hk-son">${ust('tamamlandı')}
+      <div class="buyuk" aria-hidden="true">✨</div>
+      <h2>${esc(S.ad)}, hislerin <em>yüklendi.</em></h2>
+      <p>Hislerine odaklan, derin bir nefes al ve rahatla.</p>
+      ${davet()}</div>`);
+    yildiz(26);
+    kutu.querySelector('[data-bas]').addEventListener('click', konuSec);
+  }
+
+  function hayir() {
+    surum++;
+    goster(`<div class="hk-son">${ust('his yüklemesi')}
+      <div class="buyuk" aria-hidden="true">🌿</div>
+      <h2>Sorun değil, <em>hazır olduğunda buradayız.</em></h2>
+      ${davet()}</div>`);
+    kutu.querySelector('[data-bas]').addEventListener('click', konuSec);
+  }
+
+  giris();
+})();
+</script>
+</body>
+</html>
