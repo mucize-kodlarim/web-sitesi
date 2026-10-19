@@ -58,6 +58,9 @@
 .hk-kayit li{padding:11px 14px 11px 38px;border-radius:12px;background:rgba(5,38,28,.55);border:1px solid rgba(255,255,255,.1);color:#f4efe6;position:relative;font-size:15px;opacity:0;transform:translateY(6px);animation:hkAk .5s forwards}
 .hk-kayit li::before{content:"›";position:absolute;left:15px;top:9px;color:#f3d9a4;font:600 18px "JetBrains Mono",monospace}
 @keyframes hkAk{to{opacity:1;transform:none}}
+.hk-kayit li.soluk{border-style:dashed;border-color:rgba(243,217,164,.3);background:linear-gradient(90deg,rgba(5,38,28,.45),rgba(5,38,28,0));color:#d3cadb;font-style:italic;padding-left:16px;animation-name:hkSoluk}
+.hk-kayit li.soluk::before{content:none}
+@keyframes hkSoluk{to{opacity:.6;transform:none}}
 .hk-soru{border:1px solid rgba(243,217,164,.45);border-radius:18px;background:rgba(243,217,164,.06);padding:20px 22px;margin:14px 0;font-size:17px;line-height:1.75;color:#f4efe6}
 .hk-soru b{color:#f3d9a4;font-weight:600}
 .hk-dg{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
@@ -193,8 +196,8 @@
       <div class="hk-baslik">hissettiklerin</div>
       <div class="hk-cip">${m.duygu.map(d => `<span>${esc(d)}</span>`).join('')}</div>
       <div class="hk-baslik">bilinçaltı kayıtların</div>
-      <ul class="hk-kayit">${m.kayit.map((x, i) => `<li style="animation-delay:${(i * .35).toFixed(2)}s">“${esc(x)}”</li>`).join('')}</ul>
-      <p class="hk-not">Bu kayıtlar, bu konuyu yaşayan insanlarda sık görülen inançlardır. Senin için hangilerinin geçerli olduğu birebir çalışmada netleşir.</p>
+      <ul class="hk-kayit">${m.kayit.map((x, i) => `<li style="animation-delay:${(i * .35).toFixed(2)}s">“${esc(x)}”</li>`).join('')}<li class="soluk" style="animation-delay:${(m.kayit.length * .35).toFixed(2)}s">🔒 … ve derinde başka kayıtlar</li></ul>
+      <p class="hk-not">Buradaki kayıtlar, haritanın yalnızca görünen yüzü. Derindeki kök inançlara birebir çalışmada birlikte ineriz.</p>
       <div class="hk-alt"><button class="hk-btn ana" data-ileri>✦ His yüklemesine geç</button><button class="hk-btn sade" data-geri>← Başka bir cümle seç</button></div>`);
     kutu.querySelector('[data-ileri]').addEventListener('click', hisSor);
     kutu.querySelector('[data-geri]').addEventListener('click', maddeSec);
