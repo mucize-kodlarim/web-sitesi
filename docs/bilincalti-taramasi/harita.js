@@ -532,28 +532,29 @@ window.HARITA = [
     "duygu": [
      "Özgüvensizlik",
      "Yetersizlik",
-     "Kararsızlık",
-     "Hata yapma korkusu",
-     "Değersizlik"
+     "Değersizlik",
+     "Başarısızlık",
+     "Sevgisizlik"
     ],
     "kayit": [
-     "Ne yaparsam yapayım yanlış yaparım.",
-     "Ben yeterince yetenekli değilim.",
-     "Doğru kararı asla veremem.",
-     "Hata yaparsam her şey mahvolur.",
-     "Benim fikrim önemli değil."
+     "Ben doğru seçimler yapamam.",
+     "Benim gücüm hiçbir şeye yetmez.",
+     "Benim düşüncelerim önemli değil.",
+     "Ne yaptıysam başarısız oldum.",
+     "Kimse beni sevmez."
     ],
     "his": [
-     "kendine güvenmenin, kendine inanmanın",
-     "yeteneklerini fark etmenin ve kullanmanın",
-     "doğru kararlar vermenin, kararlarını özgürce vermenin",
-     "nerede, ne zaman, nasıl, ne kadar risk alacağını bilmenin",
-     "hatalardan kolaylıkla öğrenmenin",
-     "kendini ifade etmenin ve güvende olmanın",
-     "değerli, güçlü ve özgüvenli olmanın",
-     "iç sesini duymanın ve Yaradan'ın rehberliğini almanın",
-     "kendinle gurur duymanın",
-     "cesurca adım atmanın"
+     "kendine güvenmenin",
+     "kendini başarılı görmenin",
+     "her daim başarılı olmanın",
+     "özgürce karar verebilmenin, kararlarının arkasında durmanın",
+     "güçlü olmanın, kapasiteli olmanın, dik durmanın",
+     "değerli olmanın, yeterli olmanın",
+     "sevmenin, sevilmenin, desteklenmenin",
+     "yeni başlangıçlar yapabilmenin, ilerlemenin",
+     "sevgiye layık olduğunu bilmenin",
+     "kendine sevgi ve şefkatle yaklaşmanın",
+     "kendini doğru ve güvenilir sevgiye açmanın ve bu sevgiyi kabul etmenin"
     ]
    },
    {
