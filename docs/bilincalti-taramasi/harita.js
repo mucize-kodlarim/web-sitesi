@@ -451,16 +451,20 @@ window.HARITA = [
      "Kıskançlık"
     ],
     "kayit": [
-     "Bende ne eksik?",
-     "Onlar benden daha iyi.",
-     "Onlar kadar iyi değilim.",
-     "Herkesin değerini görürüm, kendiminkini göremem.",
-     "Doğru yapmazsam herkes fark eder."
+     "Başkaları benden daha üstündür.",
+     "Ben takdir edilmeye layık değilim.",
+     "Benim yaptıklarım yeterince iyi değil.",
+     "Hiçbir şeyim tam olmuyor, tamamlanmıyor.",
+     "Başkalarının sahip oldukları benim eksikliğim."
     ],
     "his": [
-     "kendini olduğun gibi kabul etmenin",
-     "kendini takdir etmenin",
-     "kendinle gurur duymanın"
+     "kendi biricikliğini fark etmenin, kendi yolunda ilerlemenin",
+     "takdir edilmenin, kendini takdir etmenin",
+     "yaptıklarınla gurur duymanın, yeterli olmanın",
+     "bütün ve tamam olmanın, işlerini tamamlamanın",
+     "başkalarının güzellikleri için sevinmenin ve kendi bolluğunu görmenin",
+     "değerli olmanın, kendini olduğun gibi kabul etmenin",
+     "Yaradan'ın gözünde eşsiz ve değerli olmanın"
     ]
    },
    {
@@ -468,22 +472,25 @@ window.HARITA = [
     "duygu": [
      "Yetersizlik",
      "Özgüvensizlik",
-     "Reddedilme",
+     "Reddedilme korkusu",
      "Kabul görmeme",
-     "Sahtekâr gibi hissetme"
+     "Değersizlik"
     ],
     "kayit": [
-     "Değerim başkalarının onayına bağlı.",
-     "Sevgiyi hak etmem lazım.",
-     "Beni gerçekten tanısalar değersiz olduğumu görürler.",
-     "Yeterli miyim?",
-     "Eleştiri bana saldırıdır."
+     "Başkaları onaylamazsa yanlış yapmışımdır.",
+     "Kendi kararlarıma güvenemem.",
+     "Herkes beni beğenmezse dışlanırım.",
+     "Olduğum gibi davranırsam kabul görmem.",
+     "Değerimi başkaları belirler."
     ],
     "his": [
-     "kabul edilmenin",
-     "kendini olduğun gibi kabul etmenin",
-     "Yaradan tarafından sevilmenin",
-     "kendine güvenerek yaşamanın"
+     "kendi kararlarını özgürce vermenin",
+     "kendine güvenmenin, kendi iç sesini dinlemenin",
+     "olduğun gibi kabul görmenin, ait olmanın",
+     "kendini olduğun gibi ifade etmenin ve güvende olmanın",
+     "değerinin senin içinde olduğunu bilmenin",
+     "kendini takdir etmenin, kendinle gurur duymanın",
+     "Yaradan tarafından zaten kabul edilmiş ve sevilmiş olmanın"
     ]
    }
   ]
@@ -496,45 +503,50 @@ window.HARITA = [
     "baslik": "İnsanlara güvenemiyorum",
     "duygu": [
      "Güvensizlik",
-     "Şüphecilik",
-     "Hayal kırıklığı",
-     "Ümitsizlik",
-     "Sürekli tetikte olma"
+     "İhanete uğrama korkusu",
+     "İncinme korkusu",
+     "Yalnızlık",
+     "Şüphecilik"
     ],
     "kayit": [
-     "Kimseye güvenilmez.",
-     "Güvenemem.",
-     "Güvenmek tehlikelidir.",
-     "Hiç kimseye güvenmezsem tekrar incinmem.",
-     "Sadece kendime güvenebilirim."
+     "İnsanlar eninde sonunda beni kandırır.",
+     "Güvenirsem ihanete uğrarım.",
+     "Kendimi açarsam incinirim.",
+     "Her şeyi tek başıma halletmeliyim.",
+     "Herkesin bir çıkarı vardır."
     ],
     "his": [
-     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
-     "güvenin Yaradan tanımını bilmenin",
-     "güvenin ne olduğunu ve nasıl hissettirdiğini bilmenin",
-     "güvenilir biri olmanın"
+     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin, güvende olmanın",
+     "dürüst ve güvenilir insanları hayatına almanın",
+     "kalbini açmanın ve korunmanın",
+     "desteklenmenin, yardım almanın",
+     "insanlardaki iyiliği görebilmenin",
+     "Yaradan tarafından korunup kollanmanın"
     ]
    },
    {
     "baslik": "Hep kandırılıyorum, güvenim boşa çıkıyor",
     "duygu": [
-     "İhanete uğramışlık",
      "Kandırılmışlık",
-     "İncinmişlik",
-     "Arkadan bıçaklanma hissi",
-     "İstismar edilme"
+     "İhanete uğrama",
+     "Kendini suçlama",
+     "Değersizlik",
+     "Çaresizlik"
     ],
     "kayit": [
-     "Tekrar güvenirsem aynı şeyleri yaşarım.",
-     "Bunlar hep benim başıma geliyor.",
-     "Başkalarının güvenilmez davranışlarının suçlusu benim.",
-     "Güvenmek istismara açık olmaktır.",
-     "Başkalarına güvenirsem dışlanırım, yalnız kalırım, incinirim."
+     "İyi niyetim hep istismar edilir.",
+     "Sevdiklerim bana ihanet eder.",
+     "Kandırılmam benim hatam.",
+     "Değer görmek için herkese iyilik yapmalıyım.",
+     "Ne yaparsam yapayım insanlar beni kullanır."
     ],
     "his": [
-     "sevgi, affetme ve dürüstlük tarafından korunmanın",
-     "güvenini ne zaman ve nasıl göstereceğini bilmenin",
-     "bir ilişkide güvenmeyi ne zaman ve nasıl bırakabileceğini bilmenin"
+     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
+     "iyi niyetine değer verilmenin",
+     "kendini affetmenin, kendine şefkat göstermenin",
+     "kendi sınırını belirlemenin, kendini korumanın",
+     "dürüst ve güvenilir insanlarla sağlıklı ilişkiler kurmanın",
+     "değerli olmanın, saygı görmenin"
     ]
    },
    {
@@ -542,68 +554,74 @@ window.HARITA = [
     "duygu": [
      "Özgüvensizlik",
      "Yetersizlik",
+     "Kararsızlık",
      "Değersizlik",
-     "Reddedilme",
-     "Kendi duygularından şüphe etme"
+     "Kendinden şüphe etme"
     ],
     "kayit": [
-     "Kendime güvenmiyorum.",
-     "Güvenilir biri değilim.",
-     "Başkaları kadar iyi değilim.",
-     "Başkalarının duygularına ve davranışlarına göre güvenmeliyim.",
-     "Duygularım abartılı, kimse ciddiye almıyor."
+     "Verdiğim kararlar hep yanlış çıkar.",
+     "Ben yeterince yetenekli değilim.",
+     "Bir şeye karar vermek için başkalarına danışmalıyım.",
+     "Benim fikrimin değeri yoktur.",
+     "Hissettiklerim yanıltıcıdır."
     ],
     "his": [
-     "kendine güvenmenin",
-     "güçlü ve zayıf yönlerin konusunda dürüst olmanın",
-     "kendine güvenerek düşüncelerini ifade etmenin",
-     "güvenilir olmanın ve bundan keyif almanın",
-     "kendini olduğun gibi kabul etmenin"
+     "kendine güvenmenin, doğru kararlar vermenin",
+     "yeteneklerini fark etmenin ve kullanmanın",
+     "kendi seçimlerini özgürce yapabilmenin",
+     "fikirlerinin değer görmesinin, kendini ifade etmenin",
+     "iç sesini duymanın ve Yaradan'ın rehberliğini almanın",
+     "cesur ve özgüvenli olmanın"
     ]
    },
    {
     "baslik": "Hayata ve geleceğe güvenemiyorum",
     "duygu": [
-     "Dünyayı güvensiz bir yer olarak hissetme",
+     "Güvensizlik",
+     "Belirsizlik",
      "Çaresizlik",
-     "Karamsarlık",
-     "İlahi zamanlamaya direnç"
+     "Umutsuzluk",
+     "Kontrolü kaybetme korkusu"
     ],
     "kayit": [
-     "Dünya güvenilir bir yer değil.",
-     "Hayat çok zor.",
-     "İnkâr etmek güvenmekten daha güvenlidir."
+     "Hayat bana hep zorluk getirir.",
+     "Geleceğim belirsiz ve tehlikeli.",
+     "Başıma hep kötü şeyler gelir.",
+     "Her şeyi kontrol etmezsem dağılır.",
+     "Bana iyi şeyler olmaz."
     ],
     "his": [
-     "ilahi zamanlamana güvenmenin",
+     "güvende olmanın, Yaradan tarafından korunup kollanmanın",
+     "geleceğe umutla bakmanın",
+     "hayatın akışına teslim olmanın",
      "ilahi zamanlamanla uyum içinde yaşamanın",
-     "Yaradan'ın ilahi akışına güvenerek doğru seçimleri yapmanın",
-     "güvende olmanın",
-     "hayata güvenerek yaşamanın"
+     "güzel ve kolay deneyimler yaşamanın",
+     "değişimin mümkün olduğunu, seçeneklerinin olduğunu bilmenin"
     ]
    },
    {
     "baslik": "Biriyle yakınlaşınca uzaklaşıyorum",
     "duygu": [
      "Savunmasızlık",
-     "Terk edilme",
-     "Kalbinin kırılması",
-     "Yakınlıkta huzursuzluk",
-     "Kullanılma"
+     "Terk edilme korkusu",
+     "İncinme korkusu",
+     "Bağlanma korkusu",
+     "Değersizlik"
     ],
     "kayit": [
-     "Kendimi fazla açarsam eşim beni terk eder.",
-     "Biri beni her yönümle tanırsa beni incitir, onu uzakta tutmak daha iyi.",
-     "Yakınlık kurarsam terk edilirim.",
-     "Âşık olursam acı çekerim.",
-     "Güvenilmek için boyun eğmeliyim."
+     "Gerçek beni tanırlarsa sevmezler.",
+     "Yakınlaşırsam sonunda terk edilirim.",
+     "Kalbimi açarsam kırılır.",
+     "Bağlanırsam kendimi kaybederim.",
+     "Sevilmeye değer biri değilim."
     ],
     "his": [
-     "birine, seni sevmesine izin verecek kadar güvenmenin",
-     "eşini anlamanın",
-     "âşık olduğunda güvende olmanın",
-     "ruh eşinle keyifle ve güvenle yaşamanın",
-     "ilişkilerinde güvenini en iyi ve en yüce şekilde ifade etmenin"
+     "kendin olarak sevilmenin",
+     "kalıcı bağlar kurmanın",
+     "kalbini açmanın ve güvende olmanın",
+     "yakınlığın ve sevginin tadını çıkarmanın",
+     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
+     "kendini olduğun gibi kabul etmenin, değerli olmanın"
     ]
    }
   ]
@@ -617,22 +635,23 @@ window.HARITA = [
     "duygu": [
      "İncinmişlik",
      "Haksızlığa uğrama",
-     "İntikam isteği",
+     "İhanete uğrama",
      "Hayal kırıklığı",
-     "İhanete uğrama"
+     "Önemsenmeme"
     ],
     "kayit": [
-     "Affedersem onun yaptığını onaylamış olurum.",
-     "Affedersem onu aklamış olurum.",
-     "Bazı şeyler affedilmez.",
-     "Önce o özür dilemeli.",
-     "Affedersem yine incinirim."
+     "Affedersem yaptığını onaylamış olurum.",
+     "Bana yapılanı asla unutmamalıyım.",
+     "Bu haksızlığın hesabı sorulmalı.",
+     "Güvendiğim insan bana ihanet etti, bir daha kimseye güvenemem.",
+     "Benim duygularım hiç önemsenmedi."
     ],
     "his": [
-     "affetmenin",
-     "kendini ve başkalarını affetmenin mümkün olduğunu bilmenin",
-     "nasıl affedileceğini bilmenin",
-     "hafif hissetmenin",
+     "affetmenin ve hafiflemenin",
+     "kendini geçmişten özgür bırakmanın",
+     "her şeyin Yaradan'ın adaletiyle yerine oturduğunu bilmenin",
+     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
+     "duygularının önemsenmesinin, değer görmenin",
      "huzurlu olmanın"
     ]
    },
@@ -640,48 +659,50 @@ window.HARITA = [
     "baslik": "Aileme karşı öfke ve kırgınlık taşıyorum",
     "duygu": [
      "Reddedilme",
-     "Küçük düşürülme",
+     "Değer görmeme",
      "İhmal edilme",
-     "Eleştirilme",
-     "Sevgi ve saygı görmeme"
+     "Anlaşılmama",
+     "Sevgi görmeme"
     ],
     "kayit": [
-     "Anneler affedilmez, onlar her zaman haklıdır.",
-     "Ne yapsam terslenirim.",
-     "Ailem beni reddetti.",
-     "Annemi babamı çoktan affettim.",
-     "Bana yeterince sevgi ve saygı gösterilmedi."
+     "Ailem beni hiçbir zaman anlamadı.",
+     "Ne yaparsam yapayım ailemi memnun edemem.",
+     "Ailem beni olduğum gibi sevmedi.",
+     "Bana yapılanlar affedilemez.",
+     "Ailemin yükünü ben taşımalıyım."
     ],
     "his": [
      "anne ve babanı olduğu gibi kabul etmenin",
-     "hoşgörülü olmanın",
-     "anne ve babanın yanında sevinç duymanın",
-     "anne ve babanı düşünürken rahat hissetmenin",
-     "kendi duygunu sakince ifade etmenin"
+     "anlaşılmanın, duygularını sakince ifade etmenin",
+     "anne ve baba sevgisini almanın",
+     "ailenle huzur ve uyum içinde olmanın",
+     "kendi hayatını özgürce yaşamanın",
+     "aileni affetmenin ve hafiflemenin"
     ]
    },
    {
     "baslik": "Çabuk sinirleniyorum, öfkemi kontrol edemiyorum",
     "duygu": [
-     "Hayal kırıklığı",
      "Anlaşılmama",
-     "Yetersizlik",
-     "Sınırların ihlal edilmesi",
+     "Sınırlarının çiğnenmesi",
+     "Değer görmeme",
+     "Hayal kırıklığı",
      "Engellenmişlik"
     ],
     "kayit": [
-     "Öfke beni korur.",
-     "Duygularım kontrol edilemez, değişemem.",
-     "Öfkemi dışarı vurmazsam patlarım.",
-     "Öfkemi göstermezsem zayıf görünürüm, beni ezerler.",
-     "Öfkem olmasa kim olurum?"
+     "Sesimi yükseltmezsem kimse beni duymaz.",
+     "Öfkem beni korur.",
+     "Herkes sınırlarımı çiğniyor.",
+     "İşler benim istediğim gibi gitmeli.",
+     "Öfkemi göstermezsem ezilirim."
     ],
     "his": [
-     "hoşgörülü olmanın",
-     "ihtiyaçlarını açıkça ifade etmenin",
-     "dengede yaşamanın",
-     "hoşgörülü olurken sınırlarını korumanın",
-     "sakin olmanın"
+     "dinlenmenin, anlaşılmanın",
+     "kendini sakince ve özgürce ifade etmenin",
+     "kendi sınırını belirlemenin",
+     "dengede, huzurlu ve sakin olmanın",
+     "hayatın akışına uyum sağlamanın",
+     "nerede, ne zaman, nasıl, ne kadar sabredeceğini bilmenin"
     ]
    },
    {
@@ -689,46 +710,49 @@ window.HARITA = [
     "duygu": [
      "Kin",
      "Pişmanlık",
-     "İhanete uğrama",
      "Kurban hissi",
-     "Terk edilme"
+     "İncinmişlik",
+     "Haksızlığa uğrama"
     ],
     "kayit": [
-     "Affetmek unutmak demektir.",
-     "Kırgınlığım beni daha kötüsünden korur.",
-     "Bu ilk değil, geçmişte de yapmıştı.",
-     "Öfkemi bırakırsam yaşadıklarım önemsiz olur."
+     "Bırakırsam yaşadıklarım önemsiz olur.",
+     "Geçmişi bırakırsam yine incinirim.",
+     "Bana yapılanlar yüzünden hayatım değişti.",
+     "Keşke farklı olsaydı, artık çok geç.",
+     "Bu acıyı taşımak zorundayım."
     ],
     "his": [
      "şimdiki zamanda yaşamanın",
-     "yaşadıklarını kabul etmenin",
+     "yaşadıklarını kabul etmenin ve onlardan öğrenmenin",
+     "geçmişi geçmişte bırakmanın, hafiflemenin",
      "hayatta ilerlemenin",
-     "güzel ve kolay deneyimler yaşamanın",
-     "yaşadıkların için teşekkür etmenin"
+     "affetmenin ve affedilmenin",
+     "güzel ve kolay deneyimler yaşamanın"
     ]
    },
    {
     "baslik": "Kendime kızgınım, kendimi affedemiyorum",
     "duygu": [
      "Pişmanlık",
-     "Suçluluk",
+     "Kendini suçlama",
      "Utanç",
      "Değersizlik",
      "Yetersizlik"
     ],
     "kayit": [
-     "Daha iyisini bilmeliydim, daha iyisini yapmalıydım.",
-     "Bunun için kendimi asla affetmeyeceğim.",
-     "Bir daha asla böyle bir duruma düşmeyeceğim.",
-     "Geçmişteki hatam hep önüme gelecek.",
-     "Kendimi cezalandırmalıyım."
+     "Yaptığım hata affedilemez.",
+     "Daha iyisini bilmeliydim.",
+     "Kendimi cezalandırmalıyım.",
+     "Hata yapan biri değersizdir.",
+     "Asla yeterince iyi olamam."
     ],
     "his": [
      "kendini affetmenin",
+     "kendine şefkat ve anlayış göstermenin",
+     "hatalardan öğrenmenin",
      "kendini olduğun gibi kabul etmenin",
-     "affedilmiş olmanın",
-     "sevilebilir olmanın",
-     "kendine şefkat göstermenin"
+     "değerli ve sevilebilir olmanın",
+     "kendinle barışık olmanın"
     ]
    }
   ]
@@ -747,42 +771,44 @@ window.HARITA = [
      "Cezayı hak etme"
     ],
     "kayit": [
-     "Hiç yapmamalıydım.",
-     "Daha iyisini bilmeliydim, daha iyisini yapmalıydım.",
-     "Kendimi affedemiyorum.",
-     "Özümde kötü bir insanım.",
-     "Bazı şeyler affedilemez."
+     "Yaptığımı asla telafi edemem.",
+     "Hata yaptığım için cezalandırılmayı hak ediyorum.",
+     "Ben kötü bir insanım.",
+     "Geçmişi değiştiremediğim için mutlu olamam.",
+     "Herkes yaptığımı biliyor ve beni yargılıyor."
     ],
     "his": [
-     "kendini affetmenin",
+     "kendini affetmenin, affedilmiş olmanın",
      "geçmişle barışık olmanın",
-     "geçmişi geçmişte bırakmanın",
-     "hatalardan öğrenmenin",
-     "kendine şefkat göstermenin"
+     "hatalardan öğrenmenin ve ilerlemenin",
+     "kendine şefkat göstermenin",
+     "mutlu olmayı hak etmenin",
+     "değerli olmanın, iyi bir insan olduğunu bilmenin"
     ]
    },
    {
     "baslik": "Hayır dediğimde suçlu hissediyorum",
     "duygu": [
-     "Bencil olma hissi",
-     "Birini kırmış olma hissi",
-     "Onaylanma ihtiyacı",
-     "Duygusal yorgunluk",
-     "Değersizlik"
+     "Bencillik hissi",
+     "Birini kırma korkusu",
+     "Sevilmeme korkusu",
+     "Değersizlik",
+     "Sınır koyamama"
     ],
     "kayit": [
      "Hayır demek bencilliktir.",
+     "Hayır dersem insanları kırarım.",
      "Hayır dersem sevilmem.",
-     "Değerim ancak işe yaradığım kadar.",
-     "Hep ben fedakârlık yapıyorum.",
-     "Hayır dersem kötü bir insan olurum."
+     "Değerim başkalarına yararlı olduğum kadardır.",
+     "Herkesin isteğini yerine getirmek zorundayım."
     ],
     "his": [
-     "sınır koyabilmenin",
+     "nerede, ne zaman, nasıl hayır diyeceğini bilmenin",
+     "kendi sınırını belirlemenin",
      "kendi ihtiyaçlarını önemsemenin",
+     "hayır dediğinde de sevilmenin",
      "kendine sadık kalmanın",
-     "nazikçe hayır diyebilmenin",
-     "sevilmeye layık olmanın"
+     "değerli olmanın, saygı görmenin"
     ]
    },
    {
@@ -790,47 +816,49 @@ window.HARITA = [
     "duygu": [
      "Bencillik hissi",
      "Tembellik hissi",
-     "Şımarıklık hissi",
+     "Değersizlik",
      "Başkalarını hayal kırıklığına uğratma",
-     "Değersizlik"
+     "Hak etmeme"
     ],
     "kayit": [
-     "Boş duruyorum.",
+     "Dinlenmek tembelliktir.",
      "Kendime vakit ayırmak bencilliktir.",
-     "Dinlenirsem tembel biri olurum.",
-     "Sürekli faydalı olmalıyım.",
-     "Kendime vakit ayırırsam başkaları önüme geçer."
+     "Sürekli bir şey üretmeliyim.",
+     "Önce herkesin işi bitmeli.",
+     "Kendime iyi davranmayı hak etmiyorum."
     ],
     "his": [
      "kendine zaman ayırmanın",
-     "dinlenmenin",
-     "kendine alan açmanın",
-     "hayatın basit zevklerinden keyif almanın",
-     "kendine iyilik yapmanın"
+     "dinlenmenin, keyif almanın",
+     "kendine iyi davranmanın",
+     "kendine değer vermenin",
+     "dengede yaşamanın",
+     "hayatın tadını çıkarmanın"
     ]
    },
    {
     "baslik": "Mutlu olunca suçlu hissediyorum",
     "duygu": [
      "Hak etmeme",
-     "Cezalandırılmayı bekleme",
-     "Bedel ödeme hissi",
-     "Mutluluğunu saklama ihtiyacı",
-     "Kıskanılma"
+     "Cezalandırılma korkusu",
+     "Bedel ödeme korkusu",
+     "Değersizlik",
+     "Kıskanılma korkusu"
     ],
     "kayit": [
-     "Mutlu olmayı hak edecek bir şey yapmadım.",
+     "Mutlu olmayı hak etmiyorum.",
      "Mutluluğun ardından kötü bir şey gelir.",
-     "Mutlu olursam bedelini öderim.",
      "Çok gülen çok ağlar.",
-     "Nazar değer."
+     "Başkaları üzgünken ben mutlu olamam.",
+     "Mutluluğumu saklamalıyım, nazar değer."
     ],
     "his": [
      "mutlu olmayı hak etmenin",
-     "mutluluğu keyifle yaşamanın",
-     "mutluluğu paylaşmanın",
-     "mutlu olmaya layık ve izinli olmanın",
-     "yaşamın içinde olmaya hakkın olduğunu bilmenin"
+     "mutluluğu keyifle yaşamanın ve paylaşmanın",
+     "neşeyle, huzurla yaşamanın",
+     "güvende olmanın",
+     "Yaradan'ın verdiği güzellikleri kabul etmenin",
+     "mutlu olmaya layık ve izinli olmanın"
     ]
    },
    {
@@ -838,21 +866,24 @@ window.HARITA = [
     "duygu": [
      "Yetersizlik",
      "Değersizlik",
-     "Vicdan rahatsızlığı",
+     "Sorumluluk yükü",
      "Hayal kırıklığına uğratma",
-     "Aile kurallarını çiğneme hissi"
+     "Vicdan rahatsızlığı"
     ],
     "kayit": [
-     "Benim yüzümden mi acaba?",
-     "Yeterli bir anne miyim?",
-     "Suç bende."
+     "Ailemin mutluluğu benim sorumluluğum.",
+     "Ne yaparsam yapayım ailem için yeterli olamam.",
+     "Ailemi üzersem kötü bir evladım.",
+     "Kendi hayatımı yaşarsam ailemi yalnız bırakırım.",
+     "Ailemin beklentilerini karşılamak zorundayım."
     ],
     "his": [
-     "aileni bağışlamanın",
-     "anne babanı affetmenin",
-     "kabul etmenin",
-     "yeterince iyi bir anne olmanın",
-     "telafi edebilmenin"
+     "kendi hayatını özgürce yaşamanın",
+     "yeterli olmanın, değerli olmanın",
+     "aileni sevgiyle Yaradan'a emanet etmenin",
+     "ailenle huzur ve uyum içinde olmanın",
+     "kendine şefkat göstermenin, kendini affetmenin",
+     "sorumluluklarını dengeyle taşımanın"
     ]
    }
   ]
@@ -868,115 +899,122 @@ window.HARITA = [
      "Değersizlik",
      "Yetersizlik",
      "Dışlanma",
-     "İstenmemek"
+     "İstenmeme"
     ],
     "kayit": [
-     "Sevilmeye layık değilim.",
-     "Değersizim.",
-     "İşe yaramazım.",
-     "İnsanlar beni sevmiyor.",
-     "Ait değilim."
+     "Kendimi gösterirsem reddedilirim.",
+     "İnsanlar beni sevmez.",
+     "Ait olduğum bir yer yok.",
+     "İstenmek için kusursuz olmalıyım.",
+     "Reddedilmek değersiz olduğumu gösterir."
     ],
     "his": [
-     "sevilmenin",
-     "kabul edilmenin",
-     "takdir edilmenin",
+     "sevilmenin, kabul görmenin",
+     "ait olmanın",
+     "kendini olduğun gibi göstermenin ve güvende olmanın",
+     "istenmenin, değer görmenin",
      "kendini olduğun gibi kabul etmenin",
-     "Yaradan tarafından değer verilmenin"
+     "değerli olmanın"
     ]
    },
    {
     "baslik": "Yalnız kalmaktan korkuyorum",
     "duygu": [
      "Terk edilme",
-     "Reddedilme",
      "Sevilmeme",
-     "Kalbinin kırılması",
-     "Kimsesizlik (\"benim için kimse yok\")"
+     "Kimsesizlik",
+     "Güvensizlik",
+     "Değersizlik"
     ],
     "kayit": [
-     "Sevdiğim insanlar beni hep terk eder.",
-     "Kendimi fazla açarsam eşim beni terk eder.",
-     "Yakınlık kurarsam terk edilirim.",
-     "Kırgın olduğumu söylersem beni terk ederler.",
-     "Benim için kimse yok."
+     "Yalnız kalırsam ayakta kalamam.",
+     "Benim için kimse yok.",
+     "Mutlu olmak için birine ihtiyacım var.",
+     "Yalnız kalmam sevilmediğimin kanıtıdır.",
+     "Kimseye yük olmamak için sessiz kalmalıyım."
     ],
     "his": [
-     "sevgi dolu bir hayatı paylaşmanın",
+     "kendi ayaklarının üzerinde güvende durmanın",
+     "sevgi dolu insanlarla çevrili olmanın",
      "Yaradan'dan ve başkalarından destek almanın",
-     "başkalarından sevgiyi almanın",
-     "her gittiğin yerde sevgiyi görmenin",
-     "Yaradan tarafından sevilmenin"
+     "kendinle huzurlu olmanın",
+     "sevilmenin, değer görmenin",
+     "sevgiyi her yerde görmenin"
     ]
    },
    {
     "baslik": "Kaybetmekten korkuyorum",
     "duygu": [
      "Güvensizlik",
-     "Kontrolü elde tutma ihtiyacı",
+     "Kontrolü kaybetme korkusu",
      "Terk edilme",
-     "Aldatılma",
-     "Kıtlık (yetmeme)"
+     "Kıtlık hissi",
+     "Çaresizlik"
     ],
     "kayit": [
+     "Sahip olduğum her şeyi her an kaybedebilirim.",
      "Güvende olmak için her şeyi kontrol etmeliyim.",
-     "Paramı hep kaybederim.",
-     "Parayı elimde tutamam.",
-     "Zengin olunca eşim beni aldatır.",
-     "Sahip olduğum her şeyi her an kaybedebilirim."
+     "Sevdiklerimi kaybedersem yaşayamam.",
+     "İyi şeyler benim hayatımda uzun sürmez.",
+     "Kaybetmemek için sıkı tutmalıyım."
     ],
     "his": [
      "Yaradan'ın tanımıyla her an güvende olmanın",
+     "hayatın akışına teslim olmanın",
      "anı yaşamanın",
-     "kendine ve Yaradan'a güvenerek yaşamanın",
+     "bolluk içinde yaşamanın ve paylaşmanın",
      "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
-     "hayatın bolluğunu şükürle içine almanın"
+     "sevdiklerini Yaradan'a emanet etmenin, huzurlu olmanın"
     ]
    },
    {
     "baslik": "Değişimden, yeni bir adım atmaktan korkuyorum",
     "duygu": [
      "Belirsizlik",
-     "Güvenli alandan ayrılamamak",
      "Cesaretsizlik",
-     "Farklı olmanın ürkütmesi",
-     "Sosyal çevreden kopma"
+     "Güvensizlik",
+     "Yetersizlik",
+     "Başarısızlık korkusu"
     ],
     "kayit": [
-     "Burada kaldığım sürece risk almam gerekmez.",
-     "Hiçbir şey yapmazsam hata da yapmam.",
-     "Ya hata yaparsam, ya öğrenemezsem."
+     "Bildiğim yerde kalmak daha güvenli.",
+     "Yeni bir şeye başlarsam başaramam.",
+     "Değişim hep kötü sonuçlar getirir.",
+     "Hata yaparsam her şeyi kaybederim.",
+     "Yeni şeyler yapabilecek kadar güçlü değilim."
     ],
     "his": [
-     "cesur olmanın",
-     "cesurca adım atmanın",
+     "cesur olmanın, cesurca adım atmanın",
      "değişime kolaylıkla uyum sağlamanın",
-     "hayat amacınla uyumlu yaşamanın",
-     "anı yaşamanın"
+     "değişimin mümkün ve güvenli olduğunu bilmenin",
+     "yeni başlangıçları neşeyle karşılamanın",
+     "yeteneklerine ve gücüne inanmanın",
+     "hayat amacınla uyumlu yaşamanın"
     ]
    },
    {
     "baslik": "Hata yapmaktan, eleştirilmekten korkuyorum",
     "duygu": [
      "Değersizlik",
-     "Azarlanma",
      "Utanç",
-     "Kınanma",
+     "Yetersizlik",
+     "Yargılanma korkusu",
      "Aşağılanma"
     ],
     "kayit": [
      "Hata yaparsam değerimi kaybederim.",
-     "İnsanlar beni eleştirirse kötü bir insan olduğum ortaya çıkar.",
-     "Herkes beni onaylamalı.",
-     "Ben kınanacak biriyim.",
-     "Ben kötüyüm."
+     "Her şeyi kusursuz yapmalıyım.",
+     "Eleştirilirsem herkes ne kadar yetersiz olduğumu görür.",
+     "İnsanlar beni sürekli yargılar.",
+     "Hata yapan biri ayıplanır."
     ],
     "his": [
      "kendini olduğun gibi kabul etmenin",
-     "takdir edilmenin",
-     "kabul edilmenin",
-     "saygı duyulmanın",
-     "dik durabilmenin"
+     "hatalardan kolaylıkla öğrenmenin",
+     "takdir edilmenin, saygı görmenin",
+     "nerede, ne zaman, nasıl, ne kadar mükemmeliyetçi olacağını bilmenin",
+     "dik durabilmenin, kendini özgürce ifade etmenin",
+     "değerli olmanın"
     ]
    }
   ]
