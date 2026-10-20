@@ -528,53 +528,32 @@ window.HARITA = [
     ]
    },
    {
-    "baslik": "Hep kandırılıyorum, güvenim boşa çıkıyor",
-    "duygu": [
-     "Kandırılmışlık",
-     "İhanete uğrama",
-     "Kendini suçlama",
-     "Değersizlik",
-     "Çaresizlik"
-    ],
-    "kayit": [
-     "İyi niyetim hep istismar edilir.",
-     "Sevdiklerim bana ihanet eder.",
-     "Kandırılmam benim hatam.",
-     "Değer görmek için herkese iyilik yapmalıyım.",
-     "Ne yaparsam yapayım insanlar beni kullanır."
-    ],
-    "his": [
-     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
-     "iyi niyetine değer verilmenin",
-     "kendini affetmenin, kendine şefkat göstermenin",
-     "kendi sınırını belirlemenin, kendini korumanın",
-     "dürüst ve güvenilir insanlarla sağlıklı ilişkiler kurmanın",
-     "değerli olmanın, saygı görmenin"
-    ]
-   },
-   {
     "baslik": "Kendime güvenemiyorum",
     "duygu": [
      "Özgüvensizlik",
      "Yetersizlik",
      "Kararsızlık",
-     "Değersizlik",
-     "Kendinden şüphe etme"
+     "Hata yapma korkusu",
+     "Değersizlik"
     ],
     "kayit": [
-     "Verdiğim kararlar hep yanlış çıkar.",
+     "Ne yaparsam yapayım yanlış yaparım.",
      "Ben yeterince yetenekli değilim.",
-     "Bir şeye karar vermek için başkalarına danışmalıyım.",
-     "Benim fikrimin değeri yoktur.",
-     "Hissettiklerim yanıltıcıdır."
+     "Doğru kararı asla veremem.",
+     "Hata yaparsam her şey mahvolur.",
+     "Benim fikrim önemli değil."
     ],
     "his": [
-     "kendine güvenmenin, doğru kararlar vermenin",
+     "kendine güvenmenin, kendine inanmanın",
      "yeteneklerini fark etmenin ve kullanmanın",
-     "kendi seçimlerini özgürce yapabilmenin",
-     "fikirlerinin değer görmesinin, kendini ifade etmenin",
+     "doğru kararlar vermenin, kararlarını özgürce vermenin",
+     "nerede, ne zaman, nasıl, ne kadar risk alacağını bilmenin",
+     "hatalardan kolaylıkla öğrenmenin",
+     "kendini ifade etmenin ve güvende olmanın",
+     "değerli, güçlü ve özgüvenli olmanın",
      "iç sesini duymanın ve Yaradan'ın rehberliğini almanın",
-     "cesur ve özgüvenli olmanın"
+     "kendinle gurur duymanın",
+     "cesurca adım atmanın"
     ]
    },
    {
@@ -600,31 +579,6 @@ window.HARITA = [
      "ilahi zamanlamanla uyum içinde yaşamanın",
      "güzel ve kolay deneyimler yaşamanın",
      "değişimin mümkün olduğunu, seçeneklerinin olduğunu bilmenin"
-    ]
-   },
-   {
-    "baslik": "Biriyle yakınlaşınca uzaklaşıyorum",
-    "duygu": [
-     "Savunmasızlık",
-     "Terk edilme korkusu",
-     "İncinme korkusu",
-     "Bağlanma korkusu",
-     "Değersizlik"
-    ],
-    "kayit": [
-     "Gerçek beni tanırlarsa sevmezler.",
-     "Yakınlaşırsam sonunda terk edilirim.",
-     "Kalbimi açarsam kırılır.",
-     "Bağlanırsam kendimi kaybederim.",
-     "Sevilmeye değer biri değilim."
-    ],
-    "his": [
-     "kendin olarak sevilmenin",
-     "kalıcı bağlar kurmanın",
-     "kalbini açmanın ve güvende olmanın",
-     "yakınlığın ve sevginin tadını çıkarmanın",
-     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
-     "kendini olduğun gibi kabul etmenin, değerli olmanın"
     ]
    }
   ]
