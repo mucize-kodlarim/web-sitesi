@@ -385,27 +385,31 @@ window.HARITA = [
     ]
    },
    {
-    "baslik": "Kendimi sevemiyorum",
+    "baslik": "Kendimi sevmiyorum",
     "duygu": [
      "Kendini beğenmeme",
-     "Kusurlu hissetme",
+     "Kendini suçlama",
      "Utanç",
-     "Suçluluk",
+     "Değersizlik",
      "Sevgisizlik"
     ],
     "kayit": [
-     "Kendimden nefret ediyorum.",
-     "Sevilmeye layık değilim.",
-     "Sevgiyi kazanmam lazım.",
-     "Kendini sevmek bencilliktir.",
-     "Koşulsuz sevgiyi hak etmiyorum."
+     "Olduğum gibi kabul edilmem.",
+     "Her şey benim hatam.",
+     "Saklanmam gerek.",
+     "Kendim için bir şey istemek bencilliktir.",
+     "Kimse gerçekten beni sevmiyor."
     ],
     "his": [
-     "kendini sevmenin",
-     "sevilmenin",
-     "Yaradan tarafından sevilmenin",
-     "koşulsuz sevginin",
-     "kendini olduğun gibi kabul etmenin"
+     "kendini sevmenin, sevilmenin, Yaradan tarafından da sevilmenin",
+     "kendini olduğun gibi kabul etmenin",
+     "kendine anlayış ve şefkat göstermenin",
+     "kendini affetmenin",
+     "kendin olarak görünmenin, kendini ifade etmenin ve güvende olmanın",
+     "özgür olmanın",
+     "kendini beğenmenin",
+     "kendini fark etmenin ve değerli olmanın",
+     "ilgi görmenin, sevgi görmenin, görünmenin ve güvende olmanın"
     ]
    },
    {
