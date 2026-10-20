@@ -467,29 +467,28 @@ window.HARITA = [
     ]
    },
    {
-    "baslik": "Onay görmeden kendimi iyi hissedemiyorum",
+    "baslik": "Başkalarının ne düşündüğünü önemsiyorum",
     "duygu": [
+     "Onaylanma ihtiyacı",
+     "Beğenilmeme korkusu",
      "Yetersizlik",
-     "Özgüvensizlik",
-     "Reddedilme korkusu",
-     "Kabul görmeme",
-     "Değersizlik"
+     "Değersizlik",
+     "Özgüvensizlik"
     ],
     "kayit": [
-     "Başkaları onaylamazsa yanlış yapmışımdır.",
-     "Kendi kararlarıma güvenemem.",
-     "Herkes beni beğenmezse dışlanırım.",
-     "Olduğum gibi davranırsam kabul görmem.",
-     "Değerimi başkaları belirler."
+     "Onaylanmazsam yanlış yaparım.",
+     "Beğenilmem için başkalarına ihtiyaç duyarım.",
+     "Ben başarılı değilim.",
+     "Değerli olmam için insanların dediğini yapmalıyım.",
+     "Kendimi doğru ifade edemem, eleştirilirim."
     ],
     "his": [
-     "kendi kararlarını özgürce vermenin",
-     "kendine güvenmenin, kendi iç sesini dinlemenin",
-     "olduğun gibi kabul görmenin, ait olmanın",
-     "kendini olduğun gibi ifade etmenin ve güvende olmanın",
-     "değerinin senin içinde olduğunu bilmenin",
+     "kendi kararlarına güvenmenin, kararlarını özgürce vermenin",
+     "kendini ifade etmenin ve güvende olmanın",
+     "değerli, özgüvenli, kararlı olmanın",
      "kendini takdir etmenin, kendinle gurur duymanın",
-     "Yaradan tarafından zaten kabul edilmiş ve sevilmiş olmanın"
+     "saygın olmanın, görünür olmanın",
+     "ilgi görmenin ve sevilmenin"
     ]
    }
   ]
