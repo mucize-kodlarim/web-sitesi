@@ -416,24 +416,29 @@ window.HARITA = [
     "baslik": "Hep başkalarını kendimden önde tutuyorum",
     "duygu": [
      "Değersizlik",
-     "Suçluluk",
-     "Reddedilme",
-     "Dışlanma",
-     "Sevilmeme"
+     "Reddedilme korkusu",
+     "Sevilmeme korkusu",
+     "Dışlanma korkusu",
+     "Sınır koyamama"
     ],
     "kayit": [
-     "Hayır dersem sevilmem.",
-     "Değer görmek için çok vermeliyim.",
-     "Benim ihtiyaçlarım önemsiz.",
-     "Önce onlar mutlu olsun.",
-     "Kendime zaman ayırmak bencilliktir."
+     "Benim ihtiyaçlarım önemli değil.",
+     "Kabul görmek için herkesi memnun etmeliyim.",
+     "Sevilmek için kendimi feda etmeliyim.",
+     "Herkese uyum sağlamak zorundayım.",
+     "Hayır dersem yalnız kalırım."
     ],
     "his": [
-     "sevgiyi almanın",
-     "kendine sevgi ve ilgi vermenin",
-     "sevgide dengede olmanın",
-     "kendini hayatının merkezine koymanın",
-     "kendine sadık kalmanın"
+     "değerli olmanın, önemli olmanın",
+     "kendi ihtiyaçlarına öncelik vermenin",
+     "kendini olduğun hâlinle kabul etmenin",
+     "özgürce yaşayabilmenin",
+     "sevmenin, sevilmenin, desteklenmenin",
+     "kendi sınırını belirlemenin",
+     "uyum ve ahenk içinde yaşamanın",
+     "saygın olmanın, saygıyı hak etmenin",
+     "sağlıklı ilişkiler kurmanın",
+     "güvenmenin ve güvende olmanın"
     ]
    },
    {
