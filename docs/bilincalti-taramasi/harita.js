@@ -564,22 +564,24 @@ window.HARITA = [
      "Belirsizlik",
      "Çaresizlik",
      "Umutsuzluk",
-     "Kontrolü kaybetme korkusu"
+     "Güçsüzlük"
     ],
     "kayit": [
-     "Hayat bana hep zorluk getirir.",
-     "Geleceğim belirsiz ve tehlikeli.",
-     "Başıma hep kötü şeyler gelir.",
-     "Her şeyi kontrol etmezsem dağılır.",
-     "Bana iyi şeyler olmaz."
+     "Hayatın bana ne getireceği belli değil.",
+     "Bilmediğim bir durumla baş edemem.",
+     "Hayatım alt üst oldu, bunu asla değiştiremem.",
+     "Benim için güzel şeyler mümkün değil.",
+     "Hayatın zorluklarıyla baş edemem."
     ],
     "his": [
-     "güvende olmanın, Yaradan tarafından korunup kollanmanın",
-     "geleceğe umutla bakmanın",
-     "hayatın akışına teslim olmanın",
-     "ilahi zamanlamanla uyum içinde yaşamanın",
-     "güzel ve kolay deneyimler yaşamanın",
-     "değişimin mümkün olduğunu, seçeneklerinin olduğunu bilmenin"
+     "hayatı pozitiflikle, neşeyle, eğlenceyle yaşamanın",
+     "güzel sürprizler ve mucizeler yaşamanın",
+     "güvenli bir hayatın mümkün olduğunu bilmenin",
+     "güçlü olmanın, becerikli olmanın, yaratıcı olmanın",
+     "başarılı ve bilgili olmanın",
+     "düzenli, özenli, sevgi dolu bir hayat yaşamanın",
+     "hayatında korunmanın, kollanmanın, desteklenmenin",
+     "sevgi görmenin, ilgi görmenin"
     ]
    }
   ]
