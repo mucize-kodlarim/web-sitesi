@@ -438,7 +438,7 @@ window.HARITA = [
      "uyum ve ahenk içinde yaşamanın",
      "saygın olmanın, saygıyı hak etmenin",
      "sağlıklı ilişkiler kurmanın",
-     "güvenmenin ve güvende olmanın"
+     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin, güvende olmanın"
     ]
    },
    {
@@ -509,7 +509,7 @@ window.HARITA = [
      "Sadece kendime güvenebilirim."
     ],
     "his": [
-     "kime, ne zaman, ne kadar güveneceğini bilmenin",
+     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
      "güvenin Yaradan tanımını bilmenin",
      "güvenin ne olduğunu ve nasıl hissettirdiğini bilmenin",
      "güvenilir biri olmanın"
@@ -929,7 +929,7 @@ window.HARITA = [
      "Yaradan'ın tanımıyla her an güvende olmanın",
      "anı yaşamanın",
      "kendine ve Yaradan'a güvenerek yaşamanın",
-     "kime ve ne zaman güveneceğini bilmenin",
+     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
      "hayatın bolluğunu şükürle içine almanın"
     ]
    },
