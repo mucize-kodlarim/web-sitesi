@@ -458,13 +458,12 @@ window.HARITA = [
      "Başkalarının sahip oldukları benim eksikliğim."
     ],
     "his": [
-     "kendi biricikliğini fark etmenin, kendi yolunda ilerlemenin",
+     "kendi değerini fark etmenin, kendi gücünü görmenin, kendi yolunda ilerlemenin",
      "takdir edilmenin, kendini takdir etmenin",
-     "yaptıklarınla gurur duymanın, yeterli olmanın",
-     "bütün ve tamam olmanın, işlerini tamamlamanın",
-     "başkalarının güzellikleri için sevinmenin ve kendi bolluğunu görmenin",
-     "değerli olmanın, kendini olduğun gibi kabul etmenin",
-     "Yaradan'ın gözünde eşsiz ve değerli olmanın"
+     "kendi yeteneklerine güvenmenin, yeterli olmanın, tamamlanmanın",
+     "yıldız gibi parlamanın",
+     "kendi hayatındaki güzellikleri fark etmenin ve kendi bolluğunu görmenin",
+     "değerli olmanın, kendini olduğun gibi kabul etmenin"
     ]
    },
    {
