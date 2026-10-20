@@ -500,26 +500,31 @@ window.HARITA = [
    {
     "baslik": "İnsanlara güvenemiyorum",
     "duygu": [
-     "Güvensizlik",
-     "İhanete uğrama korkusu",
-     "İncinme korkusu",
+     "Terk edilme korkusu",
+     "Aldatılma korkusu",
+     "Sevilmeme",
      "Yalnızlık",
-     "Şüphecilik"
+     "Kontrolcülük"
     ],
     "kayit": [
-     "İnsanlar eninde sonunda beni kandırır.",
+     "Eninde sonunda mutlaka terk edilirim.",
      "Güvenirsem ihanete uğrarım.",
-     "Kendimi açarsam incinirim.",
+     "Kimse beni gerçekten sevmez.",
      "Her şeyi tek başıma halletmeliyim.",
-     "Herkesin bir çıkarı vardır."
+     "Kontrolü bırakırsam kötü bir şey olur."
     ],
     "his": [
-     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin, güvende olmanın",
-     "dürüst ve güvenilir insanları hayatına almanın",
-     "kalbini açmanın ve korunmanın",
-     "desteklenmenin, yardım almanın",
-     "insanlardaki iyiliği görebilmenin",
-     "Yaradan tarafından korunup kollanmanın"
+     "nerede, ne zaman, nasıl, ne kadar, kime güveneceğini bilmenin",
+     "güvenilir insanlarla güvenilmez insanları ayırt etmenin",
+     "dengede olmanın",
+     "sınırlarını korumanın",
+     "sakin olmanın, özgür olmanın",
+     "kendini korumanın",
+     "sevdiklerin tarafından da korunmanın, kollanmanın",
+     "sevilmenin, desteklenmenin",
+     "kendini sevmenin, sevildiğini hissetmenin",
+     "nerede, ne zaman, nasıl, ne kadar, kime karşı kontrolcü olabileceğini bilmenin, kontrol edebilmenin",
+     "rahat ve özgür olabilmenin"
     ]
    },
    {
