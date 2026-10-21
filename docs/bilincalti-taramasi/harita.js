@@ -693,6 +693,32 @@ window.HARITA = [
      "hayata umutla bakmanın",
      "hayatın sana sunduklarını fark etmenin ve şükretmenin"
     ]
+   },
+   {
+    "baslik": "Bana yapılanı unutamıyorum, affedemiyorum",
+    "duygu": [
+     "Kin",
+     "İncinmişlik",
+     "İhanete uğrama",
+     "İntikam isteği",
+     "Hayal kırıklığı"
+    ],
+    "kayit": [
+     "Affedersem yaptığını onaylamış olurum.",
+     "Bazı şeyler asla affedilmez.",
+     "Önce o benden özür dilemeli.",
+     "Affedersem yine incinirim.",
+     "Bana yapılanı unutursam yaşadıklarım önemsiz olur."
+    ],
+    "his": [
+     "affetmenin, affederek hafiflemenin",
+     "kendini geçmişin yükünden özgür bırakmanın",
+     "yaşadıklarından öğrenmenin ve güçlenmenin",
+     "kalbini sevgiyle açmanın ve güvende olmanın",
+     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
+     "iç huzura, dinginliğe ve dengeye sahip olmanın",
+     "Yaradan'ın sevgisiyle sarılıp sarmalanmanın"
+    ]
    }
   ]
  },
