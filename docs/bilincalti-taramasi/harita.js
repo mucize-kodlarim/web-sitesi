@@ -594,26 +594,25 @@ window.HARITA = [
     "baslik": "İnsanlara kızgınım",
     "duygu": [
      "Değer görmeme",
-     "Anlaşılmama",
+     "Dinlenilmeme",
      "Kullanılma",
-     "İncinmişlik",
+     "Sevilmeme",
      "Hayal kırıklığı"
     ],
     "kayit": [
-     "İnsanlar bana hiç değer vermiyor.",
-     "Kimse beni gerçekten anlamıyor.",
-     "İyi niyetimi hep kullanıyorlar.",
-     "İnsanlar sonunda beni mutlaka incitir.",
-     "Kimseden beklediğimi göremem."
+     "Benim yaptıklarımın hiçbir önemi yok.",
+     "Kendimi anlatamıyorum.",
+     "İnsanların ihtiyaçlarını karşılamak zorundayım.",
+     "Sevilmek için başkalarını memnun etmeliyim.",
+     "İnsanlardan beklediğim karşılığı alamam."
     ],
     "his": [
-     "değer görmenin, saygı görmenin",
-     "anlaşılmanın, dinlenmenin",
-     "iyi niyetine değer verilmenin",
-     "kendi sınırını belirlemenin ve korumanın",
-     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
-     "insanlarla sevgi, saygı ve uyum içinde olmanın",
-     "affetmenin, hafiflemenin, huzurlu olmanın"
+     "değerli olmanın, kendini sevmenin, sevilmenin, görülmenin",
+     "kendini ifade etmenin, anlaşılmanın, duyulmanın",
+     "olduğun hâlinle kabul görmenin, önemsenmenin",
+     "özgür iradenle hareket etmenin",
+     "insanları sevmenin ve insanlar tarafından sevilmenin, desteklenmenin, korunmanın ve kollanmanın",
+     "huzur içinde, keyifle, sakinlik ve dinginlik içinde yaşamanın"
     ]
    },
    {
