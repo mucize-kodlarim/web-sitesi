@@ -619,26 +619,27 @@ window.HARITA = [
     "baslik": "Aileme ve kendime kızgınım",
     "duygu": [
      "Sevgi görmeme",
-     "Anlaşılmama",
-     "Kendini suçlama",
+     "Küçümsenme",
+     "Suçlanma",
      "Yetersizlik",
      "Değersizlik"
     ],
     "kayit": [
-     "Ailem beni hiçbir zaman olduğum gibi sevmedi.",
-     "Ailem beni hiç anlamadı.",
-     "Ailemle yaşadıklarımın suçlusu benim.",
-     "Ailemin beklediği gibi biri olamadım.",
-     "Ben sevgiyi hak etmiyorum."
+     "Beni gerçekten seven kimse yok.",
+     "Benim söz hakkım yok.",
+     "Başkaları benden daha üstündür.",
+     "Ne yaparsam yapayım başaramam.",
+     "Ben hiçbir şeyi hak etmiyorum."
     ],
     "his": [
-     "anne ve babanın sevgisini almanın",
-     "ailen tarafından anlaşılmanın, kendini sakince ifade etmenin",
-     "kendini affetmenin, kendine şefkat göstermenin",
-     "yeterli olmanın, olduğun gibi kabul görmenin",
-     "değerli olmanın, sevgiyi hak etmenin",
-     "aileni olduğu gibi kabul etmenin ve affetmenin",
-     "ailenle huzur ve uyum içinde olmanın, kendi hayatını özgürce yaşamanın"
+     "gerçek sevgiyi bilmenin, yaşamanın, sevildiğini hissetmenin",
+     "söz sahibi olmanın, düşüncelerini özgürce ifade edebilmenin",
+     "kendini değerli görmenin, kendi değerini bilmenin",
+     "başarılı olmanın, güvende olmanın",
+     "cesur olmanın, çözüm odaklı olmanın",
+     "hak sahibi olmanın",
+     "sevgi görmenin, ilgi görmenin, korunmanın, kollanmanın, desteklenmenin",
+     "kendini bir aileye, bir yuvaya ait hissetmenin"
     ]
    },
    {
