@@ -700,27 +700,28 @@ window.HARITA = [
    {
     "baslik": "Bana yapılanı unutamıyorum, affedemiyorum",
     "duygu": [
-     "Kin",
-     "İncinmişlik",
-     "İhanete uğrama",
-     "İntikam isteği",
-     "Hayal kırıklığı"
+     "Kırgınlık",
+     "Güvensizlik",
+     "Değersizlik",
+     "Sevilmeme",
+     "Yalnızlık"
     ],
     "kayit": [
      "Affedersem yaptığını onaylamış olurum.",
-     "Bazı şeyler asla affedilmez.",
-     "Önce o benden özür dilemeli.",
-     "Affedersem yine incinirim.",
-     "Bana yapılanı unutursam yaşadıklarım önemsiz olur."
+     "İnsanlara güvenmek tehlikelidir.",
+     "Ben değerli biri değilim.",
+     "Kimse beni gerçekten sevmez.",
+     "Her şeyi tek başıma halletmeliyim."
     ],
     "his": [
-     "affetmenin, affederek hafiflemenin",
-     "kendini geçmişin yükünden özgür bırakmanın",
-     "yaşadıklarından öğrenmenin ve güçlenmenin",
-     "kalbini sevgiyle açmanın ve güvende olmanın",
-     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
-     "iç huzura, dinginliğe ve dengeye sahip olmanın",
-     "Yaradan'ın sevgisiyle sarılıp sarmalanmanın"
+     "affetmenin, affedilmenin",
+     "bağışlamanın",
+     "nerede, ne zaman, nasıl, ne kadar, kime güveneceğini bilmenin",
+     "değerli olmanın, kendini değerli hissetmenin",
+     "kendini sevmenin, sevildiğini hissetmenin",
+     "sevdiklerin tarafından da korunmanın, kollanmanın",
+     "özgür ve sakin olmanın",
+     "dengede, dengeli olmanın"
     ]
    }
   ]
