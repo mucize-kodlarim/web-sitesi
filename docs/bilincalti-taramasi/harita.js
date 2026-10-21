@@ -680,20 +680,20 @@ window.HARITA = [
      "Yalnızlık"
     ],
     "kayit": [
-     "Hayat bana hep zorluk getiriyor.",
+     "Hayattan beklediğim karşılığı alamam.",
+     "Ne yaparsam yapayım hiçbir şey değişmez.",
+     "Benim için güzel şeyler mümkün değil.",
      "Benim hiç şansım yok.",
-     "Ne yaparsam yapayım hayatım düzelmez.",
-     "Herkes mutlu, bir tek ben değilim.",
-     "Hayatta tek başımayım, kimse yanımda değil."
+     "Her şeyi tek başıma halletmeliyim."
     ],
     "his": [
-     "hayatı neşeyle, kolaylıkla yaşamanın",
-     "şanslı olmanın, güzel sürprizler yaşamanın",
-     "değişimin mümkün olduğunu bilmenin ve olumlu değişimler yaratabilmenin",
-     "mutlu olmanın, huzurlu olmanın",
-     "Yaradan'dan ve sevdiklerinden destek almanın",
-     "hayata umutla bakmanın",
-     "hayatın sana sunduklarını fark etmenin ve şükretmenin"
+     "hak ettiğin değeri görmenin, hakkın olanı almanın",
+     "değişimin mümkün olduğunu, seçeneklerinin olduğunu bilmenin ve hayatında olumlu değişimler yaratabilmenin",
+     "hayatı pozitiflikle, neşeyle, eğlenceyle yaşamanın",
+     "güzel sürprizler ve mucizeler yaşamanın",
+     "sevdiklerin tarafından da korunmanın, kollanmanın",
+     "sevilmenin, desteklenmenin",
+     "huzur içinde, keyifle, sakinlik ve dinginlik içinde yaşamanın"
     ]
    },
    {
