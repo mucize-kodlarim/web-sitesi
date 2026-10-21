@@ -691,6 +691,7 @@ window.HARITA = [
      "değişimin mümkün olduğunu, seçeneklerinin olduğunu bilmenin ve hayatında olumlu değişimler yaratabilmenin",
      "hayatı pozitiflikle, neşeyle, eğlenceyle yaşamanın",
      "güzel sürprizler ve mucizeler yaşamanın",
+     "şanslı olmanın, attığın her adımda, aldığın her nefeste şanslı olmanın",
      "sevdiklerin tarafından da korunmanın, kollanmanın",
      "sevilmenin, desteklenmenin",
      "huzur içinde, keyifle, sakinlik ve dinginlik içinde yaşamanın"
