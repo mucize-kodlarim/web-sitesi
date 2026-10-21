@@ -591,128 +591,107 @@ window.HARITA = [
   "ikon": "☾",
   "maddeler": [
    {
-    "baslik": "Birine çok kırgınım, affedemiyorum",
+    "baslik": "Affedememe ve İçinde Kırgınlık Taşıma",
     "duygu": [
      "İncinmişlik",
-     "Haksızlığa uğrama",
+     "Kin",
      "İhanete uğrama",
      "Hayal kırıklığı",
-     "Önemsenmeme"
+     "İntikam isteği"
     ],
     "kayit": [
      "Affedersem yaptığını onaylamış olurum.",
-     "Bana yapılanı asla unutmamalıyım.",
-     "Bu haksızlığın hesabı sorulmalı.",
-     "Güvendiğim insan bana ihanet etti, bir daha kimseye güvenemem.",
-     "Benim duygularım hiç önemsenmedi."
+     "Bazı şeyler asla affedilmez.",
+     "Önce o benden özür dilemeli.",
+     "Affedersem yine incinirim.",
+     "Kırgınlığımı bırakırsam yaşadıklarım önemsiz olur."
     ],
     "his": [
-     "affetmenin ve hafiflemenin",
-     "kendini geçmişten özgür bırakmanın",
-     "her şeyin Yaradan'ın adaletiyle yerine oturduğunu bilmenin",
+     "affetmenin, affederek hafiflemenin",
+     "kendini geçmişin yükünden özgür bırakmanın",
+     "kalbini sevgiyle açmanın ve güvende olmanın",
      "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
-     "duygularının önemsenmesinin, değer görmenin",
-     "huzurlu olmanın"
+     "yaşadıklarından öğrenmenin ve güçlenmenin",
+     "iç huzura, dinginliğe ve dengeye sahip olmanın",
+     "Yaradan'ın sevgisiyle sarılıp sarmalanmanın"
     ]
    },
    {
-    "baslik": "Aileme karşı öfke ve kırgınlık taşıyorum",
+    "baslik": "Haksızlığa Uğrama ve Adaletsizlik",
     "duygu": [
-     "Reddedilme",
+     "Haksızlığa uğrama",
      "Değer görmeme",
-     "İhmal edilme",
-     "Anlaşılmama",
-     "Sevgi görmeme"
+     "Yok sayılma",
+     "Çaresizlik",
+     "Hayal kırıklığı"
     ],
     "kayit": [
-     "Ailem beni hiçbir zaman anlamadı.",
-     "Ne yaparsam yapayım ailemi memnun edemem.",
-     "Ailem beni olduğum gibi sevmedi.",
-     "Bana yapılanlar affedilemez.",
-     "Ailemin yükünü ben taşımalıyım."
+     "Hayat bana karşı hep adaletsiz.",
+     "Emeğimin ve iyiliğimin karşılığı hiç verilmez.",
+     "Hakkımı aramazsam ezilirim.",
+     "Başkaları hep benden daha fazlasını alıyor.",
+     "Bu haksızlığın hesabı mutlaka sorulmalı."
     ],
     "his": [
-     "anne ve babanı olduğu gibi kabul etmenin",
-     "anlaşılmanın, duygularını sakince ifade etmenin",
-     "anne ve baba sevgisini almanın",
-     "ailenle huzur ve uyum içinde olmanın",
-     "kendi hayatını özgürce yaşamanın",
-     "aileni affetmenin ve hafiflemenin"
+     "hakkın olanı kolaylıkla almanın",
+     "emeğinin ve iyiliğinin karşılığını görmenin",
+     "değer görmenin, saygı görmenin",
+     "hakkını sakin ve net bir şekilde savunabilmenin",
+     "nerede, ne zaman, nasıl hakkını arayacağını bilmenin",
+     "her şeyin Yaradan'ın adaletiyle yerine oturduğunu bilmenin",
+     "huzurlu, dengeli ve güçlü olmanın"
     ]
    },
    {
-    "baslik": "Çabuk sinirleniyorum, öfkemi kontrol edemiyorum",
+    "baslik": "Bastırılmış Öfke ve Öfke Kontrolü",
     "duygu": [
      "Anlaşılmama",
+     "Dinlenmeme",
      "Sınırlarının çiğnenmesi",
-     "Değer görmeme",
-     "Hayal kırıklığı",
-     "Engellenmişlik"
+     "Engellenmişlik",
+     "Güçsüzlük"
     ],
     "kayit": [
+     "Öfkemi gösterirsem sevilmem.",
+     "Kızgınlığımı söylersem her şey daha kötü olur.",
      "Sesimi yükseltmezsem kimse beni duymaz.",
-     "Öfkem beni korur.",
-     "Herkes sınırlarımı çiğniyor.",
-     "İşler benim istediğim gibi gitmeli.",
-     "Öfkemi göstermezsem ezilirim."
+     "Öfkemi göstermezsem ezilirim.",
+     "Duygularımı kontrol edemem."
     ],
     "his": [
+     "duygularını sakince ve özgürce ifade etmenin",
      "dinlenmenin, anlaşılmanın",
-     "kendini sakince ve özgürce ifade etmenin",
-     "kendi sınırını belirlemenin",
-     "dengede, huzurlu ve sakin olmanın",
-     "hayatın akışına uyum sağlamanın",
-     "nerede, ne zaman, nasıl, ne kadar sabredeceğini bilmenin"
+     "kendi sınırını belirlemenin ve korumanın",
+     "nerede, ne zaman, nasıl, ne kadar sabredeceğini bilmenin",
+     "nerede, ne zaman, nasıl hayır diyeceğini bilmenin",
+     "dengede, sakin ve huzurlu olmanın",
+     "gücünün farkında olmanın ve onu sevgiyle kullanmanın"
     ]
    },
    {
-    "baslik": "Geçmişte yaşadıklarımı bırakamıyorum",
-    "duygu": [
-     "Kin",
-     "Pişmanlık",
-     "Kurban hissi",
-     "İncinmişlik",
-     "Haksızlığa uğrama"
-    ],
-    "kayit": [
-     "Bırakırsam yaşadıklarım önemsiz olur.",
-     "Geçmişi bırakırsam yine incinirim.",
-     "Bana yapılanlar yüzünden hayatım değişti.",
-     "Keşke farklı olsaydı, artık çok geç.",
-     "Bu acıyı taşımak zorundayım."
-    ],
-    "his": [
-     "şimdiki zamanda yaşamanın",
-     "yaşadıklarını kabul etmenin ve onlardan öğrenmenin",
-     "geçmişi geçmişte bırakmanın, hafiflemenin",
-     "hayatta ilerlemenin",
-     "affetmenin ve affedilmenin",
-     "güzel ve kolay deneyimler yaşamanın"
-    ]
-   },
-   {
-    "baslik": "Kendime kızgınım, kendimi affedemiyorum",
+    "baslik": "Geçmişe Takılı Kalma ve Kendine Öfke",
     "duygu": [
      "Pişmanlık",
      "Kendini suçlama",
      "Utanç",
-     "Değersizlik",
+     "Kurban hissi",
      "Yetersizlik"
     ],
     "kayit": [
-     "Yaptığım hata affedilemez.",
-     "Daha iyisini bilmeliydim.",
+     "Geçmişte yaptığım hatayı asla telafi edemem.",
+     "Daha iyisini bilmeliydim, daha iyisini yapmalıydım.",
      "Kendimi cezalandırmalıyım.",
-     "Hata yapan biri değersizdir.",
-     "Asla yeterince iyi olamam."
+     "Yaşadıklarım yüzünden hayatım hep böyle kalacak.",
+     "Geçmişi bırakırsam yine aynı şeyleri yaşarım."
     ],
     "his": [
-     "kendini affetmenin",
-     "kendine şefkat ve anlayış göstermenin",
-     "hatalardan öğrenmenin",
-     "kendini olduğun gibi kabul etmenin",
-     "değerli ve sevilebilir olmanın",
-     "kendinle barışık olmanın"
+     "kendini affetmenin, kendine şefkat göstermenin",
+     "geçmişle barışık olmanın",
+     "şimdiki zamanda yaşamanın",
+     "hatalardan kolaylıkla öğrenmenin",
+     "yeni başlangıçlar yapabilmenin, hayatta ilerlemenin",
+     "kendini olduğun gibi kabul etmenin, değerli olmanın",
+     "güzel ve kolay deneyimler yaşamanın"
     ]
    }
   ]
