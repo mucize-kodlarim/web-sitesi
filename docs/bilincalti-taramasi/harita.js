@@ -645,27 +645,29 @@ window.HARITA = [
    {
     "baslik": "Haksızlığa uğradığımı hissediyorum",
     "duygu": [
-     "Haksızlığa uğrama",
-     "Değer görmeme",
+     "Güvensizlik",
+     "Değersizlik",
      "Yok sayılma",
      "Çaresizlik",
      "Güçsüzlük"
     ],
     "kayit": [
-     "Hayat bana karşı hep adaletsiz.",
-     "Emeğimin karşılığını hiçbir zaman alamam.",
-     "Benim hakkım hep yenir.",
-     "Ne yaparsam yapayım bu haksızlığı değiştiremem.",
-     "Hakkımı arayacak gücüm yok."
+     "İnsanlara güvenmek tehlikelidir.",
+     "Ben değerli biri değilim.",
+     "Benim varlığımın bir önemi yok.",
+     "Ne yaparsam yapayım bazı şeyleri değiştiremem.",
+     "Hayatın zorluklarıyla baş edebilecek gücüm yok."
     ],
     "his": [
-     "adil davranılmanın, hakkın olanı kolaylıkla almanın",
-     "emeğinin karşılığını görmenin",
-     "görülmenin, değer görmenin",
-     "değişimin mümkün olduğunu, seçeneklerinin olduğunu bilmenin",
-     "nerede, ne zaman, nasıl hakkını arayacağını bilmenin",
-     "güçlü olmanın, dik durabilmenin",
-     "her şeyin Yaradan'ın adaletiyle yerine oturduğunu bilmenin"
+     "nerede, ne zaman, nasıl, ne kadar, kime güveneceğini bilmenin",
+     "güvende olmanın, Yaradan tarafından da güvende tutulmanın",
+     "değerli olmanın, kendini değerli hissetmenin",
+     "hak ettiğin değeri görmenin",
+     "görünmenin, fark edilmenin, duyulmanın",
+     "desteklenmenin",
+     "çözüm bulmanın",
+     "yaşamı pozitif yönden deneyimlemenin",
+     "güçlü olmanın, kendini koruyabilmenin, dik durmanın"
     ]
    },
    {
