@@ -591,107 +591,107 @@ window.HARITA = [
   "ikon": "☾",
   "maddeler": [
    {
-    "baslik": "Affedememe ve İçinde Kırgınlık Taşıma",
+    "baslik": "İnsanlara kızgınım",
     "duygu": [
+     "Değer görmeme",
+     "Anlaşılmama",
+     "Kullanılma",
      "İncinmişlik",
-     "Kin",
-     "İhanete uğrama",
-     "Hayal kırıklığı",
-     "İntikam isteği"
+     "Hayal kırıklığı"
     ],
     "kayit": [
-     "Affedersem yaptığını onaylamış olurum.",
-     "Bazı şeyler asla affedilmez.",
-     "Önce o benden özür dilemeli.",
-     "Affedersem yine incinirim.",
-     "Kırgınlığımı bırakırsam yaşadıklarım önemsiz olur."
+     "İnsanlar bana hiç değer vermiyor.",
+     "Kimse beni gerçekten anlamıyor.",
+     "İyi niyetimi hep kullanıyorlar.",
+     "İnsanlar sonunda beni mutlaka incitir.",
+     "Kimseden beklediğimi göremem."
     ],
     "his": [
-     "affetmenin, affederek hafiflemenin",
-     "kendini geçmişin yükünden özgür bırakmanın",
-     "kalbini sevgiyle açmanın ve güvende olmanın",
+     "değer görmenin, saygı görmenin",
+     "anlaşılmanın, dinlenmenin",
+     "iyi niyetine değer verilmenin",
+     "kendi sınırını belirlemenin ve korumanın",
      "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
-     "yaşadıklarından öğrenmenin ve güçlenmenin",
-     "iç huzura, dinginliğe ve dengeye sahip olmanın",
-     "Yaradan'ın sevgisiyle sarılıp sarmalanmanın"
+     "insanlarla sevgi, saygı ve uyum içinde olmanın",
+     "affetmenin, hafiflemenin, huzurlu olmanın"
     ]
    },
    {
-    "baslik": "Haksızlığa Uğrama ve Adaletsizlik",
+    "baslik": "Aileme ve kendime kızgınım",
+    "duygu": [
+     "Sevgi görmeme",
+     "Anlaşılmama",
+     "Kendini suçlama",
+     "Yetersizlik",
+     "Değersizlik"
+    ],
+    "kayit": [
+     "Ailem beni hiçbir zaman olduğum gibi sevmedi.",
+     "Ailem beni hiç anlamadı.",
+     "Ailemle yaşadıklarımın suçlusu benim.",
+     "Ailemin beklediği gibi biri olamadım.",
+     "Ben sevgiyi hak etmiyorum."
+    ],
+    "his": [
+     "anne ve babanın sevgisini almanın",
+     "ailen tarafından anlaşılmanın, kendini sakince ifade etmenin",
+     "kendini affetmenin, kendine şefkat göstermenin",
+     "yeterli olmanın, olduğun gibi kabul görmenin",
+     "değerli olmanın, sevgiyi hak etmenin",
+     "aileni olduğu gibi kabul etmenin ve affetmenin",
+     "ailenle huzur ve uyum içinde olmanın, kendi hayatını özgürce yaşamanın"
+    ]
+   },
+   {
+    "baslik": "Haksızlığa uğradığımı hissediyorum",
     "duygu": [
      "Haksızlığa uğrama",
      "Değer görmeme",
      "Yok sayılma",
      "Çaresizlik",
-     "Hayal kırıklığı"
-    ],
-    "kayit": [
-     "Hayat bana karşı hep adaletsiz.",
-     "Emeğimin ve iyiliğimin karşılığı hiç verilmez.",
-     "Hakkımı aramazsam ezilirim.",
-     "Başkaları hep benden daha fazlasını alıyor.",
-     "Bu haksızlığın hesabı mutlaka sorulmalı."
-    ],
-    "his": [
-     "hakkın olanı kolaylıkla almanın",
-     "emeğinin ve iyiliğinin karşılığını görmenin",
-     "değer görmenin, saygı görmenin",
-     "hakkını sakin ve net bir şekilde savunabilmenin",
-     "nerede, ne zaman, nasıl hakkını arayacağını bilmenin",
-     "her şeyin Yaradan'ın adaletiyle yerine oturduğunu bilmenin",
-     "huzurlu, dengeli ve güçlü olmanın"
-    ]
-   },
-   {
-    "baslik": "Bastırılmış Öfke ve Öfke Kontrolü",
-    "duygu": [
-     "Anlaşılmama",
-     "Dinlenmeme",
-     "Sınırlarının çiğnenmesi",
-     "Engellenmişlik",
      "Güçsüzlük"
     ],
     "kayit": [
-     "Öfkemi gösterirsem sevilmem.",
-     "Kızgınlığımı söylersem her şey daha kötü olur.",
-     "Sesimi yükseltmezsem kimse beni duymaz.",
-     "Öfkemi göstermezsem ezilirim.",
-     "Duygularımı kontrol edemem."
+     "Hayat bana karşı hep adaletsiz.",
+     "Emeğimin karşılığını hiçbir zaman alamam.",
+     "Benim hakkım hep yenir.",
+     "Ne yaparsam yapayım bu haksızlığı değiştiremem.",
+     "Hakkımı arayacak gücüm yok."
     ],
     "his": [
-     "duygularını sakince ve özgürce ifade etmenin",
-     "dinlenmenin, anlaşılmanın",
-     "kendi sınırını belirlemenin ve korumanın",
-     "nerede, ne zaman, nasıl, ne kadar sabredeceğini bilmenin",
-     "nerede, ne zaman, nasıl hayır diyeceğini bilmenin",
-     "dengede, sakin ve huzurlu olmanın",
-     "gücünün farkında olmanın ve onu sevgiyle kullanmanın"
+     "adil davranılmanın, hakkın olanı kolaylıkla almanın",
+     "emeğinin karşılığını görmenin",
+     "görülmenin, değer görmenin",
+     "değişimin mümkün olduğunu, seçeneklerinin olduğunu bilmenin",
+     "nerede, ne zaman, nasıl hakkını arayacağını bilmenin",
+     "güçlü olmanın, dik durabilmenin",
+     "her şeyin Yaradan'ın adaletiyle yerine oturduğunu bilmenin"
     ]
    },
    {
-    "baslik": "Geçmişe Takılı Kalma ve Kendine Öfke",
+    "baslik": "Hayata karşı öfkeliyim",
     "duygu": [
-     "Pişmanlık",
-     "Kendini suçlama",
-     "Utanç",
-     "Kurban hissi",
-     "Yetersizlik"
+     "Hayal kırıklığı",
+     "Çaresizlik",
+     "Umutsuzluk",
+     "Şanssızlık hissi",
+     "Yalnızlık"
     ],
     "kayit": [
-     "Geçmişte yaptığım hatayı asla telafi edemem.",
-     "Daha iyisini bilmeliydim, daha iyisini yapmalıydım.",
-     "Kendimi cezalandırmalıyım.",
-     "Yaşadıklarım yüzünden hayatım hep böyle kalacak.",
-     "Geçmişi bırakırsam yine aynı şeyleri yaşarım."
+     "Hayat bana hep zorluk getiriyor.",
+     "Benim hiç şansım yok.",
+     "Ne yaparsam yapayım hayatım düzelmez.",
+     "Herkes mutlu, bir tek ben değilim.",
+     "Hayatta tek başımayım, kimse yanımda değil."
     ],
     "his": [
-     "kendini affetmenin, kendine şefkat göstermenin",
-     "geçmişle barışık olmanın",
-     "şimdiki zamanda yaşamanın",
-     "hatalardan kolaylıkla öğrenmenin",
-     "yeni başlangıçlar yapabilmenin, hayatta ilerlemenin",
-     "kendini olduğun gibi kabul etmenin, değerli olmanın",
-     "güzel ve kolay deneyimler yaşamanın"
+     "hayatı neşeyle, kolaylıkla yaşamanın",
+     "şanslı olmanın, güzel sürprizler yaşamanın",
+     "değişimin mümkün olduğunu bilmenin ve olumlu değişimler yaratabilmenin",
+     "mutlu olmanın, huzurlu olmanın",
+     "Yaradan'dan ve sevdiklerinden destek almanın",
+     "hayata umutla bakmanın",
+     "hayatın sana sunduklarını fark etmenin ve şükretmenin"
     ]
    }
   ]
