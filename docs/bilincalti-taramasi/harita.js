@@ -766,26 +766,32 @@ window.HARITA = [
    {
     "baslik": "İnsanlara hayır dediğimde suçlu hissediyorum",
     "duygu": [
-     "Bencillik hissi",
-     "Birini kırma korkusu",
      "Sevilmeme korkusu",
+     "Reddedilme korkusu",
      "Değersizlik",
-     "Sınır koyamama"
+     "Görülmeme",
+     "Yalnızlık"
     ],
     "kayit": [
-     "Hayır demek bencilliktir.",
-     "Hayır dersem insanları kırarım.",
-     "Hayır dersem sevilmem.",
-     "Değerim başkalarına yararlı olduğum kadardır.",
-     "Herkesin isteğini yerine getirmek zorundayım."
+     "Sevilmek için insanları mutlu etmeliyim.",
+     "Hayır dersem beni kabul etmezler.",
+     "Herkese ben yardım etmeliyim.",
+     "İşe yararsam görülürüm.",
+     "Hayır dersem tek başıma kalırım."
     ],
     "his": [
-     "nerede, ne zaman, nasıl hayır diyeceğini bilmenin",
-     "kendi sınırını belirlemenin",
-     "kendi ihtiyaçlarını önemsemenin",
-     "hayır dediğinde de sevilmenin",
-     "kendine sadık kalmanın",
-     "değerli olmanın, saygı görmenin"
+     "kendini sevmenin, insanlar tarafından sevilmenin, Yaradan tarafından da sevilmenin",
+     "kabul görmenin",
+     "desteklenmenin, korunmanın, kollanmanın",
+     "başarılı, bilgili ve kariyerli olmanın",
+     "görünmenin, duyulmanın, ilgi görmenin",
+     "değer görmenin, değerli olmanın",
+     "arkadaşların ve ailen tarafından sevilmenin, desteklenmenin",
+     "şefkat görmenin",
+     "sosyal çevrende de sevilmenin, saygın ve değerli olmanın",
+     "fikirlerine değer verilmesinin",
+     "dilediğin zaman özgür iradenle insanlara yardım edebilmenin",
+     "nerede, ne zaman, ne kadar, kime güveneceğini Yaradan'a göre ayırt etmenin"
     ]
    },
    {
