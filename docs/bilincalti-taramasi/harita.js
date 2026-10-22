@@ -828,26 +828,29 @@ window.HARITA = [
    {
     "baslik": "Hata yaptığım için suçluluk hissediyorum",
     "duygu": [
-     "Değersizlik",
+     "Pişmanlık",
      "Utanç",
+     "Değersizlik",
      "Yetersizlik",
-     "Yargılanma korkusu",
-     "Aşağılanma"
+     "Affedememe"
     ],
     "kayit": [
-     "Hata yaparsam değerimi kaybederim.",
-     "Her şeyi kusursuz yapmalıyım.",
-     "Eleştirilirsem herkes ne kadar yetersiz olduğumu görür.",
-     "İnsanlar beni sürekli yargılar.",
-     "Hata yapan biri ayıplanır."
+     "Doğru kararlar veremiyorum.",
+     "Hata yapmak beni utandırıyor.",
+     "Başarılı olursam değerli olurum.",
+     "Hata yapıyorsam yeterince iyi değilim.",
+     "Kendimi affedersem yine hata yaparım."
     ],
     "his": [
-     "kendini olduğun gibi kabul etmenin",
-     "hatalardan kolaylıkla öğrenmenin",
-     "takdir edilmenin, saygı görmenin",
-     "nerede, ne zaman, nasıl, ne kadar mükemmeliyetçi olacağını bilmenin",
-     "dik durabilmenin, kendini özgürce ifade etmenin",
-     "değerli olmanın"
+     "kendi kararlarına güvenmenin, doğru kararlar verebilmenin",
+     "başarılı olabilmenin, bilgili olabilmenin",
+     "kendine şefkat ve anlayış göstermenin",
+     "kendine güvenmenin, güvenilir olmanın",
+     "kendini affetmenin, kendini olduğun gibi kabul etmenin",
+     "hatalarından ders almanın; hatalarının sana kattıklarını idrak ederek bilinçli ve doğru seçimler yapabilmenin",
+     "nerede, ne zaman, nasıl sorumluluk alabileceğini bilmenin",
+     "sevilmenin, görünmenin, değerli olmanın",
+     "korunmanın, kollanmanın, desteklenmenin"
     ]
    }
   ]
