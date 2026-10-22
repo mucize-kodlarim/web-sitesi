@@ -735,28 +735,36 @@ window.HARITA = [
     "duygu": [
      "Pişmanlık",
      "Utanç",
-     "Vicdan azabı",
      "Değersizlik",
-     "Cezayı hak etme"
+     "Sevgisizlik",
+     "Çaresizlik"
     ],
     "kayit": [
-     "Yaptığımı asla telafi edemem.",
-     "Hata yaptığım için cezalandırılmayı hak ediyorum.",
-     "Ben kötü bir insanım.",
-     "Geçmişi değiştiremediğim için mutlu olamam.",
-     "Herkes yaptığımı biliyor ve beni yargılıyor."
+     "Keşke o gün farklı davransaydım.",
+     "Geçmişi unutmalıyım.",
+     "Ben değerli biri değilim.",
+     "Kendimi sevmiyorum.",
+     "Geçmişte yaptıklarımı değiştiremem."
     ],
     "his": [
-     "kendini affetmenin, affedilmiş olmanın",
-     "geçmişle barışık olmanın",
-     "hatalardan öğrenmenin ve ilerlemenin",
-     "kendine şefkat göstermenin",
-     "mutlu olmayı hak etmenin",
-     "değerli olmanın, iyi bir insan olduğunu bilmenin"
+     "geçmişinle yüzleşmenin ve geçmişte yaptıklarını kabul etmenin",
+     "hatalarından ders çıkarmanın, hatalarından özgürleşmenin",
+     "kendini affedebilmenin",
+     "geçmişinle barışık olmanın; geçmişte yaşadıklarını bastırmadan kabul edip onlardan serbest kalmanın",
+     "değerli olmanın, kendine değer vermenin",
+     "bağımsız ve özgür olmanın",
+     "sevmenin, sevilmenin",
+     "kendine şefkat ve anlayış göstermenin",
+     "insanların da seni sevmesinin ve sana anlayışlı olmasının",
+     "Yaradan'ın da seni sevmesinin, korumasının, kollamasının, desteklemesinin",
+     "seçimlerini artık özgürce yapabilmenin, doğru seçimler yapabilmenin",
+     "başarılı olabilmenin, güvende olmanın",
+     "güvenilir olmanın, saygın ve itibarlı olmanın",
+     "mutlu olmanın, huzurlu olmanın, keyifli olmanın"
     ]
    },
    {
-    "baslik": "Hayır dediğimde suçlu hissediyorum",
+    "baslik": "İnsanlara hayır dediğimde suçlu hissediyorum",
     "duygu": [
      "Bencillik hissi",
      "Birini kırma korkusu",
@@ -781,7 +789,7 @@ window.HARITA = [
     ]
    },
    {
-    "baslik": "Kendime zaman ayırınca suçluluk duyuyorum",
+    "baslik": "Kendime öncelik verdiğimde suçluluk duyuyorum",
     "duygu": [
      "Bencillik hissi",
      "Tembellik hissi",
@@ -806,53 +814,28 @@ window.HARITA = [
     ]
    },
    {
-    "baslik": "Mutlu olunca suçlu hissediyorum",
+    "baslik": "Hata yaptığım için suçluluk hissediyorum",
     "duygu": [
-     "Hak etmeme",
-     "Cezalandırılma korkusu",
-     "Bedel ödeme korkusu",
      "Değersizlik",
-     "Kıskanılma korkusu"
-    ],
-    "kayit": [
-     "Mutlu olmayı hak etmiyorum.",
-     "Mutluluğun ardından kötü bir şey gelir.",
-     "Çok gülen çok ağlar.",
-     "Başkaları üzgünken ben mutlu olamam.",
-     "Mutluluğumu saklamalıyım, nazar değer."
-    ],
-    "his": [
-     "mutlu olmayı hak etmenin",
-     "mutluluğu keyifle yaşamanın ve paylaşmanın",
-     "neşeyle, huzurla yaşamanın",
-     "güvende olmanın",
-     "Yaradan'ın verdiği güzellikleri kabul etmenin",
-     "mutlu olmaya layık ve izinli olmanın"
-    ]
-   },
-   {
-    "baslik": "Ailemi mutlu edemediğim için kendimi suçlu hissediyorum",
-    "duygu": [
+     "Utanç",
      "Yetersizlik",
-     "Değersizlik",
-     "Sorumluluk yükü",
-     "Hayal kırıklığına uğratma",
-     "Vicdan rahatsızlığı"
+     "Yargılanma korkusu",
+     "Aşağılanma"
     ],
     "kayit": [
-     "Ailemin mutluluğu benim sorumluluğum.",
-     "Ne yaparsam yapayım ailem için yeterli olamam.",
-     "Ailemi üzersem kötü bir evladım.",
-     "Kendi hayatımı yaşarsam ailemi yalnız bırakırım.",
-     "Ailemin beklentilerini karşılamak zorundayım."
+     "Hata yaparsam değerimi kaybederim.",
+     "Her şeyi kusursuz yapmalıyım.",
+     "Eleştirilirsem herkes ne kadar yetersiz olduğumu görür.",
+     "İnsanlar beni sürekli yargılar.",
+     "Hata yapan biri ayıplanır."
     ],
     "his": [
-     "kendi hayatını özgürce yaşamanın",
-     "yeterli olmanın, değerli olmanın",
-     "aileni sevgiyle Yaradan'a emanet etmenin",
-     "ailenle huzur ve uyum içinde olmanın",
-     "kendine şefkat göstermenin, kendini affetmenin",
-     "sorumluluklarını dengeyle taşımanın"
+     "kendini olduğun gibi kabul etmenin",
+     "hatalardan kolaylıkla öğrenmenin",
+     "takdir edilmenin, saygı görmenin",
+     "nerede, ne zaman, nasıl, ne kadar mükemmeliyetçi olacağını bilmenin",
+     "dik durabilmenin, kendini özgürce ifade etmenin",
+     "değerli olmanın"
     ]
    }
   ]
