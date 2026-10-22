@@ -797,26 +797,32 @@ window.HARITA = [
    {
     "baslik": "Kendime öncelik verdiğimde suçluluk duyuyorum",
     "duygu": [
-     "Bencillik hissi",
-     "Tembellik hissi",
      "Değersizlik",
-     "Başkalarını hayal kırıklığına uğratma",
-     "Hak etmeme"
+     "Sevilmeme",
+     "Görülmeme",
+     "İstenilmeme",
+     "Bencillik"
     ],
     "kayit": [
-     "Dinlenmek tembelliktir.",
-     "Kendime vakit ayırmak bencilliktir.",
-     "Sürekli bir şey üretmeliyim.",
-     "Önce herkesin işi bitmeli.",
-     "Kendime iyi davranmayı hak etmiyorum."
+     "Benim ihtiyaçlarım önemli değil.",
+     "Sevilmek için kendimi feda etmeliyim.",
+     "Kendimle ilgilenirsem beni fark etmezler.",
+     "Kendime öncelik verirsem beni kabul etmezler.",
+     "Kendim için bir şey istemek bencilliktir."
     ],
     "his": [
-     "kendine zaman ayırmanın",
-     "dinlenmenin, keyif almanın",
-     "kendine iyi davranmanın",
-     "kendine değer vermenin",
-     "dengede yaşamanın",
-     "hayatın tadını çıkarmanın"
+     "önemli olmanın, kendini önemli hissetmenin, kendine önem vermenin",
+     "kendi ihtiyaçlarını fark etmenin ve karşılamanın",
+     "kendine öncelik vermenin",
+     "kendine değer vermenin, değer görmenin",
+     "kendini sevmenin, sevilmenin",
+     "görünmenin, duyulmanın, desteklenmenin",
+     "kendinle ilgilenirken de görülmenin, fark edilmenin ve sevilmenin",
+     "kendin için bir adım attığında da mutlu, huzurlu ve değerli olmanın",
+     "sevdiklerinle beraber olmanın",
+     "güvende olmanın, güvenilir olmanın",
+     "ihtiyaçlarını ve önceliklerini dile getirmenin doğal olduğunu bilmenin",
+     "kendin için bir şeyler isterken rahat, huzurlu, keyifli ve neşeli olmanın"
     ]
    },
    {
