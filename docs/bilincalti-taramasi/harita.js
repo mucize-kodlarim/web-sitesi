@@ -885,7 +885,7 @@ window.HARITA = [
      "kendini açık ve doğru bir şekilde ifade edebilmenin",
      "insanlarla iletişim kurabilmenin, doğru anlaşılabilmenin",
      "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
-     "insanlara kalbini güvenle açabilmenin",
+     "güvenilir insanlara kalbini açabilmenin",
      "sevmenin, sevilmenin, görünmenin",
      "huzurlu, neşeli, keyifli olmanın"
     ]
