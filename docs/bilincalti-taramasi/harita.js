@@ -935,7 +935,7 @@ window.HARITA = [
     ]
    },
    {
-    "baslik": "Değişimden, yeni bir adım atmaktan korkuyorum",
+    "baslik": "Değişimden, belirsizlikten korkuyorum",
     "duygu": [
      "Belirsizlik",
      "Cesaretsizlik",
