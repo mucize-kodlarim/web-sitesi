@@ -900,19 +900,26 @@ window.HARITA = [
      "Değersizlik"
     ],
     "kayit": [
-     "Yalnız kalırsam ayakta kalamam.",
-     "Benim için kimse yok.",
-     "Mutlu olmak için birine ihtiyacım var.",
-     "Yalnız kalmam sevilmediğimin kanıtıdır.",
-     "Kimseye yük olmamak için sessiz kalmalıyım."
+     "İnsanlar eninde sonunda beni terk eder.",
+     "Ben sevilecek biri değilim.",
+     "Her şeyi tek başıma halletmek zorundayım.",
+     "İnsanlara hiç güvenmiyorum.",
+     "Benim varlığım önemli değil."
     ],
     "his": [
-     "kendi ayaklarının üzerinde güvende durmanın",
-     "sevgi dolu insanlarla çevrili olmanın",
-     "Yaradan'dan ve başkalarından destek almanın",
-     "kendinle huzurlu olmanın",
-     "sevilmenin, değer görmenin",
-     "sevgiyi her yerde görmenin"
+     "insanlarla kalıcı ve güvenli bağlar kurmanın",
+     "ilişkilerinde kendini güvende hissetmenin, ilişkilerinin güvenli olmasının",
+     "güvenilir insanları bulmanın",
+     "sevilebilir biri olmanın, sevilmenin nasıl hissedildiğini bilmenin",
+     "sevgiye layık olduğunu bilmenin",
+     "sevgiyi görmenin, kabul etmenin ve içtenlikle yaşamanın",
+     "korunmanın, kollanmanın, desteklenmenin",
+     "ilgi görmenin, sevgi görmenin",
+     "güvenilir insanlarla güvenilmez insanları ayırt edebilmenin",
+     "kendi sınırlarını korumanın",
+     "kendini değerli ve önemli hissetmenin, kendi değerinin farkına varmanın",
+     "sana değer verecek insanlarla karşılaşmanın ve onları hayatına almanın",
+     "yalnızken de kendini güvende ve huzurlu hissetmenin"
     ]
    },
    {
