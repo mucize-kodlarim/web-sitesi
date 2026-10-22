@@ -862,26 +862,32 @@ window.HARITA = [
    {
     "baslik": "Reddedilmekten korkuyorum",
     "duygu": [
-     "Sevilmeme",
      "Değersizlik",
+     "Sevilmeme",
+     "İstenmeme",
      "Yetersizlik",
-     "Dışlanma",
-     "İstenmeme"
+     "Güvensizlik"
     ],
     "kayit": [
-     "Kendimi gösterirsem reddedilirim.",
-     "İnsanlar beni sevmez.",
-     "Ait olduğum bir yer yok.",
-     "İstenmek için kusursuz olmalıyım.",
-     "Reddedilmek değersiz olduğumu gösterir."
+     "Başkaları kadar değerli değilim.",
+     "Beni gerçekten sevmezler.",
+     "Olduğum gibi kabul edilmem.",
+     "Yeterince iyi değilim.",
+     "İnsanlara yaklaşırsam yanlış anlaşılırım."
     ],
     "his": [
-     "sevilmenin, kabul görmenin",
-     "ait olmanın",
-     "kendini olduğun gibi göstermenin ve güvende olmanın",
-     "istenmenin, değer görmenin",
-     "kendini olduğun gibi kabul etmenin",
-     "değerli olmanın"
+     "değerli olmanın, kendine değer katmanın, kendini değerli hissetmenin",
+     "kendi değerini kendi içinde görebilmenin",
+     "samimi ve içten sevginin nasıl bir his olduğunu bilmenin",
+     "güvenilir insanların sevgisini fark edebilmenin",
+     "kendini olduğun gibi kabul etmenin, kendini yeterli hissetmenin",
+     "istenmenin, kabul görmenin, ait olmanın",
+     "kendini açık ve doğru bir şekilde ifade edebilmenin",
+     "insanlarla iletişim kurabilmenin, doğru anlaşılabilmenin",
+     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
+     "insanlara kalbini güvenle açabilmenin",
+     "sevmenin, sevilmenin, görünmenin",
+     "huzurlu, neşeli, keyifli olmanın"
     ]
    },
    {
