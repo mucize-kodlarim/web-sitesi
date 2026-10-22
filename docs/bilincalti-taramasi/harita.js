@@ -926,25 +926,30 @@ window.HARITA = [
     "baslik": "Kaybetmekten korkuyorum",
     "duygu": [
      "Güvensizlik",
-     "Kontrolü kaybetme korkusu",
      "Terk edilme",
-     "Kıtlık hissi",
-     "Çaresizlik"
+     "Belirsizlik",
+     "Çaresizlik",
+     "Yalnızlık"
     ],
     "kayit": [
-     "Sahip olduğum her şeyi her an kaybedebilirim.",
-     "Güvende olmak için her şeyi kontrol etmeliyim.",
-     "Sevdiklerimi kaybedersem yaşayamam.",
-     "İyi şeyler benim hayatımda uzun sürmez.",
-     "Kaybetmemek için sıkı tutmalıyım."
+     "Sahip olduğum şeyleri kaybedebilirim.",
+     "Sevdiğim insanlar beni bırakıp gider.",
+     "Her an her şeyimi kaybedebilirim.",
+     "Hayatın zorluklarıyla baş edemem.",
+     "Kaybettiğimde yalnız kalırım."
     ],
     "his": [
-     "Yaradan'ın tanımıyla her an güvende olmanın",
-     "hayatın akışına teslim olmanın",
-     "anı yaşamanın",
-     "bolluk içinde yaşamanın ve paylaşmanın",
-     "nerede, ne zaman, nasıl, kime güveneceğini bilmenin",
-     "sevdiklerini Yaradan'a emanet etmenin, huzurlu olmanın"
+     "sahip olduklarının tadını güven içinde çıkarabilmenin",
+     "hayatındaki güzel şeylere odaklanabilmenin ve hayatına güzel şeyleri çekmenin",
+     "iç huzurunu koruyabilmenin",
+     "sevdiklerinle güvenli ve sağlam bağlar kurmanın",
+     "sevilmenin, değer görmenin, korunmanın, kollanmanın, desteklenmenin",
+     "kiminle, nerede, ne zaman, nasıl yakınlık kurabileceğini bilmenin",
+     "hayatını güven içinde nasıl yaşayacağını bilmenin; aldığın her nefeste, attığın her adımda güven içinde yaşayabilmenin",
+     "dik durabilmenin; özenli, itinalı ve düzenli olmanın",
+     "kendi gücünü ve yeteneklerini fark edebilmenin",
+     "güçlü, başarılı ve azimli olmanın",
+     "sevdiğin insanlarla bir arada mutlu, keyifli, neşeli, sevgi dolu ve güvende olmanın"
     ]
    },
    {
