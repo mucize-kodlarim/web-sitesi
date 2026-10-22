@@ -8,19 +8,30 @@ window.HARITA = [
     "baslik": "Para kazanmakta zorlanıyorum",
     "duygu": [
      "Yetersizlik",
+     "Değersizlik",
      "Başarısızlık",
-     "Umutsuzluk",
-     "Kaygı"
+     "Kıtlık bilinci",
+     "Özgüvensizlik"
     ],
     "kayit": [
+     "Emeğimin karşılığını alamam.",
+     "Ben parayı hak etmiyorum.",
+     "Para kazanmak için çok çalışmak gerekir.",
      "Para kazanmak zordur.",
-     "Para kazanmak için çok çalışmak ve çabalamak gerekir.",
      "Kolay yoldan para kazanmak mümkün değildir."
     ],
     "his": [
-     "neşeyle, kolaylıkla para kazanmanın",
-     "emeğinin karşılığını almanın",
-     "huzurla, güvenle, keyifle para kazanmanın"
+     "emeğinin karşılığını almanın, verdiğin emeğin değerinin görülmesinin",
+     "parayı hak ettiğini bilmenin",
+     "parayı kazanmanın, parayı sevmenin, kazandığın parayı kabul etmenin",
+     "kazandığın paraya ve maddi bolluğa layık olmanın ve şükretmenin",
+     "kolay para kazanmanın mümkün ve güvenli olduğunu bilmenin",
+     "para kazanırken de güvende olmanın",
+     "fırsatları fark etmenin ve paraya dönüştürmenin",
+     "kolaylıkla gelir elde etmenin, parayı kolaylıkla kazanmanın",
+     "başarılı, özgüvenli ve cesaretli olmanın",
+     "nerede, ne zaman, ne yapacağını bilerek hareket etmenin",
+     "desteklenmenin, korunmanın, kollanmanın"
     ]
    },
    {
