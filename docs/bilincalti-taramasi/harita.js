@@ -956,25 +956,36 @@ window.HARITA = [
     "baslik": "Değişimden, belirsizlikten korkuyorum",
     "duygu": [
      "Belirsizlik",
-     "Cesaretsizlik",
      "Güvensizlik",
+     "Cesaretsizlik",
      "Yetersizlik",
-     "Başarısızlık korkusu"
+     "Kontrolü kaybetme korkusu"
     ],
     "kayit": [
-     "Bildiğim yerde kalmak daha güvenli.",
-     "Yeni bir şeye başlarsam başaramam.",
-     "Değişim hep kötü sonuçlar getirir.",
-     "Hata yaparsam her şeyi kaybederim.",
-     "Yeni şeyler yapabilecek kadar güçlü değilim."
+     "Bilmediğim bir durumla baş edemem.",
+     "Değişirsem sahip olduğum şeyleri kaybedebilirim.",
+     "Benim gücüm hiçbir şeye yetmez.",
+     "Yeni bir durumun gerektirdiklerini karşılayamam.",
+     "Değişim başladığında gelişmeleri kontrol edemem."
     ],
     "his": [
-     "cesur olmanın, cesurca adım atmanın",
-     "değişime kolaylıkla uyum sağlamanın",
-     "değişimin mümkün ve güvenli olduğunu bilmenin",
-     "yeni başlangıçları neşeyle karşılamanın",
-     "yeteneklerine ve gücüne inanmanın",
-     "hayat amacınla uyumlu yaşamanın"
+     "yeni bir adım attığında güvende olmanın, doğru adımı attığını bilmenin",
+     "yeni durumu nasıl yöneteceğini bilmenin",
+     "yeni bir adım attığında ilerleyebilmenin, yükselebilmenin",
+     "cesaretli, başarılı ve güçlü olmanın, dik durmanın",
+     "kariyer sahibi olmanın",
+     "hayatın değişip dönüşürken de güvende olduğunu bilmenin",
+     "hayatın sana yeni fırsatları neşeyle, kolaylıkla, güzellikle getirmesinin",
+     "değişimin ve dönüşümün senin en yüksek hayrına olmasının",
+     "sahip olduklarının değerini bilmenin",
+     "huzurlu, mutlu, bereketli ve zengin olmanın",
+     "kendi gücünü ve yapabileceklerini fark etmenin",
+     "işlerini kolaylıkla ve pozitiflikle yapabilmenin",
+     "desteklenmenin, korunmanın, kollanmanın, sevmenin, sevilmenin",
+     "öngörülü olmanın, fırsatları kazanca dönüştürmenin",
+     "uyum ve ahenk içinde, güvenilir bir şekilde çalışmanın",
+     "nerede, ne zaman, nasıl, ne kadar, kime karşı kontrolcü olabileceğini ve neyi kontrol edebileceğini bilmenin",
+     "doğru kararlar vermenin"
     ]
    }
   ]
