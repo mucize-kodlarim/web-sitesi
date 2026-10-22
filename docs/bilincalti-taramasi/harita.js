@@ -958,31 +958,6 @@ window.HARITA = [
      "yeteneklerine ve gücüne inanmanın",
      "hayat amacınla uyumlu yaşamanın"
     ]
-   },
-   {
-    "baslik": "Hata yapmaktan, eleştirilmekten korkuyorum",
-    "duygu": [
-     "Değersizlik",
-     "Utanç",
-     "Yetersizlik",
-     "Yargılanma korkusu",
-     "Aşağılanma"
-    ],
-    "kayit": [
-     "Hata yaparsam değerimi kaybederim.",
-     "Her şeyi kusursuz yapmalıyım.",
-     "Eleştirilirsem herkes ne kadar yetersiz olduğumu görür.",
-     "İnsanlar beni sürekli yargılar.",
-     "Hata yapan biri ayıplanır."
-    ],
-    "his": [
-     "kendini olduğun gibi kabul etmenin",
-     "hatalardan kolaylıkla öğrenmenin",
-     "takdir edilmenin, saygı görmenin",
-     "nerede, ne zaman, nasıl, ne kadar mükemmeliyetçi olacağını bilmenin",
-     "dik durabilmenin, kendini özgürce ifade etmenin",
-     "değerli olmanın"
-    ]
    }
   ]
  }
