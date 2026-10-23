@@ -53,7 +53,13 @@ window.HARITA = [
      "bol bereketli para kazanmanın",
      "parayı dengeli bir şekilde kullanmanın",
      "parayı neşeyle, kolaylıkla kullanmanın",
-     "parayı sevmenin"
+     "parayı sevmenin",
+     "paraya değer vermenin, paranın da seni sevmesinin",
+     "maddi bolluk içinde yaşamanın",
+     "dilediğin şeyleri rahatlıkla alabilmenin",
+     "para konusunda huzurlu ve rahat olmanın",
+     "kazandığın paraya şükretmenin",
+     "güvende olmanın, desteklenmenin"
     ]
    },
    {
@@ -76,7 +82,13 @@ window.HARITA = [
      "kazandığın parayı dengeli bir şekilde biriktirmenin",
      "bol bereketli para kazanmanın",
      "hem para kazanmanın hem konforlu, huzurlu ve keyifli olmanın",
-     "parayı hak etmenin"
+     "parayı hak etmenin",
+     "paranın sende kalmasının, kolaylıkla birikmesinin",
+     "kazancını kolaylıkla artırmanın",
+     "bol paranın sana huzur ve neşe getirmesinin",
+     "bolluğa ve bereketli kazanca layık olmanın",
+     "parayı nerede, ne zaman, nasıl kullanacağını bilmenin",
+     "yeterli ve başarılı olmanın"
     ]
    },
    {
@@ -99,7 +111,13 @@ window.HARITA = [
      "bol bereketli para kazanmanın",
      "dilediğin şeyleri kolaylıkla, neşeyle almanın",
      "zengin olmanın",
-     "hem bol bereketli para kazanmanın hem de azimli olmanın"
+     "hem bol bereketli para kazanmanın hem de azimli olmanın",
+     "borçlarını kolaylıkla kapatmanın",
+     "kendi kazancınla dilediğin şeylere sahip olmanın",
+     "maddi olarak rahat ve huzurlu olmanın",
+     "parayı nerede, ne zaman, nasıl kullanacağını bilmenin",
+     "kendini sevmenin, değerli olmanın",
+     "desteklenmenin, korunmanın, kollanmanın"
     ]
    },
    {
@@ -118,11 +136,17 @@ window.HARITA = [
      "Paramı kaybedersem güvende olamam."
     ],
     "his": [
-     "hem çok paran olmasının hem de iyi bir insan olmanın",
-     "parayı kolaylıkla elinde tutmanın",
-     "hem paralı olmanın hem de sevilmenin",
-     "güvende olmanın",
-     "desteklenmenin"
+     "güçlü olmanın, güvende olmanın",
+     "rahat ve konforlu olmanın",
+     "çok para kazanmanın, parayı kolaylıkla kazanmanın",
+     "bolluk, bereket içinde yaşamanın",
+     "zengin olmanın",
+     "desteklenmenin, korunmanın, kollanmanın",
+     "attığın her adımda, aldığın her nefeste bolluk bereket içinde olduğunu bilmenin",
+     "paranı artırmanın, katlamanın, çoğaltmanın",
+     "sevdiklerinle birlikte bolluk içinde yaşamanın",
+     "fırsatları kolaylıkla kazanca dönüştürmenin",
+     "hem zengin olmanın hem de sevdiklerinle birlikte olmanın"
     ]
    }
   ]
@@ -152,7 +176,13 @@ window.HARITA = [
      "görülmenin, fark edilmenin",
      "kariyerinde ilerlemenin ve yükselmenin",
      "yeterli olmanın, başarılı olmanın",
-     "takdir edilmenin, değerli olmanın"
+     "takdir edilmenin, değerli olmanın",
+     "hak ettiğin ücreti ve değeri almanın",
+     "başarılı olmayı ve yükselmeyi hak ettiğini bilmenin",
+     "adil davranılmanın",
+     "yeteneklerini göstermenin",
+     "kendini ifade etmenin",
+     "desteklenmenin"
     ]
    },
    {
@@ -200,7 +230,13 @@ window.HARITA = [
      "sana uygun müşterilerin ve fırsatların kolaylıkla gelmesinin",
      "bolluk ve bereket içinde çalışmanın",
      "özgüvenli, cesaretli, dengeli ve konforlu olarak çalışmanın",
-     "çalışkan, azimli olmanın ve işlerini tamamlamanın"
+     "çalışkan, azimli olmanın ve işlerini tamamlamanın",
+     "doğru insanlarla kolaylıkla tanışmanın",
+     "işini büyütmek için gereken imkânların kolaylıkla gelmesinin",
+     "işini büyütürken güvende olmanın",
+     "rahatlıkla, keyifle çalışmanın",
+     "güçlü, yeterli ve başarılı olmanın",
+     "desteklenmenin"
     ]
    },
    {
@@ -226,7 +262,13 @@ window.HARITA = [
      "yeteneklerini fark ederek doğru adımı atmanın",
      "kendi seçimlerini özgürce yapabilmenin",
      "hem başarılı olmanın hem de değerli olmanın",
-     "istediğin işi yapmaya layık olmanın"
+     "istediğin işi yapmaya layık olmanın",
+     "sevdiğin işi yaparak bol bereketli para kazanmanın",
+     "yeteneklerinin değerli olduğunu bilmenin",
+     "sana en uygun işi kolaylıkla bulmanın",
+     "yaptığın işten keyif almanın",
+     "doğru zamanda doğru kararları vermenin",
+     "yeterli olmanın"
     ]
    },
    {
@@ -252,7 +294,13 @@ window.HARITA = [
      "yeterli olmanın",
      "cesur, özgüvenli olmanın",
      "görülmenin, sevilmenin",
-     "çalışkan, azimli olmanın"
+     "çalışkan, azimli olmanın",
+     "başarıyı hak ettiğini bilmenin",
+     "her durumda değerli olduğunu bilmenin",
+     "hata yaptığında da sevilmenin",
+     "yeni şeyler denemenin ve öğrenmenin",
+     "kendinle barışık olmanın",
+     "kendini ifade etmenin"
     ]
    }
   ]
