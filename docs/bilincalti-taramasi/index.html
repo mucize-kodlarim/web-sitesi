@@ -70,8 +70,8 @@
 .hk-yukle .hk-cubuk{flex:1}
 .hk-ok{color:#a9c98a;font:600 15px "Sora",sans-serif;margin:10px 0}
 .hk-tam{border-left:3px solid #a9c98a;padding:10px 16px;margin:14px 0;color:#f4efe6;font-style:italic;line-height:1.75;background:rgba(169,201,138,.07);border-radius:0 12px 12px 0}
-.hk-yildiz{position:absolute;pointer-events:none;color:#f3d9a4;font-size:16px;text-shadow:0 0 12px #f3d9a4;animation:hkYildiz 1.8s ease-out forwards;z-index:3}
-@keyframes hkYildiz{0%{opacity:0;transform:translateY(0) scale(.4)}20%{opacity:1}100%{opacity:0;transform:translateY(-120px) scale(1.2) rotate(40deg)}}
+.hk-yildiz{position:absolute;pointer-events:none;color:#ffe9b8;font-size:16px;text-shadow:0 0 4px #fff,0 0 10px #f3d9a4,0 0 22px #f3d9a4,0 0 36px rgba(243,217,164,.7);animation:hkYildiz 2s ease-out forwards;z-index:3}
+@keyframes hkYildiz{0%{opacity:0;transform:translateY(0) scale(.4)}15%{opacity:1;transform:translateY(-20px) scale(1.3)}30%{opacity:.6}45%{opacity:1;transform:translateY(-70px) scale(1)}60%{opacity:.7}75%{opacity:1}100%{opacity:0;transform:translateY(-170px) scale(1.2) rotate(40deg)}}
 .hk-son{text-align:center}
 .hk-son .buyuk{font-size:40px;margin-bottom:6px}
 .hk-cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:20px 0 8px}
@@ -127,7 +127,7 @@
 
   const ust = (etiket, adim) => `<div class="hk-ust"><i></i><span>${etiket}</span>${adim ? `<span class="adim">${adim}</span>` : ''}</div>`;
   const goster = (h, odak) => { kutu.innerHTML = h; const f = kutu.querySelector(odak || 'h2'); if (f) { f.setAttribute('tabindex', '-1'); f.focus({ preventScroll: true }); } if (kutu.getBoundingClientRect().top < 0) kutu.scrollIntoView({ behavior: yavas ? 'auto' : 'smooth', block: 'start' }); };
-  const yildiz = (n = 14) => { if (yavas) return; const r = kutu.getBoundingClientRect(); for (let i = 0; i < n; i++) { const y = document.createElement('span'); y.className = 'hk-yildiz'; y.textContent = Math.random() > .5 ? '✦' : '✧'; y.style.left = (8 + Math.random() * 84) + '%'; y.style.top = (55 + Math.random() * 35) + '%'; y.style.animationDelay = (Math.random() * .6) + 's'; y.style.fontSize = (12 + Math.random() * 14) + 'px'; kutu.appendChild(y); setTimeout(() => y.remove(), 2600); } };
+  const yildiz = (n = 14) => { if (yavas) return; const r = kutu.getBoundingClientRect(); for (let i = 0; i < n; i++) { const y = document.createElement('span'); y.className = 'hk-yildiz'; y.textContent = Math.random() > .2 ? '✦' : '✧'; y.style.left = (8 + Math.random() * 84) + '%'; y.style.top = (25 + Math.random() * 70) + '%'; y.style.animationDelay = (Math.random() * 1.2) + 's'; y.style.fontSize = (10 + Math.random() * 18) + 'px'; kutu.appendChild(y); setTimeout(() => y.remove(), 3400); } };
   const dna = () => { let a = '', b = '', r = ''; for (let x = 0; x <= 800; x += 8) { const s = Math.sin(x / 32); a += (x ? 'L' : 'M') + x + ' ' + (35 + 24 * s).toFixed(1); b += (x ? 'L' : 'M') + x + ' ' + (35 - 24 * s).toFixed(1); if (x % 24 === 0) r += `<line x1="${x}" y1="${(35 + 24 * s).toFixed(1)}" x2="${x}" y2="${(35 - 24 * s).toFixed(1)}" stroke-opacity="${(.15 + .4 * Math.abs(Math.cos(x / 32))).toFixed(2)}"/>`; } return `<svg class="hk-dna" viewBox="0 0 800 70" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="hkg"><stop offset="0" stop-color="#a9c98a"/><stop offset=".5" stop-color="#f3d9a4"/><stop offset="1" stop-color="#e08cc4"/></linearGradient></defs><g stroke="#f3d9a4" stroke-width="1">${r}</g><path d="${a}" stroke="url(#hkg)" stroke-width="2" fill="none"/><path d="${b}" stroke="url(#hkg)" stroke-width="2" fill="none" stroke-opacity=".55"/></svg>`; };
 
   function giris() {
@@ -235,7 +235,7 @@
     for (let p = 0; p <= 100; p += 4) { if (s !== surum) return; c.style.width = p + '%'; await bekle(110); }
     if (s !== surum) return;
     a.innerHTML = `<p class="hk-ok">✓ Yüklendi</p>${tam ? `<div class="hk-tam">${tam}</div>` : ''}<div class="hk-alt"><button class="hk-btn ana" data-d>Devam →</button></div>`;
-    yildiz(18);
+    yildiz(45);
     a.querySelector('[data-d]').addEventListener('click', sonra);
     a.querySelector('[data-d]').focus({ preventScroll: true });
   }
@@ -255,7 +255,7 @@
       <h2>${esc(S.ad)}, hislerin <em>yüklendi.</em></h2>
       <p>Hislerine odaklan, derin bir nefes al ve rahatla.</p>
       ${davet()}</div>`);
-    yildiz(26);
+    yildiz(70);
     kutu.querySelector('[data-bas]').addEventListener('click', konuSec);
   }
 
