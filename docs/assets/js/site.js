@@ -33,6 +33,7 @@
     danis:   ['#a9c98a', '<path d="M12 19s-6.5-4-6.5-8.5A3.6 3.6 0 0 1 12 8.3a3.6 3.6 0 0 1 6.5 2.2C18.5 15 12 19 12 19z"/>'],
     hakkimda:['#f3d9a4', '<path d="M12 18c-3.5 0-6-2-6.5-4.5 2 .3 3.8 1.2 4.6 2.4M12 18c3.5 0 6-2 6.5-4.5-2 .3-3.8 1.2-4.6 2.4M12 18c-1.8-2-2.4-5.4 0-9 2.4 3.6 1.8 7 0 9z"/>'],
     blog:    ['#c9a6e8', '<path d="M18 5c-6 0-10 4.5-11 12M18 5c.5 5-3 9-8.5 9.5M8.5 13.5 6 19"/>'],
+    takvim:  ['#f0b98a', '<rect x="5" y="6.5" width="14" height="12.5" rx="2.5"/><path d="M5 10.5h14M9 4.5v4M15 4.5v4"/><path d="M9 14h1.5M13.5 14H15" stroke-width="1.8"/>'],
     iletisim:['#bfe0a6', '<path d="M5 6.5h14v9H10l-3.5 3v-3H5z"/><path d="M8.5 10.5h7M8.5 13h4.5"/>']
   };
   const ik = k => `<span class="nav-ik" style="--ik:${IKS[k][0]}" aria-hidden="true"><svg viewBox="0 0 24 24">${IKS[k][1]}</svg></span>`;  if (ust) ust.outerHTML = `
@@ -50,6 +51,7 @@
         <div class="dd"><button type="button" aria-expanded="false">${ik('danis')}Danışmanlık</button>
           <div class="mega sm"><div><h6>Birebir seanslar</h6>${DN.map(mItem).join('')}
             <a href="${L('danismanliklar/')}" style="--c:var(--muted)"><i></i><span>Tüm danışmanlıklar<small>karşılaştır</small></span></a></div></div></div>
+        <a href="${L('seminerler/')}#takvim" data-s="takvim">${ik('takvim')}Takvim</a>
         <a href="${L('hakkimda/')}" data-s="hakkimda">${ik('hakkimda')}Hakkımda</a>
         <a href="${L('blog-yazilari/')}" data-s="blog">${ik('blog')}Blog</a>
         <a href="${L('iletisim/')}" data-s="iletisim">${ik('iletisim')}İletişim</a>
@@ -62,9 +64,9 @@
     <div class="mtop"><span class="brand">Mucize Kodlarım</span><button class="x" type="button" aria-label="Menüyü kapat">✕</button></div>
     <h6>${ik('seminer')}ThetaHealing® seminerleri</h6>${theta.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>${h.modul}</small></a>`).join('')}
     <h6>${ik('seminer')}Diğer seminerler</h6>${diger.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>sertifikalı</small></a>`).join('')}
-    <a class="l" href="${L('seminerler/')}#takvim">Takvim <small>tarih · ücret</small></a>
     <h6>${ik('danis')}Danışmanlık</h6>${DN.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>birebir</small></a>`).join('')}
     <h6>Keşfet</h6>
+    <a class="l" href="${L('seminerler/')}#takvim"><span class="l-ad">${ik('takvim')}Takvim</span> <small>tarih · ücret</small></a>
     <a class="l" href="${L('hakkimda/')}"><span class="l-ad">${ik('hakkimda')}Hakkımda</span> <small>Melike Kaan</small></a>
     <a class="l" href="${L('blog-yazilari/')}"><span class="l-ad">${ik('blog')}Blog</span> <small>yazılar</small></a>
     <a class="l" href="${L('iletisim/')}"><span class="l-ad">${ik('iletisim')}İletişim</span> <small>whatsapp · e-posta</small></a>

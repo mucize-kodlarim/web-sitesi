@@ -55,6 +55,11 @@ main,header,footer{position:relative;z-index:2}
 h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,5.2vw,80px);line-height:.98;letter-spacing:-.01em;margin:26px 0 22px}
 h1 em,.g{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{font-size:clamp(16px,1.6vw,18px);color:var(--muted);max-width:520px}
+.yontem{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:0 0 14px;font-family:var(--serif);font-weight:600;font-size:clamp(22px,2.2vw,28px);line-height:1.2}
+.yontem span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.yontem i{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold);opacity:.8}
+.txt .lead{line-height:1.7;max-width:600px;text-wrap:pretty}
+@media (max-width:560px){.yontem{flex-wrap:nowrap;white-space:nowrap;gap:0 9px;font-size:4.8vw}.yontem i{width:5px;height:5px;flex:none}}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:40px}
 .chips span{font:400 12px/1 var(--mono);color:var(--muted);padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:var(--panel)}
@@ -223,7 +228,7 @@ footer ul{list-style:none;display:grid;gap:8px;color:var(--muted);font-size:14px
 .hero .txt{grid-area:txt;align-self:end}
 .hero .term{grid-area:term;align-self:start;margin-top:0}
 .hero .sys{grid-area:sys}
-.orbit{position:relative;aspect-ratio:1;width:min(580px,calc(100% - 150px));margin:40px auto 0}
+.orbit{position:relative;aspect-ratio:1;width:min(580px,calc(100% - 150px));margin:64px auto 0}
 .ring{position:absolute;border-radius:50%;border:1px solid rgba(224,140,196,.25);pointer-events:none;animation:spin var(--t) linear infinite}
 .r-out{inset:0;--t:95s}
 .r-deco{inset:7%;border:1px dashed rgba(243,217,164,.16);animation:spin 200s linear infinite}
@@ -243,13 +248,13 @@ footer ul{list-style:none;display:grid;gap:8px;color:var(--muted);font-size:14px
 .planet{position:absolute;inset:28%;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 32%,rgba(243,217,164,.45),rgba(224,140,196,.45) 30%,rgba(138,62,116,.45) 55%,rgba(6,42,31,.95) 80%);border:1px solid rgba(243,217,164,.3);box-shadow:0 0 90px rgba(224,140,196,.35),0 0 0 10px rgba(224,140,196,.05)}
 .planet img{position:absolute;left:50%;bottom:-2%;width:118%;max-width:none;transform:translateX(-50%)}
 .planet:after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:inset 0 -26px 40px rgba(11,7,20,.55)}
-.plate{text-align:center;margin-top:44px}
-.plate b{display:block;font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.1}
-.plate span{font:400 12px var(--mono);color:var(--muted)}
-.legend{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font:400 12px var(--mono);color:var(--muted)}
-.legend span{display:flex;align-items:center;gap:7px}
-.legend i{width:8px;height:8px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c)}
-.legend em{font-style:normal;color:var(--dim);width:100%;text-align:center}
+.plate{text-align:center}
+.plate b{display:block;font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.1;background:linear-gradient(100deg,var(--gold),#fff 45%,var(--orchid));-webkit-background-clip:text;background-clip:text;color:transparent}
+.plate span{display:block;margin-top:8px;font:400 12.5px var(--mono);color:var(--text);opacity:.85}
+.legend{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 10px;margin-top:14px;font:400 11.5px var(--mono);color:var(--text)}
+.legend span{display:flex;align-items:center;gap:6px;padding:3px 11px;border-radius:999px;border:1px solid color-mix(in srgb,var(--c) 35%,transparent);background:color-mix(in srgb,var(--c) 8%,transparent)}
+.legend i{width:7px;height:7px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c)}
+.legend em{font-style:normal;font-size:12.5px;color:var(--gold);width:100%;text-align:center;margin-top:4px;letter-spacing:.01em;text-wrap:balance}
 
 /* hedefe gidince parlama + bilgi */
 .ping{animation:ping 1.5s ease 2}
@@ -269,9 +274,10 @@ footer ul{list-style:none;display:grid;gap:8px;color:var(--muted);font-size:14px
 @media (max-width:1060px){.links{gap:18px;font-size:13.5px}}
 @media (max-width:900px){
   .hero{grid-template-columns:1fr;grid-template-areas:"txt" "sys" "term"}
-  .orbit{width:min(440px,calc(100% - 56px));margin-top:40px}
+  .orbit{width:min(440px,calc(100% - 56px));margin-top:56px}
   .lab{flex-direction:column;gap:4px;padding:6px 8px;border-radius:14px}.lab small{display:none}.lab b{font-size:10px;line-height:1.15;white-space:normal;text-align:center;max-width:74px}.lab i{width:9px;height:9px}
-  .plate b{font-size:26px}
+  .plate b{font-size:25px}
+  .legend em{font-size:11.5px}
   .contact{grid-template-columns:1fr 1fr}
 }
 @media (max-width:420px){.contact{grid-template-columns:1fr}}
@@ -674,7 +680,10 @@ a.ek:hover .ek-devam{color:#1a0f22;box-shadow:0 0 18px rgba(224,140,196,.45);tra
 body.menu-acik #mucize-assistant-widget-host,body.menu-acik .ses,body.wa-sec-acik #mucize-assistant-widget-host,body.wa-sec-acik .ses{display:none !important}
 /* orta genişlikte (tablet/küçük dizüstü) menü sığsın */
 @media (max-width:1080px){.links{gap:12px;font-size:13.5px}.links>a,.dd>button{gap:6px}.nav-ik{width:20px;height:20px}.nav-ik svg{width:13px;height:13px}.nav-cta{padding:12px 16px;font-size:13px}}
-@media (max-width:999px){.links,.nav .btn{display:none}.menu-t{display:block}}
+/* Takvim eklenince (2026-10-23): dar masaüstünde menü sığsın, 1120px altında ☰ menü */
+@media (max-width:1360px){.links{gap:14px}}
+@media (max-width:1240px){.links{gap:10px;font-size:13.5px}.links>a,.dd>button{gap:6px}.nav-ik{width:20px;height:20px}.nav-ik svg{width:13px;height:13px}.nav-cta{padding:12px 16px;font-size:13px}}
+@media (max-width:1120px){.links,.nav .btn{display:none}.menu-t{display:block}}
 /* ana sayfa takvim bölümü: gereksiz boşluklar alındı (Neziha 2026-10-15) */
 section:has(+ #takvim){padding-bottom:40px}
 #takvim{padding:40px 0}
