@@ -51,6 +51,7 @@
 .hk-katman span.tamam::before{content:"✓ "}
 .hk-yuzde{font:500 13px "JetBrains Mono",monospace;color:#f3d9a4;margin-top:8px}
 .hk-dna{display:block;width:100%;height:70px;margin:6px 0 4px;opacity:.9}
+.hk-kafa{display:block;width:100%;max-width:560px;aspect-ratio:16/9;object-fit:cover;margin:8px auto 6px;border-radius:14px;background:#000;-webkit-mask:radial-gradient(ellipse 70% 75% at 50% 50%,#000 60%,transparent 100%);mask:radial-gradient(ellipse 70% 75% at 50% 50%,#000 60%,transparent 100%)}
 .hk-baslik{font:500 12px "JetBrains Mono",monospace;color:#a9c98a;letter-spacing:.08em;text-transform:uppercase;margin:20px 0 8px}
 .hk-cip{display:flex;flex-wrap:wrap;gap:10px;padding:16px;border-radius:18px;border:1px solid rgba(224,140,196,.5);background:rgba(224,140,196,.09);box-shadow:inset 0 0 24px rgba(224,140,196,.08)}
 .hk-cip span{padding:9px 16px;border-radius:999px;background:rgba(224,140,196,.24);border:1px solid #e08cc4;color:#fff;font:600 16px "Sora",sans-serif;box-shadow:0 0 14px rgba(224,140,196,.22)}
@@ -171,7 +172,7 @@
     const SEV = ['öz benlik', 'genetik', 'geçmiş', 'ruhsal'];
     goster(`${ust('bilinçaltı taranıyor', '4 / 5')}
       <h2>Bilinçaltın <em>taranıyor…</em></h2>
-      ${dna()}
+      <video class="hk-kafa" src="../assets/img/kafa-tarama.mp4" poster="../assets/img/kafa-tarama.jpg" ${yavas ? '' : 'autoplay'} muted playsinline aria-hidden="true"></video>
       <div class="hk-tara"><div class="hk-cubuk"><span id="hkc"></span></div><div class="hk-yuzde" id="hky">%0</div>
       <div class="hk-katman">${SEV.map(x => `<span>${x}</span>`).join('')}</div></div>
       <p class="kucuk">Hislerine odaklan, derin bir nefes al…</p>`);
@@ -181,7 +182,7 @@
       c.style.width = p + '%'; y.textContent = '%' + p;
       const i = Math.min(3, Math.floor(p / 25));
       ks.forEach((e, j) => { e.className = j < i || p === 100 ? 'tamam' : j === i ? 'simdi' : ''; });
-      await bekle(60);
+      await bekle(105);
     }
     await bekle(350);
     if (s === surum) harita();
