@@ -864,3 +864,87 @@ body.wa-sec-acik{overflow:hidden}
 @keyframes hy-blip{0%{opacity:0;transform:translateY(10px) scale(.95)}55%{opacity:1;transform:none;border-color:rgba(243,217,164,.75);box-shadow:0 0 20px rgba(243,217,164,.45)}100%{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.hy-ekran *,.hy-basla,.hy-kayit.akis{animation:none !important}.hy-zerre{opacity:.5}}
 @media (max-width:640px){.hy-ekran{height:140px}.hy-ekran.kucuk{height:46px}.hy-basla{width:100%;padding:15px 20px;font-size:16px}.hy-katman{gap:4px 12px;font-size:11px}}
+/* müzik penceresi: ortada, mor zemin; çalarken frekans dalgaları + pırıltı (ses.js, Neziha 2026-11-03) */
+.ses-perde{position:fixed;inset:0;z-index:70;display:grid;place-items:center;padding:16px;background:rgba(8,4,18,.6);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.ses-perde.acik{opacity:1;visibility:visible}
+.ses-pano{position:relative;width:min(600px,100%);max-height:calc(100vh - 32px);overflow:hidden auto;border-radius:26px;padding:30px 28px 26px;background:radial-gradient(120% 85% at 50% 0%,#55287e 0%,#2e1550 48%,#170a2c 100%);border:1px solid rgba(226,180,255,.4);box-shadow:0 30px 90px rgba(0,0,0,.65),0 0 70px rgba(168,92,255,.28);color:#f6ecff;transform:translateY(14px) scale(.97);transition:transform .35s ease}
+.ses-perde.acik .ses-pano{transform:none}
+.ses-pano>*:not(.ses-halka):not(.ses-pirilti):not(.ses-kapat){position:relative;z-index:1}
+.ses-pano>.ses-kapat{z-index:2}
+.ses-dalgalar{position:absolute;left:0;top:50%;width:100%;height:46%;transform:translateY(-50%);pointer-events:none;opacity:.28;transition:opacity .8s}
+.ses-dalgalar path{fill:none;stroke-width:1.6;vector-effect:non-scaling-stroke}
+.ses-dalgalar .d1{stroke:#f2a6e0}.ses-dalgalar .d2{stroke:#c9a6ff;stroke-opacity:.8}.ses-dalgalar .d3{stroke:#f3d9a4;stroke-opacity:.55}
+.ses-perde.caliyor .ses-dalgalar{opacity:.75}
+.ses-perde.caliyor .ses-dalgalar .d1{animation:sesdalga 9s linear infinite}
+.ses-perde.caliyor .ses-dalgalar .d2{animation:sesdalga 6s linear infinite}
+.ses-perde.caliyor .ses-dalgalar .d3{animation:sesdalga 13s linear infinite reverse}
+@keyframes sesdalga{to{transform:translateX(-50%)}}
+.ses-pirilti{position:absolute;inset:0;pointer-events:none}
+.ses-pirilti i{position:absolute;font-style:normal;font-size:12px;color:#ffe9b8;text-shadow:0 0 6px #f3d9a4,0 0 14px rgba(226,150,255,.9);opacity:0;transform:translate(-50%,-50%)}
+.ses-perde.caliyor .ses-pirilti i{animation:sespirilti 3s ease-in-out infinite}
+@keyframes sespirilti{0%,100%{opacity:0;transform:translate(-50%,-50%) scale(.4)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}}
+.ses-kapat{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(226,180,255,.4);background:rgba(255,255,255,.06);color:#f6ecff;font:300 24px/1 var(--sans);cursor:pointer}
+.ses-kapat:hover{background:rgba(255,255,255,.14)}
+.ses-pano h3{margin:0;font:500 34px/1.1 var(--serif);color:#ffe9b8;text-shadow:0 0 18px rgba(243,217,164,.35)}
+.ses-durum{margin:6px 0 20px;font:400 14px var(--sans);color:#dcc9f0}
+.ses-liste{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ses-liste button{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:13px 14px;border-radius:15px;border:1px solid rgba(226,180,255,.25);background:rgba(255,255,255,.06);color:#f6ecff;cursor:pointer;text-align:left;transition:background .2s,border-color .2s,box-shadow .2s}
+.ses-liste button b{font:600 15px/1.2 var(--sans)}
+.ses-liste button small{font:400 11.5px var(--mono);color:#cbb6e6}
+.ses-liste button:hover{background:rgba(255,255,255,.12);border-color:rgba(243,217,164,.6)}
+.ses-liste button[aria-pressed="true"]{background:var(--grad);border-color:transparent;color:#1a0f22;box-shadow:0 0 24px rgba(242,166,224,.55)}
+.ses-liste button[aria-pressed="true"] small{color:#3a2440}
+.ses-sustur{display:block;margin:20px auto 0;padding:11px 26px;border-radius:999px;border:1px solid rgba(243,217,164,.6);background:rgba(0,0,0,.2);color:#ffe9b8;font:500 14px var(--sans);cursor:pointer}
+.ses-sustur:hover{background:rgba(243,217,164,.15)}
+.ses-sustur[hidden]{display:none}
+body.ses-pano-acik{overflow:hidden}
+body.ses-pano-acik #mucize-assistant-widget-host{display:none !important}
+@media (max-width:640px){.ses-pano{padding:24px 16px 20px;border-radius:22px}.ses-pano h3{font-size:28px}.ses-liste{grid-template-columns:repeat(2,1fr);gap:8px}.ses-liste button{padding:11px 12px}.ses-liste button b{font-size:14px}}
+@media (prefers-reduced-motion:reduce){.ses-perde.caliyor .ses-dalgalar path,.ses-perde.caliyor .ses-pirilti i{animation:none}.ses-perde.caliyor .ses-pirilti i{opacity:.7}}
+.ses-liste button{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:10px;row-gap:2px;align-items:center}
+.ses-liste .ses-ik{grid-row:1 / 3;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:21px;line-height:1;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(226,180,255,.2)}
+.ses-liste button[aria-pressed="true"] .ses-ik{background:rgba(255,255,255,.45)}
+.ses-perde.caliyor .ses-liste button[aria-pressed="true"] .ses-ik{animation:sesik 2.4s ease-in-out infinite}
+@keyframes sesik{50%{transform:scale(1.12)}}
+@media (max-width:640px){.ses-liste .ses-ik{width:32px;height:32px;font-size:18px;border-radius:10px}}
+@media (prefers-reduced-motion:reduce){.ses-perde.caliyor .ses-liste button[aria-pressed="true"] .ses-ik{animation:none}}
+.ses-pano>.ses-kapat{position:absolute}
+.ses-liste button{background:rgba(38,16,66,.78);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.ses-liste button:hover{background:rgba(70,34,110,.85)}
+.ses-perde.caliyor .ses-dalgalar{opacity:.55}
+/* zemin: huzurlu gece mavisi; su halkaları (Neziha 2026-11-03) */
+.ses-pano{background:radial-gradient(120% 85% at 50% 0%,#2d5f96 0%,#173a66 46%,#0c2142 100%);border-color:rgba(170,210,255,.4);box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 70px rgba(110,170,255,.25)}
+.ses-liste button{background:rgba(12,34,66,.72);border-color:rgba(170,210,255,.25)}
+.ses-liste button:hover{background:rgba(30,66,112,.85)}
+.ses-liste .ses-ik{box-shadow:inset 0 0 0 1px rgba(170,210,255,.25)}
+.ses-liste button small{color:#b9d2ee}
+.ses-durum{color:#cfe1f5}
+.ses-kapat{border-color:rgba(170,210,255,.4)}
+.ses-pano>.ses-halka{position:absolute;inset:0;pointer-events:none;z-index:0}
+.ses-halka span{position:absolute;width:0;height:0;animation:seshalka 7s ease-out infinite;opacity:0}
+.ses-halka i{position:absolute;left:0;top:0;width:200px;height:200px;margin:-100px 0 0 -100px;border-radius:50%;border:1.5px solid rgba(190,225,255,.7);transform:scale(0);opacity:0;animation:inherit;animation-name:seshalkai}
+.ses-halka i:nth-child(2){animation-delay:inherit;animation-name:seshalkai2}
+.ses-halka i:nth-child(3){animation-name:seshalkai3}
+@keyframes seshalka{0%,100%{opacity:1}}
+@keyframes seshalkai{0%{transform:scale(0);opacity:0}5%{opacity:.8}60%,100%{transform:scale(1);opacity:0}}
+@keyframes seshalkai2{0%,10%{transform:scale(0);opacity:0}15%{opacity:.6}70%,100%{transform:scale(.85);opacity:0}}
+@keyframes seshalkai3{0%,20%{transform:scale(0);opacity:0}25%{opacity:.45}80%,100%{transform:scale(.7);opacity:0}}
+.ses-perde:not(.caliyor) .ses-halka{display:none}
+@media (prefers-reduced-motion:reduce){.ses-halka{display:none}}
+@media (max-width:640px){.ses-liste button:last-child:nth-child(odd){grid-column:1 / -1}}
+/* zemin: gece moru + üstten pembe-altın ışık + incimsi kenar; altın nokta pırıltı; belirgin su halkaları (Neziha 2026-11-03) */
+.ses-pano{background:radial-gradient(75% 48% at 50% -6%,rgba(255,190,214,.55) 0%,rgba(246,204,150,.24) 42%,transparent 72%),radial-gradient(130% 70% at 50% 115%,rgba(238,224,255,.16),transparent 62%),linear-gradient(180deg,#2b1739 0%,#1e102d 55%,#170b23 100%);border-color:rgba(252,236,255,.45);box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 70px rgba(242,166,214,.22),inset 0 0 46px rgba(248,232,255,.1)}
+.ses-liste button{background:rgba(42,22,58,.66);border-color:rgba(252,228,255,.22)}
+.ses-liste button:hover{background:rgba(70,38,90,.8);border-color:rgba(243,217,164,.6)}
+.ses-liste .ses-ik{box-shadow:inset 0 0 0 1px rgba(252,228,255,.25)}
+.ses-liste button small{color:#e3cfe9}
+.ses-durum{color:#ecd9f0}
+.ses-kapat{border-color:rgba(252,228,255,.4)}
+.ses-pirilti i{border-radius:50%;background:radial-gradient(circle,#fff6d8 0%,#f3d9a4 45%,rgba(232,180,90,.9) 100%);box-shadow:0 0 6px 1px rgba(243,217,164,.85),0 0 14px rgba(243,200,120,.5);text-shadow:none}
+.ses-halka i{width:260px;height:260px;margin:-130px 0 0 -130px;border:2px solid rgba(255,232,246,.8);box-shadow:0 0 12px rgba(255,220,240,.35)}
+@media (max-width:640px){.ses-halka i{width:200px;height:200px;margin:-100px 0 0 -100px}}
+/* müzik kutusu biraz büyük (Neziha 2026-11-03) */
+.ses-rozet{width:100px;height:150px;border-radius:22px}
+.ses-btn .ses-rozet .yazi{font-size:22px;bottom:11px}
+@media (max-width:640px){.ses-rozet{width:52px;height:78px;border-radius:13px}.ses-btn .ses-rozet .yazi{font-size:13px;bottom:6px}}
+.ses-pano>.ses-halka,.ses-pano>.ses-pirilti{overflow:hidden;border-radius:inherit}
