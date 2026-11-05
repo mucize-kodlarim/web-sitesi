@@ -142,6 +142,11 @@
   const T = (MK.takvim || []).filter(t => t && t.tarih && new Date(t.tarih + 'T00:00:00') >= bugun)
     .sort((a, b) => a.tarih.localeCompare(b.tarih));
   const tYaz = s => { const d = new Date(s + 'T00:00:00'); return { g: String(d.getDate()).padStart(2, '0'), a: d.toLocaleDateString('tr-TR', { month: 'short' }), gun: d.toLocaleDateString('tr-TR', { weekday: 'short' }) }; };
+  const ay = s => new Date(s + 'T00:00:00').toLocaleDateString('tr-TR', { month: 'long' });
+  /* 18–19–20 Kasım (bitis varsa her gün yazılır; ay değişirse iki ay da yazılır) */
+  const gunler = t => { const a = new Date(t.tarih + 'T00:00:00'), b = new Date((t.bitis || t.tarih) + 'T00:00:00'), g = [];
+    for (const d = new Date(a); d <= b && g.length < 10; d.setDate(d.getDate() + 1)) g.push(d.getDate());
+    return a.getMonth() === b.getMonth() ? g.join('–') + ' ' + ay(t.tarih) : a.getDate() + ' ' + ay(t.tarih) + ' – ' + b.getDate() + ' ' + ay(t.bitis); };
   document.querySelectorAll('[data-takvim]').forEach(box => {
     const tek = box.dataset.takvim;
     const list = tek ? T.filter(t => t.egitim === tek) : T;
@@ -151,14 +156,16 @@
     }
     box.innerHTML = list.map(t => {
       const h = H.find(x => x.kod === t.egitim) || { ad: t.ad || t.egitim, yol: t.yol || '', kod: t.egitim };
-      const d = tYaz(t.tarih);
+      const d = tYaz(t.tarih), son = t.bitis ? new Date(t.bitis + 'T00:00:00') : null;
+      const ayAyni = !son || son.getMonth() === new Date(t.tarih + 'T00:00:00').getMonth();
+      const buyuk = son && ayAyni ? `${+d.g}–${son.getDate()}` : +d.g;
       const dolu = t.kontenjan && !/açık|ücretsiz/i.test(t.kontenjan);
-      return `<div class="row"><div class="d">${d.g} ${d.a}<small>${t.gunler || d.gun}</small></div><div><h5><a href="${L(h.yol)}">${h.ad}</a></h5><p>${[t.yer, t.saat, t.not].filter(Boolean).join(' · ')}</p></div><span class="pill ${dolu ? 'w' : ''}">${t.kontenjan || 'kontenjan açık'}</span><a class="btn btn-ghost" href="${L('iletisim/')}?ilgi=${h.kod}#basvuru">Başvur</a></div>`;
+      return `<div class="row"><div class="d"><b>${ayAyni ? buyuk : gunler(t)}</b>${ayAyni ? `<span>${ay(t.tarih)}</span>` : ''}<small>${t.gunler || d.gun}</small></div><div><h5><a href="${L(h.yol)}">${h.ad}</a></h5><p>${[t.yer, t.saat, t.not].filter(Boolean).join(' · ')}</p></div><span class="pill ${dolu ? 'w' : ''}">${t.kontenjan || 'kontenjan açık'}</span><a class="btn btn-ghost" href="${L('iletisim/')}?ilgi=${h.kod}#basvuru">Başvur</a></div>`;
     }).join('');
   });
   document.querySelectorAll('[data-tarih]').forEach(el => {
     const t = T.find(x => x.egitim === el.dataset.tarih);
-    if (t) { const d = tYaz(t.tarih); el.textContent = 'sıradaki · ' + d.g + ' ' + d.a; }
+    if (t) el.innerHTML = gunler(t) + (t.saat ? `<small class="saat">${t.saat}</small>` : '');
   });
   document.querySelectorAll('[data-ucret]').forEach(el => {
     const h = H.find(x => x.kod === el.dataset.ucret);

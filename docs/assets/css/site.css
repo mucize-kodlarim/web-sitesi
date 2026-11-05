@@ -994,3 +994,14 @@ body.ses-pano-acik #mucize-assistant-widget-host{display:none !important}
 .metin .hk-uyari p{font-size:14.5px;line-height:1.65;color:#c9bfd4;margin:0 0 10px}
 .metin .hk-uyari p:last-child{margin-bottom:0}
 @media (max-width:640px){.metin .hk-uyari{padding:18px}}
+/* takvim tarihleri belirgin (Neziha 2026-11-05) */
+.row{grid-template-columns:170px 1fr auto auto}
+.row .d{display:flex;flex-direction:column;gap:4px;white-space:nowrap}
+.row .d b{font:500 40px/1 var(--serif);background:linear-gradient(120deg,#ffe9b8,#f3d9a4 45%,#e8b4d8);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.01em}
+.row .d span{font:500 19px/1 var(--serif);color:var(--gold)}
+.row .d small{margin-top:2px;font-size:11.5px;color:var(--muted);letter-spacing:.06em}
+.row h5{font-size:19px}
+.row p{font-size:14px}
+.kutu dd[data-tarih]{font-weight:600}
+@media (max-width:760px){.row{grid-template-columns:118px 1fr}.row .d b{font-size:30px}.row .d span{font-size:16px}}
+.kutu dd[data-tarih] small.saat{display:block;margin-top:3px;font:500 13px var(--mono);white-space:nowrap;opacity:.85}

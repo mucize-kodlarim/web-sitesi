@@ -27,14 +27,14 @@ window.MK = {
 
   /* Seminer takvimi. Boşsa sitede "Yeni dönem tarihleri yakında" yazar.
      Geçmiş tarihler kendiliğinden gizlenir. Örnek satır (başındaki // silinince görünür):
-     { egitim: "theta-1", tarih: "2026-11-07", gunler: "Cum–Paz", saat: "19:00–24:00", yer: "Online · Zoom", not: "3 akşam", kontenjan: "kontenjan açık" },
-     egitim kodları: theta-1, theta-2, theta-3, theta-4, jaas-egitim, dowsing */
+     { egitim: "theta-1", tarih: "2026-11-07", gunler: "Cum–Paz", saat: "19:00–24:00", yer: "Online · Zoom", kontenjan: "kontenjan açık" },
+     bitis: son gün (birden çok günse). egitim kodları: theta-1, theta-2, theta-3, theta-4, jaas-egitim, dowsing */
   takvim: [
     // Melike Hanım'ın afişlerinden (Neziha 2026-11-05)
     { egitim: "tanitim", ad: "ThetaHealing Tanıtım Semineri · “Anne Karnı Şifası”", yol: "seminerler/", tarih: "2026-11-14", gunler: "Cmt", saat: "21:00", yer: "Online", kontenjan: "ücretsiz" },
-    { egitim: "theta-1", tarih: "2026-11-18", gunler: "Çar–Cum", saat: "19:00–24:00", yer: "Online · Zoom", not: "18–19–20 Kasım" },
-    { egitim: "theta-2", tarih: "2026-11-26", gunler: "Per–Cmt", saat: "19:00–24:00", yer: "Online · Zoom", not: "26–27–28 Kasım" },
-    { egitim: "theta-3", tarih: "2026-12-18", gunler: "Cum–Cmt", saat: "19:00–24:00", yer: "Online · Zoom", not: "18–19 Aralık" },
-    { egitim: "theta-4", tarih: "2026-12-29", gunler: "Sal–Çar", saat: "19:00–24:00", yer: "Online · Zoom", not: "29–30 Aralık" }
+    { egitim: "theta-1", tarih: "2026-11-18", bitis: "2026-11-20", gunler: "Çar–Cum", saat: "19:00–24:00", yer: "Online · Zoom" },
+    { egitim: "theta-2", tarih: "2026-11-26", bitis: "2026-11-28", gunler: "Per–Cmt", saat: "19:00–24:00", yer: "Online · Zoom" },
+    { egitim: "theta-3", tarih: "2026-12-18", bitis: "2026-12-19", gunler: "Cum–Cmt", saat: "19:00–24:00", yer: "Online · Zoom" },
+    { egitim: "theta-4", tarih: "2026-12-29", bitis: "2026-12-30", gunler: "Sal–Çar", saat: "19:00–24:00", yer: "Online · Zoom" }
   ]
 };
