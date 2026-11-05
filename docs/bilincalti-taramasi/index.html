@@ -74,6 +74,7 @@
 .hk-yildiz{position:absolute;pointer-events:none;color:#ffe9b8;font-size:16px;text-shadow:0 0 4px #fff,0 0 10px #f3d9a4,0 0 22px #f3d9a4,0 0 36px rgba(243,217,164,.7);animation:hkYildiz 2s ease-out forwards;z-index:3}
 @keyframes hkYildiz{0%{opacity:0;transform:translateY(0) scale(.4)}15%{opacity:1;transform:translateY(-20px) scale(1.3)}30%{opacity:.6}45%{opacity:1;transform:translateY(-70px) scale(1)}60%{opacity:.7}75%{opacity:1}100%{opacity:0;transform:translateY(-170px) scale(1.2) rotate(40deg)}}
 .hk-son{text-align:center}
+.hk h2.hk-bosluk{margin-bottom:34px}
 .hk-sem{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px}
 .hk-sem-kart{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:26px 24px;border-radius:20px;border:1px solid rgba(243,217,164,.4);background:rgba(243,217,164,.06)}
 .hk-sem-kart p{flex:1}
@@ -228,12 +229,11 @@
     surum++;
     goster(`<div class="hk-son">${ust('bir sonraki adım')}
       <div class="buyuk" aria-hidden="true">✨</div>
-      <h2>Ya Bugün Deneyimlediğin Çalışmayı <em>Kendin Yapmayı Öğrenseydin?</em></h2>
-      <p>Bugün yalnızca bir bilinçaltı koduyla başladın.</p>
+      <h2 class="hk-bosluk">Az önce bir konudaki blokajını tespit ettin.<br>Peki, <em>Diğerleri Seni Aynı Döngüde Tutmaya Devam mı Edecek?</em></h2>
       <p>Peki ya ilişkiler, para, özgüven, başarı ve hayatında tekrar eden yüzlerce farklı konuda kendi bilinçaltı inançlarınla çalışmayı öğrenebilseydin?</p>
       <p class="hk-vurgu">Bir Kez Öğren. Hayatın Boyunca Kullan.</p>
-      <p>ThetaHealing, JAAS seminerlerinde, sınırlayıcı inançları bulmayı, sorunlara yol açan negatif etkileri temizlemeyi adım adım öğrenebilirsin.</p>
-      <p>Öğrendiklerini hayatın boyunca hem kendine hem de başkalarına uygula.</p>
+      <p>ThetaHealing, JAAS seminerlerinde, sınırlayıcı inançları bulmayı, sorunlara yol açan negatif etkileri temizlemeyi adım adım öğren.</p>
+      <p>Öğrendiklerini hayatın boyunca, hem kendine hem de başkalarına uygula.</p>
       <div class="hk-cta"><button class="hk-btn ana" data-bilgi>BİLGİ ALMAK İSTİYORUM →</button></div>
     </div>`);
     kutu.querySelector('[data-bilgi]').addEventListener('click', seminerSec);
