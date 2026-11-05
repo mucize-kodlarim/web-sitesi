@@ -988,3 +988,9 @@ body.ses-pano-acik #mucize-assistant-widget-host{display:none !important}
 .metin p.hk-imza{margin:34px 0 0;text-align:right;display:flex;flex-direction:column;gap:2px}
 .metin p.hk-imza b{font-family:var(--serif);font-style:italic;font-weight:600;font-size:26px;color:var(--gold)}
 .metin p.hk-imza span{font:500 12px var(--mono);letter-spacing:.08em;color:#bfb3cc}
+/* Melike 2026-11-05: Hakkımda en altta "Önemli Bilgilendirme ve Yasal Uyarı" kutusu */
+.metin .hk-uyari{margin-top:34px;padding:22px 24px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.035)}
+.metin .hk-uyari h3{margin:0 0 10px;font-size:21px}
+.metin .hk-uyari p{font-size:14.5px;line-height:1.65;color:#c9bfd4;margin:0 0 10px}
+.metin .hk-uyari p:last-child{margin-bottom:0}
+@media (max-width:640px){.metin .hk-uyari{padding:18px}}
