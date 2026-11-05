@@ -957,3 +957,18 @@ body.ses-pano-acik #mucize-assistant-widget-host{display:none !important}
 .ses-btn .ses-rozet .yazi{font-size:22px;bottom:11px}
 @media (max-width:640px){.ses-rozet{width:52px;height:78px;border-radius:13px}.ses-btn .ses-rozet .yazi{font-size:13px;bottom:6px}}
 .ses-pano>.ses-halka,.ses-pano>.ses-pirilti{overflow:hidden;border-radius:inherit}
+
+/* Melike 2026-11-05: ana sayfadaki uydular gezegen biçiminde (seminerler pembe halkalı, danışmanlıklar yeşil); adı gezegenin altında */
+.lab{position:relative;display:block;padding:0;gap:0;background:none;border:0;border-radius:50%;backdrop-filter:none;-webkit-backdrop-filter:none}
+.lab i{display:block;position:relative;width:13px;height:13px;border-radius:50%;background-color:var(--c);background-image:radial-gradient(circle at 32% 28%,rgba(255,255,255,.75) 0%,rgba(255,255,255,0) 26%),radial-gradient(circle at 40% 38%,var(--c) 0%,color-mix(in srgb,var(--c) 70%,#140a1e) 64%,color-mix(in srgb,var(--c) 25%,#0b0714) 100%);box-shadow:0 0 16px -1px var(--c),inset -2px -3px 4px rgba(0,0,0,.4);transition:transform .25s,box-shadow .25s}
+.sat.e .lab i::after{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:5px;margin-top:-2.5px;border-radius:50%;border:1px solid color-mix(in srgb,var(--c) 70%,#f3d9a4);border-top-color:transparent;transform:rotate(-18deg)}
+.lab>span{position:absolute;left:50%;top:calc(100% + 5px);transform:translateX(-50%);text-align:center;white-space:nowrap;text-shadow:0 0 6px #05261c,0 0 3px #05261c,0 0 12px #05261c}
+.sat:hover .lab,.sat:focus-visible .lab{border-color:transparent;box-shadow:none}
+.sat:hover .lab i,.sat:focus-visible .lab i{transform:scale(1.18);box-shadow:0 0 22px 2px var(--c),inset -2px -3px 4px rgba(0,0,0,.4)}
+@media (max-width:900px){
+  .lab{padding:0;border-radius:50%}
+  .lab i{width:9px;height:9px}
+  .sat.e .lab i::after{left:-3px;right:-3px;height:4px;margin-top:-2px}
+  .lab>span{top:calc(100% + 4px)}
+  .lab b{white-space:nowrap;max-width:none}
+}

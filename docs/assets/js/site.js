@@ -43,7 +43,7 @@
       <nav class="links" aria-label="Ana menü">
         <div class="dd"><button type="button" aria-expanded="false">${ik('seminer')}Seminerler</button>
           <div class="mega">
-            <div><h6>ThetaHealing® · modül yolu</h6>${theta.map(mItem).join('')}</div>
+            <div><h6>ThetaHealing · modül yolu</h6>${theta.map(mItem).join('')}</div>
             <div><h6>Diğer seminerler</h6>${diger.map(mItem).join('')}
               <a href="${L('seminerler/')}#takvim" style="--c:var(--gold)"><i></i><span>Takvim<small>tarih · ücret · kontenjan</small></span></a>
               <a href="${L('seminerler/')}" style="--c:var(--muted)"><i></i><span>Tüm seminerler<small>hepsi tek sayfada</small></span></a></div>
@@ -62,7 +62,7 @@
   </header>
   <div class="mnav" id="mnav" aria-hidden="true">
     <div class="mtop"><span class="brand">Mucize Kodlarım</span><button class="x" type="button" aria-label="Menüyü kapat">✕</button></div>
-    <h6>${ik('seminer')}ThetaHealing® seminerleri</h6>${theta.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>${h.modul}</small></a>`).join('')}
+    <h6>${ik('seminer')}ThetaHealing seminerleri</h6>${theta.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>${h.modul}</small></a>`).join('')}
     <h6>${ik('seminer')}Diğer seminerler</h6>${diger.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>sertifikalı</small></a>`).join('')}
     <h6>${ik('danis')}Danışmanlık</h6>${DN.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>birebir</small></a>`).join('')}
     <h6>Keşfet</h6>
@@ -82,7 +82,7 @@
     <div class="wrap">
       <div class="fgrid">
         <div><a class="brand" href="${L('')}">Mucize Kodlarım</a>
-          <p class="f-ozet">ThetaHealing®, JAAS ve Spiritüel Dowsing seminerleri ve birebir danışmanlık · online</p></div>
+          <p class="f-ozet">ThetaHealing, JAAS ve Spiritüel Dowsing seminerleri ve birebir danışmanlık · online</p></div>
         <div><h6>Keşfet</h6><ul>
           <li><a href="${L('seminerler/')}">Seminerler</a></li><li><a href="${L('danismanliklar/')}">Danışmanlık</a></li>
           <li><a href="${L('hakkimda/')}">Hakkımda</a></li>

@@ -15,13 +15,13 @@ window.MK = {
   /* Hizmetler: menü, form ve takvim bunları kullanır.
      ucret boşsa sitede "bilgi için sorun" yazar. Örnek: ucret: "12.500 TL" */
   hizmetler: [
-    { kod: "theta-1", tur: "egitim", grup: "theta", ad: "ThetaHealing® Basic DNA", menuAd: "Basic DNA", menuNot: "1. modül · temel seminer", modul: "1. modül", yol: "services/thetahealing-basic-dna-1-modul/", ucret: "12.500 TL" },
-    { kod: "theta-2", tur: "egitim", grup: "theta", ad: "ThetaHealing® Advanced DNA", menuAd: "Advanced DNA", menuNot: "2. modül · derinleşme", modul: "2. modül", yol: "services/thetahealing-advanced-dna-2-modul/", ucret: "12.500 TL" },
-    { kod: "theta-3", tur: "egitim", grup: "theta", ad: "ThetaHealing® Derin Kazı", menuAd: "Derin Kazı", menuNot: "3. modül · kök çalışması", modul: "3. modül", yol: "services/thetahealing-derin-kazi-3-modul/", ucret: "12.500 TL" },
-    { kod: "theta-4", tur: "egitim", grup: "theta", ad: "ThetaHealing® Sen ve Yaradan", menuAd: "Sen ve Yaradan", menuNot: "4. modül", modul: "4. modül", yol: "services/thetahealing-sen-ve-yaradan-4-modul/", ucret: "12.500 TL" },
+    { kod: "theta-1", tur: "egitim", grup: "theta", ad: "ThetaHealing Basic DNA", menuAd: "Basic DNA", menuNot: "1. modül · temel seminer", modul: "1. modül", yol: "services/thetahealing-basic-dna-1-modul/", ucret: "12.500 TL" },
+    { kod: "theta-2", tur: "egitim", grup: "theta", ad: "ThetaHealing Advanced DNA", menuAd: "Advanced DNA", menuNot: "2. modül · derinleşme", modul: "2. modül", yol: "services/thetahealing-advanced-dna-2-modul/", ucret: "12.500 TL" },
+    { kod: "theta-3", tur: "egitim", grup: "theta", ad: "ThetaHealing Derin Kazı", menuAd: "Derin Kazı", menuNot: "3. modül · kök çalışması", modul: "3. modül", yol: "services/thetahealing-derin-kazi-3-modul/", ucret: "12.500 TL" },
+    { kod: "theta-4", tur: "egitim", grup: "theta", ad: "ThetaHealing Sen ve Yaradan", menuAd: "Sen ve Yaradan", menuNot: "4. modül", modul: "4. modül", yol: "services/thetahealing-sen-ve-yaradan-4-modul/", ucret: "12.500 TL" },
     { kod: "jaas-egitim", tur: "egitim", grup: "diger", ad: "JAAS Uygulayıcılık Semineri", menuAd: "JAAS Uygulayıcılık", menuNot: "Jean Adrienne Arınma Sistemi", modul: "sertifikalı", yol: "services/jaas-jean-adrienne-arinma-sistemi-1-modul/", ucret: "14.500 TL" },
     { kod: "dowsing", tur: "egitim", grup: "diger", ad: "Spiritüel Dowsing Semineri", menuAd: "Spiritüel Dowsing", menuNot: "sarkaç ile arınma", modul: "sertifikalı", yol: "services/spirituel-dowsing-sarkac-ile-arinma-egitimi/", ucret: "7.500 TL" },
-    { kod: "theta-danismanlik", tur: "danismanlik", grup: "dn", ad: "ThetaHealing® Danışmanlık", menuAd: "ThetaHealing® Danışmanlık", menuNot: "online · birebir", modul: "birebir", yol: "services/thetahealing-danismanlik/", ucret: "" },
+    { kod: "theta-danismanlik", tur: "danismanlik", grup: "dn", ad: "ThetaHealing Danışmanlık", menuAd: "ThetaHealing Danışmanlık", menuNot: "online · birebir", modul: "birebir", yol: "services/thetahealing-danismanlik/", ucret: "" },
     { kod: "jaas-danismanlik", tur: "danismanlik", grup: "dn", ad: "JAAS Danışmanlık", menuAd: "JAAS Danışmanlık", menuNot: "online · birebir", modul: "birebir", yol: "services/jaas-danismanlik/", ucret: "" }
   ],
 
