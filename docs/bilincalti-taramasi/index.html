@@ -212,7 +212,7 @@
       <div class="hk-soru">${esc(S.ad)}, Yaradan tanımıyla ${m.his.map(esc).join('; ')} hissi sana <b>Yaradan tanımıyla en iyi, en yüce şekilde yüklensin mi?</b></div>
       <div class="hk-dg"><button class="hk-btn ana" data-e>Evet</button><button class="hk-btn ikinci" data-h>Hayır</button></div>
       <div id="hka"></div>`);
-    kutu.querySelector('[data-e]').addEventListener('click', () => yukle(TAM, ortakSor));
+    kutu.querySelector('[data-e]').addEventListener('click', () => yukle('', ortakSor));
     kutu.querySelector('[data-h]').addEventListener('click', hayir);
   }
 
