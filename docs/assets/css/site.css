@@ -1005,3 +1005,4 @@ body.ses-pano-acik #mucize-assistant-widget-host{display:none !important}
 .kutu dd[data-tarih]{font-weight:600}
 @media (max-width:760px){.row{grid-template-columns:118px 1fr}.row .d b{font-size:30px}.row .d span{font-size:16px}}
 .kutu dd[data-tarih] small.saat{display:block;margin-top:3px;font:500 13px var(--mono);white-space:nowrap;opacity:.85}
+@media (min-width:641px) and (max-width:1100px){.ses-rozet{width:64px;height:96px;border-radius:16px}.ses-btn .ses-rozet .yazi{font-size:15px;bottom:7px}}
