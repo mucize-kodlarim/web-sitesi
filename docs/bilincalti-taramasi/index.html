@@ -74,6 +74,8 @@
 .hk-yildiz{position:absolute;pointer-events:none;color:#ffe9b8;font-size:16px;text-shadow:0 0 4px #fff,0 0 10px #f3d9a4,0 0 22px #f3d9a4,0 0 36px rgba(243,217,164,.7);animation:hkYildiz 2s ease-out forwards;z-index:3}
 @keyframes hkYildiz{0%{opacity:0;transform:translateY(0) scale(.4)}15%{opacity:1;transform:translateY(-20px) scale(1.3)}30%{opacity:.6}45%{opacity:1;transform:translateY(-70px) scale(1)}60%{opacity:.7}75%{opacity:1}100%{opacity:0;transform:translateY(-170px) scale(1.2) rotate(40deg)}}
 .hk-son{text-align:center}
+.hk-son p{max-width:640px;margin-left:auto;margin-right:auto}
+.hk-vurgu{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:clamp(24px,3vw,30px);color:#f3d9a4 !important;opacity:1 !important;margin:22px auto 14px !important;line-height:1.25}
 .hk-son .buyuk{font-size:40px;margin-bottom:6px}
 .hk-cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:20px 0 8px}
 .hk-not{font-size:13.5px;opacity:.8;margin-top:14px}
@@ -216,17 +218,20 @@
     kutu.querySelector('[data-h]').addEventListener('click', hayir);
   }
 
+  /* Melike 2026-11-05: his yüklemesinden sonra "Devam" bu ekranı açar: seminer daveti + "Bilgi almak istiyorum" (WhatsApp) */
   function ortakSor() {
     surum++;
-    goster(`${ust('genel his yüklemesi', '5 / 5')}
-      <h2>Ve şimdi <em>hayatının bütününe…</em></h2>
-      ${ORTAK(esc(S.ad)) ? `<div class="hk-soru">${ORTAK(esc(S.ad))}</div>` : ''}
-      <div class="hk-dg"><button class="hk-btn ana" data-e>Evet</button><button class="hk-btn ikinci" data-h>Hayır</button></div>
-      <div id="hka"></div>`);
-    kutu.querySelector('[data-e]').addEventListener('click', () => yukle('', son));
-    kutu.querySelector('[data-h]').addEventListener('click', hayir);
+    goster(`<div class="hk-son">${ust('bir sonraki adım')}
+      <div class="buyuk" aria-hidden="true">✨</div>
+      <h2>Ya Bugün Deneyimlediğin Çalışmayı <em>Kendin Yapmayı Öğrenseydin?</em></h2>
+      <p>Bugün yalnızca bir bilinçaltı koduyla başladın.</p>
+      <p>Peki ya ilişkiler, para, özgüven, başarı ve hayatında tekrar eden yüzlerce farklı konuda kendi bilinçaltı inançlarınla çalışmayı öğrenebilseydin?</p>
+      <p class="hk-vurgu">Bir Kez Öğren. Hayatın Boyunca Kullan.</p>
+      <p>ThetaHealing, JAAS seminerlerinde, sınırlayıcı inançları bulmayı, sorunlara yol açan negatif etkileri temizlemeyi adım adım öğrenebilirsin.</p>
+      <p>Öğrendiklerini hayatın boyunca hem kendine hem de başkalarına uygula.</p>
+      <div class="hk-cta"><a class="hk-btn ana" href="${wa('Merhaba, ThetaHealing ve JAAS seminerleri hakkında bilgi almak istiyorum.')}" target="_blank" rel="noopener">BİLGİ ALMAK İSTİYORUM →</a></div>
+    </div>`);
   }
-
   async function yukle(tam, sonra) {
     const s = ++surum;
     kutu.querySelectorAll('.hk-dg button').forEach(b => b.disabled = true);
