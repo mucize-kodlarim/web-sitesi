@@ -192,7 +192,7 @@
 
 
   /* ---------- arka plan sesi (assets/js/ses.js) ---------- */
-  const sesJs = document.createElement('script'); sesJs.src = K + 'assets/js/ses.js?v=20261020a'; document.body.appendChild(sesJs);
+  const sesJs = document.createElement('script'); sesJs.src = K + 'assets/js/ses.js?v=20261103a'; document.body.appendChild(sesJs);
 
   /* ---------- chatbot (Mucize Asistan, Replit) ---------- */
   const bot = document.createElement('script'); bot.src = 'https://mucize-kodlarim-asistan.replit.app/widget.js'; bot.defer = true; document.body.appendChild(bot);

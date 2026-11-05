@@ -9,17 +9,22 @@
   const SEVIYE = 0.55;
   // Frekans sahneleri (Neziha 2026-10-15). Duygu adları gelenekseldir; sağlık iddiası yazılmaz.
   const SAHNELER = {
-    bolluk:    { ad: 'Bolluk',     hz: '888 Hz',   kazanc: 3.4, katman: [['ton', 888]] },
-    sevgi:     { ad: 'Sevgi',      hz: '528 Hz',   kazanc: 2.2, katman: [['ton', 528]] },
-    mutluluk:  { ad: 'Mutluluk',   hz: '432 Hz',   kazanc: 2.2, katman: [['akor', 432]] },
-    uyum:      { ad: 'Uyum',       hz: '639 Hz',   kazanc: 3.6, katman: [['ton', 639]] },
-    guven:     { ad: 'Güven',      hz: '174 Hz',   kazanc: 2, katman: [['ton', 174]] },
-    tazelenme: { ad: 'Tazelenme',  hz: '285 Hz',   kazanc: 2, katman: [['ton', 285]] },
-    ifade:     { ad: 'İfade',      hz: '741 Hz',   kazanc: 3.4, katman: [['ton', 741]] },
-    butunluk:  { ad: 'Bütünlük',   hz: '963 Hz',   kazanc: 3.8, katman: [['ton', 963]] },
-    cakra:     { ad: 'Çakralar',   hz: '7 çakra',  kazanc: 2, katman: ['cakra'] },
-    theta:     { ad: 'Theta',      hz: 'kulaklıkla', kazanc: 2.4, katman: [['binaural', 6], ['akor', 216, true]] },
-    alfa:      { ad: 'Alfa',       hz: 'kulaklıkla', kazanc: 2.2, katman: [['binaural', 10], ['akor', 216, true]] }
+    bolluk:    { ik: '🌾', ad: 'Bolluk',     hz: '888 Hz',   kazanc: 3.4, katman: [['ton', 888]] },
+    huzur:     { ik: '🕊️', ad: 'Huzur',      hz: '396 Hz',   kazanc: 2.4, katman: [['ton', 396]] },
+    sevgi:     { ik: '💗', ad: 'Sevgi',      hz: '528 Hz',   kazanc: 2.2, katman: [['ton', 528]] },
+    mutluluk:  { ik: '☀️', ad: 'Mutluluk',   hz: '432 Hz',   kazanc: 2.2, katman: [['akor', 432]] },
+    uyum:      { ik: '🌊', ad: 'Uyum',       hz: '639 Hz',   kazanc: 3.6, katman: [['ton', 639]] },
+    guven:     { ik: '🛡️', ad: 'Güven',      hz: '174 Hz',   kazanc: 2, katman: [['ton', 174]] },
+    tazelenme: { ik: '🌿', ad: 'Tazelenme',  hz: '285 Hz',   kazanc: 2, katman: [['ton', 285]] },
+    ifade:     { ik: '🦋', ad: 'İfade',      hz: '741 Hz',   kazanc: 3.4, katman: [['ton', 741]] },
+    sezgi:     { ik: '🔮', ad: 'Sezgi',      hz: '852 Hz',   kazanc: 3.6, katman: [['ton', 852]] },
+    butunluk:  { ik: '🌕', ad: 'Bütünlük',   hz: '963 Hz',   kazanc: 3.8, katman: [['ton', 963]] },
+    // Çiçekler (Neziha 2026-11-03): rakamlar Gary Young / Bruce Tainio listesinden, Hz olarak; doğrulanmış ölçüm değil
+    gul:       { ik: '🌹', ad: 'Gül',        hz: '320 Hz',   kazanc: 2.4, katman: [['ton', 320]] },
+    lavanta:   { ik: '🪻', ad: 'Lavanta',    hz: '118 Hz',   kazanc: 2.4, katman: [['ton', 118], ['akor', 236, true]] },
+    cakra:     { ik: '🌈', ad: 'Çakralar',   hz: '7 çakra',  kazanc: 2, katman: ['cakra'] },
+    theta:     { ik: '🌙', ad: 'Theta',      hz: 'kulaklıkla', kazanc: 2.4, katman: [['binaural', 6], ['akor', 216, true]] },
+    alfa:      { ik: '🌤️', ad: 'Alfa',       hz: 'kulaklıkla', kazanc: 2.2, katman: [['binaural', 10], ['akor', 216, true]] }
   };
   const rnd = (a, b) => a + Math.random() * (b - a);
   const sec = a => a[Math.floor(Math.random() * a.length)];
@@ -243,20 +248,41 @@
   /* ---------- düğme ---------- */
   const kutu = document.createElement('div');
   kutu.className = 'ses';
-  kutu.innerHTML = `<button class="ses-btn" type="button" aria-pressed="false" aria-label="Arka plan sesini aç"><span class="ses-rozet" aria-hidden="true"><img class="ses-foto" src="${(document.body.dataset.kok || './')}assets/img/muzik-rozet.jpg" alt=""><span class="yazi">Müzik</span></span></button>
-    <div class="ses-menu" role="group" aria-label="Frekans seçimi"><b class="ses-baslik">Frekanslar</b>${Object.entries(SAHNELER).map(([k, s]) => `<button type="button" data-s="${k}">${s.ad}<small>${s.hz}</small></button>`).join('')}</div>`;
+  kutu.innerHTML = `<button class="ses-btn" type="button" aria-haspopup="dialog" aria-label="Müzik penceresini aç"><span class="ses-rozet" aria-hidden="true"><img class="ses-foto" src="${(document.body.dataset.kok || './')}assets/img/muzik-rozet.jpg" alt=""><span class="yazi">Müzik</span></span></button>`;
   document.body.appendChild(kutu);
   const btn = kutu.querySelector('.ses-btn');
+
+  /* ---------- ortadaki müzik penceresi (Neziha 2026-11-03): mor zemin, çalarken dalga + pırıltı ---------- */
+  const perde = document.createElement('div');
+  perde.className = 'ses-perde';
+  perde.innerHTML = `<div class="ses-pano" role="dialog" aria-modal="true" aria-labelledby="ses-baslik">
+    <div class="ses-halka" aria-hidden="true">${[[14, 18], [84, 26], [50, 52], [20, 82], [80, 78]].map(([x, y], i) => `<span style="left:${(x + rnd(-5, 5)).toFixed(1)}%;top:${(y + rnd(-5, 5)).toFixed(1)}%;animation-delay:${(i * 1.4 + rnd(0, .5)).toFixed(2)}s"><i></i><i></i><i></i></span>`).join('')}</div>
+    <div class="ses-pirilti" aria-hidden="true">${Array.from({ length: 34 }, () => { const b = sec([2, 2.5, 3, 3, 4, 5, 6.5, 8]); return `<i style="left:${rnd(3, 97).toFixed(1)}%;top:${rnd(3, 97).toFixed(1)}%;width:${b}px;height:${b}px;animation-delay:${rnd(0, 3.5).toFixed(2)}s;animation-duration:${rnd(2.2, 4.2).toFixed(2)}s"></i>`; }).join('')}</div>
+    <button class="ses-kapat" type="button" aria-label="Pencereyi kapat">×</button>
+    <h3 id="ses-baslik">Frekanslar</h3>
+    <p class="ses-durum"></p>
+    <div class="ses-liste">${Object.entries(SAHNELER).map(([k, s]) => `<button type="button" data-s="${k}"><span class="ses-ik" aria-hidden="true">${s.ik}</span><b>${s.ad}</b><small>${s.hz}</small></button>`).join('')}</div>
+    <button class="ses-sustur" type="button">Sesi kapat</button>
+  </div>`;
+  document.body.appendChild(perde);
+  const durumYazi = perde.querySelector('.ses-durum'), sustur = perde.querySelector('.ses-sustur');
+  function ac() { perde.classList.add('acik'); document.body.classList.add('ses-pano-acik'); (perde.querySelector('.ses-liste [aria-pressed="true"]') || perde.querySelector('.ses-liste button')).focus({ preventScroll: true }); }
+  function kapat() { perde.classList.remove('acik'); document.body.classList.remove('ses-pano-acik'); btn.focus({ preventScroll: true }); }
   function ciz() {
     kutu.classList.toggle('acik', durum === 'acik');
     kutu.classList.toggle('bekliyor', durum === 'bekliyor');
-    btn.setAttribute('aria-pressed', durum === 'acik');
-    btn.setAttribute('aria-label', durum === 'acik' ? 'Arka plan sesini kapat' : 'Arka plan sesini aç');
-    btn.title = durum === 'acik' ? 'Sesi kapat' : 'Huzurlu arka plan sesi';
-    kutu.querySelectorAll('.ses-menu button').forEach(b => b.setAttribute('aria-pressed', b.dataset.s === sahne));
+    perde.classList.toggle('caliyor', durum === 'acik');
+    btn.title = durum === 'acik' ? 'Müzik çalıyor' : 'Huzurlu arka plan sesi';
+    durumYazi.textContent = durum === 'acik' ? `Şimdi çalıyor: ${SAHNELER[sahne].ad}` : 'Dinlemek istediğin frekansı seç';
+    sustur.hidden = durum !== 'acik';
+    perde.querySelectorAll('.ses-liste button').forEach(b => b.setAttribute('aria-pressed', durum === 'acik' && b.dataset.s === sahne));
   }
-  btn.addEventListener('click', e => { e.stopPropagation(); durum === 'acik' ? dur() : cal(sahne); });
-  kutu.querySelectorAll('.ses-menu button').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); cal(b.dataset.s); }));
+  btn.addEventListener('click', e => { e.stopPropagation(); ac(); });
+  perde.querySelectorAll('.ses-liste button').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); cal(b.dataset.s); }));
+  sustur.addEventListener('click', e => { e.stopPropagation(); dur(); });
+  perde.querySelector('.ses-kapat').addEventListener('click', kapat);
+  perde.addEventListener('click', e => { if (e.target === perde) kapat(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && perde.classList.contains('acik')) kapat(); });
 
   /* Ses açık bırakılmışsa: yeni sayfada ilk dokunuşta devam et (tarayıcılar kendiliğinden çalmaya izin vermez) */
   let tercih = 'kapali'; try { tercih = localStorage.getItem('mk-ses') || 'kapali'; } catch (e) {}
