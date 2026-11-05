@@ -150,9 +150,9 @@
       return;
     }
     box.innerHTML = list.map(t => {
-      const h = H.find(x => x.kod === t.egitim) || { ad: t.egitim, yol: '', kod: t.egitim };
+      const h = H.find(x => x.kod === t.egitim) || { ad: t.ad || t.egitim, yol: t.yol || '', kod: t.egitim };
       const d = tYaz(t.tarih);
-      const dolu = t.kontenjan && !/açık/i.test(t.kontenjan);
+      const dolu = t.kontenjan && !/açık|ücretsiz/i.test(t.kontenjan);
       return `<div class="row"><div class="d">${d.g} ${d.a}<small>${t.gunler || d.gun}</small></div><div><h5><a href="${L(h.yol)}">${h.ad}</a></h5><p>${[t.yer, t.saat, t.not].filter(Boolean).join(' · ')}</p></div><span class="pill ${dolu ? 'w' : ''}">${t.kontenjan || 'kontenjan açık'}</span><a class="btn btn-ghost" href="${L('iletisim/')}?ilgi=${h.kod}#basvuru">Başvur</a></div>`;
     }).join('');
   });
