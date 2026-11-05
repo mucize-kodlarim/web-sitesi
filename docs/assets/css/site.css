@@ -982,3 +982,9 @@ body.ses-pano-acik #mucize-assistant-widget-host{display:none !important}
 .links>a,.dd>button{white-space:nowrap}
 .links{gap:10px;font-size:13.5px}.links>a,.dd>button{gap:6px}.nav-ik{width:20px;height:20px}.nav-ik svg{width:13px;height:13px}.nav-cta{padding:12px 16px;font-size:13px}.nav .bar{gap:14px}
 @media (max-width:1200px){.links,.nav .btn{display:none}.menu-t{display:block}}
+
+/* Melike 2026-11-05: Hakkımda "Benim Hikâyem" alt başlığı ve imza */
+.metin p.hk-alt{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2vw,24px);line-height:1.4;color:var(--orchid);margin:-6px 0 26px}
+.metin p.hk-imza{margin:34px 0 0;text-align:right;display:flex;flex-direction:column;gap:2px}
+.metin p.hk-imza b{font-family:var(--serif);font-style:italic;font-weight:600;font-size:26px;color:var(--gold)}
+.metin p.hk-imza span{font:500 12px var(--mono);letter-spacing:.08em;color:#bfb3cc}
