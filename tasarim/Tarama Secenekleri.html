@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tarama Görseli Seçenekleri</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#05261c; --line:rgba(255,255,255,.10);
+  --text:#f4efe6; --muted:#b9adc6; --dim:#a597b8;
+  --orchid:#e08cc4; --sage:#a9c98a; --gold:#f3d9a4;
+  --grad: linear-gradient(120deg,var(--orchid) 0%, var(--gold) 50%, var(--sage) 100%);
+  --serif:"Cormorant Garamond", Georgia, serif; --sans:"Sora", system-ui, sans-serif; --mono:"JetBrains Mono", ui-monospace, monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(ellipse at 20% 0%,#0b3a29,var(--bg) 60%);background-color:var(--bg);color:var(--text);font:400 15px/1.7 var(--sans);min-height:100vh}
+.wrap{max-width:760px;margin:0 auto;padding:48px 16px 80px}
+h1{font:500 40px/1.1 var(--serif);margin-bottom:10px}
+h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.giris{color:var(--muted);margin-bottom:22px}
+.dugme{display:inline-block;background:var(--grad);color:#1a0f22;border:0;border-radius:999px;padding:11px 26px;font:500 14px var(--sans);cursor:pointer;margin-bottom:34px}
+.kart{margin-bottom:40px}
+.kart h2{font:500 26px/1.2 var(--serif);margin-bottom:4px}
+.kart h2 b{font:500 13px var(--mono);color:var(--gold);margin-right:10px;vertical-align:4px}
+.kart p{color:var(--muted);font-size:14px;margin-bottom:12px}
+.kart.simdi h2{color:var(--dim)}
+/* sitedeki kutunun aynısı */
+.term{border:1px solid var(--line);border-radius:22px;background:rgba(6,26,14,.78);overflow:hidden;padding:18px 22px}
+.hy-ekran{position:relative;height:178px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.07);background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(224,140,196,.13),transparent 70%),linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,0))}
+.hy-ekran::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:22px 22px;mask-image:radial-gradient(ellipse at center,#000 40%,transparent 85%);-webkit-mask-image:radial-gradient(ellipse at center,#000 40%,transparent 85%)}
+.hy-ekran canvas,.hy-ekran svg{position:absolute;inset:0;width:100%;height:100%}
+.hy-ekran video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;mix-blend-mode:screen;opacity:.95;-webkit-mask-image:radial-gradient(ellipse 22% 48% at 50% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 22% 48% at 50% 50%,#000 55%,transparent 100%)}
+.hy-isin{position:absolute;left:0;right:0;top:6%;height:2px;background:linear-gradient(90deg,transparent,rgba(243,217,164,.95),transparent);box-shadow:0 0 16px 4px rgba(243,217,164,.45);animation:hy-isin 3.4s ease-in-out infinite alternate}
+.hy-isin::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:38px;background:linear-gradient(0deg,rgba(243,217,164,.10),transparent)}
+.tariyor .hy-isin{animation-duration:.75s}
+.hy-zerre{position:absolute;width:3px;height:3px;border-radius:50%;background:#f3d9a4;box-shadow:0 0 6px #f3d9a4;opacity:0;animation:hy-zerre 4.5s ease-in-out infinite}
+.hy-dna{opacity:.8;filter:drop-shadow(0 0 6px rgba(243,217,164,.35))}
+.hy-dna-g{animation:hy-dna 10s linear infinite}
+.tariyor .hy-dna-g{animation-duration:1.8s}
+.alt{font:400 13px var(--mono);color:var(--orchid);margin-top:12px}
+@keyframes hy-dna{to{transform:translateX(-300px)}}
+@keyframes hy-isin{from{top:6%}to{top:92%}}
+@keyframes hy-zerre{0%{opacity:0;transform:translateY(0)}40%{opacity:.9}100%{opacity:0;transform:translateY(-26px)}}
+@media (max-width:640px){.hy-ekran{height:140px}.term{padding:14px}h1{font-size:32px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Tarama görseli <em>seçenekleri</em></h1>
+  <p class="giris">Ana sayfadaki bilinçaltı taraması kutusunda DNA sarmalının yerine gelebilecek dört seçenek. Hepsi sitedeki kutunun birebir kopyasında, tarama ışını ve altın zerrelerle birlikte gösteriliyor. Bu sayfa yayında değil, yalnız seçim için.</p>
+  <button class="dugme" id="tara">✦ Tarama anını göster</button>
+
+  <div class="kart simdi">
+    <h2><b>ŞU AN</b>DNA sarmalı</h2>
+    <p>Karşılaştırma için sitedeki mevcut hâli.</p>
+    <div class="term"><div class="hy-ekran" data-tur="dna"></div></div>
+  </div>
+
+  <div class="kart">
+    <h2><b>1</b>Dönen kafa (video)</h2>
+    <p>Neziha Hanım'ın Bilinçaltı Taraması sayfasına koyduğu, tam tur dönen ışıklı kafa videosu. İki sayfa birbirine benzer, en gerçekçi görünen seçenek. Video dosyası büyük olduğu için telefonda ana sayfa biraz daha geç açılabilir.</p>
+    <div class="term"><div class="hy-ekran" data-tur="video"></div></div>
+  </div>
+
+  <div class="kart">
+    <h2><b>2</b>Dönen beyin · ışık noktaları</h2>
+    <p>Binlerce küçük ışık noktasından oluşan, kendi etrafında dönen bir beyin. İçinde zaman zaman yanıp sönen kıvılcımlar var. Ana sayfadaki yıldız ağıyla aynı dilde.</p>
+    <div class="term"><div class="hy-ekran" data-tur="beyin-nokta"></div></div>
+  </div>
+
+  <div class="kart">
+    <h2><b>3</b>Dönen beyin · ince çizgiler</h2>
+    <p>Beynin kıvrımlarını ince altın çizgilerle gösteren, dönen tel kafes beyin. DNA sarmalına en yakın, en sade seçenek.</p>
+    <div class="term"><div class="hy-ekran" data-tur="beyin-tel"></div></div>
+  </div>
+
+  <div class="kart">
+    <h2><b>4</b>Dönen kafa · içinde parlayan beyin</h2>
+    <p>Işık noktalarından bir insan başı; içinde nabız gibi parlayan altın bir beyin. Kafatası yerine bunu önerdim: kafatası çoğu kişiye ölüm ya da korku çağrıştırır, sitenin huzurlu havasına uymaz.</p>
+    <div class="term"><div class="hy-ekran" data-tur="kafa"></div></div>
+  </div>
+</div>
+
+<script>
+let HIZ = 1;
+const G = [[224,140,196],[243,217,164],[169,201,138]];
+const renk = t => { t = Math.max(0, Math.min(1, t)); const i = t < .5 ? 0 : 1, k = t < .5 ? t * 2 : (t - .5) * 2; return G[i].map((v, j) => Math.round(v + (G[i + 1][j] - v) * k)); };
+const R = Math.random;
+
+function ortak(d) {
+  const isin = document.createElement('div'); isin.className = 'hy-isin'; d.appendChild(isin);
+  for (let i = 0; i < 12; i++) { const z = document.createElement('b'); z.className = 'hy-zerre'; z.style.left = (R() * 100) + '%'; z.style.top = (20 + R() * 70) + '%'; z.style.animationDelay = (R() * 4) + 's'; d.appendChild(z); }
+}
+
+/* ---- 3B yardımcılar ---- */
+function kur(d, ciz) {
+  const cv = document.createElement('canvas'); d.appendChild(cv);
+  const ctx = cv.getContext('2d'); let w, h;
+  const boyut = () => { const dpr = Math.min(2, devicePixelRatio || 1); w = cv.clientWidth; h = cv.clientHeight; cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
+  boyut(); new ResizeObserver(boyut).observe(cv);
+  let a = 0, son = performance.now();
+  const kare = n => { const dt = Math.min(50, n - son); son = n; a += dt * .0005 * HIZ; ctx.clearRect(0, 0, w, h); ciz(ctx, w, h, a, n); requestAnimationFrame(kare); };
+  requestAnimationFrame(kare);
+}
+function proj(p, a, w, h, s) {
+  const ca = Math.cos(a), sa = Math.sin(a);
+  const x = p[0] * ca + p[2] * sa, z = -p[0] * sa + p[2] * ca, y = p[1];
+  const t = .22, ct = Math.cos(t), st = Math.sin(t);
+  const y2 = y * ct - z * st, z2 = y * st + z * ct, f = 3.2 / (3.2 - z2);
+  return [w / 2 + x * s * f, h / 2 - y2 * s * f, z2, f];
+}
+const kure = () => { const v = Math.acos(1 - 2 * R()), u = 2 * Math.PI * R(); return [u, v]; };
+
+/* beyin yüzeyi: u,v açılarından nokta */
+function beyin(u, v) {
+  const r = 1 + .055 * Math.sin(u * 11 + v * 4) * Math.sin(v * 9 + u * 2);
+  let x = Math.sin(v) * Math.cos(u) * r, y = Math.cos(v) * r, z = Math.sin(v) * Math.sin(u) * r;
+  x = Math.sign(x) * (Math.abs(x) * .58 + .05);
+  y = y * .62; if (y < 0) y *= .62;
+  z = z * .95;
+  if (y < -.05 && Math.abs(x) > .3 && z > -.2) y -= .1 * (Math.abs(x) - .3) * 3;   /* şakak lobları */
+  return [x, y + .14, z];
+}
+function beyinNoktalari(n) {
+  const p = [];
+  for (let i = 0; i < n; i++) { const [u, v] = kure(); p.push(beyin(u, v)); }
+  for (let i = 0; i < n * .18; i++) { /* beyincik */
+    const [u, v] = kure(); const yy = Math.cos(v) * .2;
+    p.push([Math.sin(v) * Math.cos(u) * .4, yy - .34 + .015 * Math.sin(yy * 90), Math.sin(v) * Math.sin(u) * .26 - .55]);
+  }
+  for (let i = 0; i < n * .06; i++) { /* beyin sapı */
+    const t = R(), q = 2 * Math.PI * R();
+    p.push([Math.cos(q) * .09, -.25 - t * .6, -.3 - t * .1 + Math.sin(q) * .09]);
+  }
+  return p;
+}
+
+/* ---- seçenekler ---- */
+const YAP = {
+  dna(d) {
+    const P = 150, A = 34, m = 60; let a = '', b = '', r = '';
+    for (let x = 0; x <= 1200; x += 6) { const s = Math.sin(2 * Math.PI * x / P); a += (x ? 'L' : 'M') + x + ' ' + (m + A * s).toFixed(1); b += (x ? 'L' : 'M') + x + ' ' + (m - A * s).toFixed(1); }
+    for (let x = 0; x <= 1200; x += 15) { const s = Math.sin(2 * Math.PI * x / P), c = Math.abs(Math.cos(2 * Math.PI * x / P)); r += `<line x1="${x}" y1="${(m + A * s).toFixed(1)}" x2="${x}" y2="${(m - A * s).toFixed(1)}" stroke-opacity="${(.15 + .45 * c).toFixed(2)}"/>`; }
+    d.insertAdjacentHTML('beforeend', `<svg class="hy-dna" viewBox="0 0 600 120" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="hyg" x1="0" x2="1"><stop offset="0" stop-color="#e08cc4"/><stop offset=".5" stop-color="#f3d9a4"/><stop offset="1" stop-color="#a9c98a"/></linearGradient></defs><g class="hy-dna-g"><g stroke="#f3d9a4" stroke-width="1.2">${r}</g><path d="${a}" stroke="url(#hyg)" stroke-width="2.4" fill="none"/><path d="${b}" stroke="url(#hyg)" stroke-width="2.4" fill="none" stroke-opacity=".55"/></g></svg>`);
+  },
+  video(d) {
+    const v = document.createElement('video');
+    v.src = '../docs/assets/img/kafa-tarama.mp4'; v.poster = '../docs/assets/img/kafa-tarama.jpg';
+    v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true; v.className = 'kafa-video';
+    d.appendChild(v); v.play().catch(() => {});
+  },
+  'beyin-nokta'(d) {
+    const p = beyinNoktalari(1500), kiv = [];
+    kur(d, (c, w, h, a, n) => {
+      const s = h * .52, q = p.map(pt => proj(pt, a, w, h, s)); q.sort((x, y) => x[2] - y[2]);
+      for (const [x, y, z, f] of q) {
+        const dz = (z + 1.1) / 2.2, [r, g, b] = renk((x - (w / 2 - s)) / (2 * s));
+        c.fillStyle = `rgba(${r},${g},${b},${(.18 + .72 * dz).toFixed(2)})`;
+        const rr = (.6 + 1.1 * dz) * f; c.fillRect(x - rr / 2, y - rr / 2, rr, rr);
+      }
+      if (R() < .05 * HIZ) kiv.push({ i: (R() * p.length) | 0, t: n });
+      for (let k = kiv.length - 1; k >= 0; k--) {
+        const o = kiv[k], yas = (n - o.t) / 900; if (yas > 1) { kiv.splice(k, 1); continue; }
+        const [x, y] = proj(p[o.i], a, w, h, s), al = Math.sin(yas * Math.PI);
+        const gr = c.createRadialGradient(x, y, 0, x, y, 7); gr.addColorStop(0, `rgba(255,240,205,${.75 * al})`); gr.addColorStop(1, 'rgba(243,217,164,0)');
+        c.fillStyle = gr; c.beginPath(); c.arc(x, y, 7, 0, 7); c.fill();
+      }
+    });
+  },
+  'beyin-tel'(d) {
+    const cizgiler = [];
+    for (let i = 1; i < 14; i++) { const v = i / 14 * Math.PI, l = []; for (let j = 0; j <= 140; j++) l.push(beyin(j / 140 * 2 * Math.PI, v)); cizgiler.push(l); }
+    for (let i = 0; i < 28; i++) { const u = i / 28 * 2 * Math.PI, l = []; for (let j = 0; j <= 70; j++) l.push(beyin(u, j / 70 * Math.PI)); cizgiler.push(l); }
+    kur(d, (c, w, h, a) => {
+      const s = h * .52; c.lineWidth = 1;
+      for (const l of cizgiler) {
+        let o = null, ox = 0;
+        for (const pt of l) {
+          const q = proj(pt, a, w, h, s);
+          if (o && Math.sign(pt[0]) === Math.sign(ox)) {
+            const dz = ((q[2] + o[2]) / 2 + 1.1) / 2.2, [r, g, b] = renk((q[0] - (w / 2 - s)) / (2 * s));
+            c.strokeStyle = `rgba(${r},${g},${b},${(.08 + .62 * dz * dz).toFixed(3)})`;
+            c.beginPath(); c.moveTo(o[0], o[1]); c.lineTo(q[0], q[1]); c.stroke();
+          }
+          o = q; ox = pt[0];
+        }
+      }
+    });
+  },
+  kafa(d) {
+    const bas = [];
+    for (let i = 0; i < 2200; i++) {
+      const [u, v] = kure();
+      let X = Math.sin(v) * Math.cos(u) * .66, Y = Math.cos(v) * .9, Z = Math.sin(v) * Math.sin(u) * .8;
+      if (Z < 0 && Y > -.3) Z *= 1.12;                                           /* kafanın arkası */
+      if (Y < -.05) { const k = 1 - Math.min(1, (-.05 - Y) / .85) * .42; X *= k; if (Z < 0) Z *= k; }   /* çene */
+      if (Z > 0) {
+        const bu = Math.hypot(X / .1, (Y + .14) / .26); if (bu < 1) Z += .16 * (1 - bu * bu);           /* burun */
+        for (const sx of [-.24, .24]) { const g = Math.hypot((X - sx) / .13, (Y - .1) / .08); if (g < 1) Z -= .07 * (1 - g * g); }  /* gözler */
+        const du = Math.hypot(X / .14, (Y + .44) / .05); if (du < 1) Z += .04 * (1 - du * du);           /* dudak */
+      }
+      bas.push([X, Y + .12, Z]);
+    }
+    for (let i = 0; i < 200; i++) { const q = 2 * Math.PI * R(), t = R(); bas.push([Math.cos(q) * .3, -.62 - t * .3, Math.sin(q) * .3 - .12]); }  /* boyun */
+    const bey = beyinNoktalari(900).map(([x, y, z]) => [x * .62, y * .62 + .42, z * .62 - .06]);
+    kur(d, (c, w, h, a, n) => {
+      const s = h * .38, nab = .55 + .45 * Math.sin(n / 1000 * 2.4 * Math.max(1, HIZ * .8));
+      const q = bas.map(pt => [...proj(pt, a, w, h, s), 0]).concat(bey.map(pt => [...proj(pt, a, w, h, s), 1]));
+      q.sort((x, y) => x[2] - y[2]);
+      for (const [x, y, z, f, b] of q) {
+        const dz = (z + 1.1) / 2.2;
+        if (b) { const [r, g, bl] = renk(.35 + .3 * dz); c.fillStyle = `rgba(${r},${g},${bl},${(.25 + .7 * dz * nab).toFixed(2)})`; const rr = (.8 + 1.2 * dz) * f; c.fillRect(x - rr / 2, y - rr / 2, rr, rr); }
+        else { c.fillStyle = `rgba(214,190,236,${(.14 + .66 * dz).toFixed(2)})`; const rr = (.5 + .9 * dz) * f; c.fillRect(x - rr / 2, y - rr / 2, rr, rr); }
+      }
+      const [bx, by] = proj([0, .45, 0], a, w, h, s), gr = c.createRadialGradient(bx, by, 0, bx, by, s * .6);
+      gr.addColorStop(0, `rgba(243,217,164,${.16 * nab})`); gr.addColorStop(1, 'rgba(243,217,164,0)');
+      c.fillStyle = gr; c.fillRect(0, 0, w, h);
+    });
+  }
+};
+
+document.querySelectorAll('.hy-ekran').forEach(d => { YAP[d.dataset.tur](d); ortak(d); });
+
+document.getElementById('tara').onclick = e => {
+  const on = HIZ === 1; HIZ = on ? 4 : 1;
+  document.querySelectorAll('.hy-ekran').forEach(d => d.classList.toggle('tariyor', on));
+  document.querySelectorAll('video').forEach(v => v.playbackRate = on ? 2 : 1);
+  e.target.textContent = on ? '✦ Normal hâle dön' : '✦ Tarama anını göster';
+};
+</script>
+</body>
+</html>
