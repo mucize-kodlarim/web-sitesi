@@ -260,11 +260,25 @@
     let tur = 0; // yeni başlangıç eski akışı keser
     const satir = async (cls, txt) => { const my = tur; const p = el('p', 'hy-s ' + (cls || '')); hy.appendChild(p); for (const ch of txt) { if (my !== tur) break; p.textContent += ch; await bekle(18); } return p; };
     const yildiz = n => { for (let i = 0; i < n; i++) { const s = el('i', 'hy-yildiz', '✦'); s.style.left = (4 + Math.random() * 92) + '%'; s.style.top = (6 + Math.random() * 88) + '%'; s.style.animationDelay = (Math.random() * .7) + 's'; s.style.fontSize = (9 + Math.random() * 9) + 'px'; hy.parentElement.appendChild(s); setTimeout(() => s.remove(), 2600); } };
-    /* tarama ekranı: DNA sarmalı + tarama ışını + nabız halkaları + zerreler */
+    /* tarama ekranı: ortada dönen kafa videosu + tarama ışını + zerreler (Melike 2026-11-05).
+       Video, kutu ekrana yaklaşınca yüklenir. DNA sarmalı yalnız küçük şerit ('kucuk') hâlinde kalır. */
+    const KOK = document.body.dataset.kok || '';
+    const kafaRapor = d => {
+      const v = el('video', 'hy-kafa'); v.muted = true; v.loop = true; v.playsInline = true; v.preload = 'none';
+      v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('aria-hidden', 'true'); v.poster = KOK + 'assets/img/kafa-tarama.jpg';
+      d.appendChild(v);
+      if (reduce) return;
+      const gozle = new IntersectionObserver(es => {
+        if (!es.some(e => e.isIntersecting)) return; gozle.disconnect();
+        v.src = KOK + 'assets/img/kafa-tarama.mp4'; v.play().catch(() => {});
+      }, { rootMargin: '200px' });
+      gozle.observe(d);
+    };
     const dna = () => { const P = 150, A = 34, m = 60; let a = '', b = '', r = ''; for (let x = 0; x <= 1200; x += 6) { const s = Math.sin(2 * Math.PI * x / P); a += (x ? 'L' : 'M') + x + ' ' + (m + A * s).toFixed(1); b += (x ? 'L' : 'M') + x + ' ' + (m - A * s).toFixed(1); } for (let x = 0; x <= 1200; x += 15) { const s = Math.sin(2 * Math.PI * x / P), c = Math.abs(Math.cos(2 * Math.PI * x / P)); r += `<line x1="${x}" y1="${(m + A * s).toFixed(1)}" x2="${x}" y2="${(m - A * s).toFixed(1)}" stroke-opacity="${(.15 + .45 * c).toFixed(2)}"/>`; } return `<g class="hy-basamak" stroke="#f3d9a4" stroke-width="1.2">${r}</g><path d="${a}" stroke="url(#hyg)" stroke-width="2.4" fill="none"/><path d="${b}" stroke="url(#hyg)" stroke-width="2.4" fill="none" stroke-opacity=".55"/>`; };
     const ekranYap = durum => { const d = el('div', 'hy-ekran ' + durum); d.setAttribute('aria-hidden', 'true');
-      d.innerHTML = `<svg class="hy-dna" viewBox="0 0 600 120" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="hyg" x1="0" x2="1"><stop offset="0" stop-color="#e08cc4"/><stop offset=".5" stop-color="#f3d9a4"/><stop offset="1" stop-color="#a9c98a"/></linearGradient></defs><g class="hy-dna-g">${dna()}</g></svg><div class="hy-halka"><i></i><i></i><i></i></div><div class="hy-isin"></div>`;
+      d.innerHTML = durum !== 'kucuk' ? '<div class="hy-isin"></div>' : `<svg class="hy-dna" viewBox="0 0 600 120" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="hyg" x1="0" x2="1"><stop offset="0" stop-color="#e08cc4"/><stop offset=".5" stop-color="#f3d9a4"/><stop offset="1" stop-color="#a9c98a"/></linearGradient></defs><g class="hy-dna-g">${dna()}</g></svg><div class="hy-halka"><i></i><i></i><i></i></div><div class="hy-isin"></div>`;
       for (let i = 0; i < 12; i++) { const z = el('b', 'hy-zerre'); z.style.left = (Math.random() * 100) + '%'; z.style.top = (20 + Math.random() * 70) + '%'; z.style.animationDelay = (Math.random() * 4) + 's'; d.appendChild(z); }
+      if (durum !== 'kucuk') { d.classList.add('kafali'); kafaRapor(d); }
       return d; };
     const KATMAN = ['öz benlik', 'genetik', 'geçmiş', 'ruhsal'];
     function listele(akis) {
