@@ -972,3 +972,5 @@ body.ses-pano-acik #mucize-assistant-widget-host{display:none !important}
   .lab>span{top:calc(100% + 4px)}
   .lab b{white-space:nowrap;max-width:none}
 }
+/* Melike 2026-11-05: "Senin yolun hangisi" kartlarında liste kalktı; yazı ile düğme arasına boşluk */
+#yollar .path p + .btn{margin-top:16px}
