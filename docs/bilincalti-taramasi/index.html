@@ -121,8 +121,8 @@
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const wa = t => 'https://wa.me/' + ((window.MK && MK.whatsapp) || '') + '?text=' + encodeURIComponent(t);
   const TAM = 'Tüm bunlar senin için mümkün ve güvenli. Tüm bunlara layık ve izinlisin. Dört inanç seviyene, bedenine, alanına, DNA\'larına, hücrelerine, moleküllerine Yaradan tanımıyla yüklensin.';
-  const ORTAK = ad => `${ad}, hayatını neşeyle, kolaylıkla, en iyi ve en yüce şekilde; pozitiflikle, keyifle, bollukla, bereketle, güzellikle, şansla, zenginlikle, mutlulukla, huzurla, sevgiyle, korunarak, kollanarak, desteklenerek, saygınlıkla, başarıyla, dengeyle ve güvende olarak yaşamanın hissi sana <b>Yaradan tanımıyla yüklensin mi ve Yaradan sana öğretsin mi?</b>`;
-  const ORTAK_TAM = 'Evet demen yeterli.';   // Melike 2026-11-05: "Tüm bunlar senin için mümkün…" cümlesi kaldırıldı
+  /* Melike 2026-11-05: "Ve şimdi hayatının bütününe…" ekranının metni silindi; yeni metin gelince buraya yazılacak (ad için ${ad}) */
+  const ORTAK = ad => '';
   const S = { ad: '', k: null, m: null };   // ad yalnız bu sayfanın belleğinde durur; hiçbir yere kaydedilmez ya da gönderilmez
   let surum = 0;                            // eski animasyonlar yeni ekranı bozmasın
 
@@ -220,7 +220,7 @@
     surum++;
     goster(`${ust('genel his yüklemesi', '5 / 5')}
       <h2>Ve şimdi <em>hayatının bütününe…</em></h2>
-      <div class="hk-soru">${ORTAK(esc(S.ad))}<br><br>${ORTAK_TAM}</div>
+      ${ORTAK(esc(S.ad)) ? `<div class="hk-soru">${ORTAK(esc(S.ad))}</div>` : ''}
       <div class="hk-dg"><button class="hk-btn ana" data-e>Evet</button><button class="hk-btn ikinci" data-h>Hayır</button></div>
       <div id="hka"></div>`);
     kutu.querySelector('[data-e]').addEventListener('click', () => yukle('', son));
