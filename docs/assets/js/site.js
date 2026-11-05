@@ -280,7 +280,7 @@
       for (let i = 0; i < 12; i++) { const z = el('b', 'hy-zerre'); z.style.left = (Math.random() * 100) + '%'; z.style.top = (20 + Math.random() * 70) + '%'; z.style.animationDelay = (Math.random() * 4) + 's'; d.appendChild(z); }
       if (durum !== 'kucuk') { d.classList.add('kafali'); kafaRapor(d); }
       return d; };
-    const KATMAN = ['öz benlik', 'genetik', 'geçmiş', 'ruhsal'];
+    const KATMAN = ['Anne karnı', 'Çocukluk', 'Atalar', 'Beden', 'Ruh'];
     function listele(akis) {
       const kutu = el('div', 'hy-secim');
       KY.forEach((k, i) => { const b = el('button', 'hy-kayit' + (akis ? ' akis' : '') + (i >= 8 ? ' gizli' : ''), k.kayit); b.type = 'button'; if (akis && i < 8) b.style.animationDelay = (i * .11) + 's'; b.addEventListener('click', () => sec(k)); kutu.appendChild(b); });
@@ -294,7 +294,7 @@
       const kat = el('div', 'hy-katman'); KATMAN.forEach(k => kat.appendChild(el('span', '', k))); hy.appendChild(kat);
       const bulundu = () => { durum.className = 'hy-s ok'; durum.textContent = '> ' + KY.length + ' kayıt bulundu · sana tanıdık geleni seç'; kat.querySelectorAll('span').forEach(s => s.classList.add('tamam')); };
       if (atla) { bulundu(); listele(false); return; }
-      for (const ch of '> bilinçaltı taramaya hazır') { if (my !== tur) return; durum.textContent += ch; await bekle(26); }
+      for (const ch of '> Bilinçaltı taramaya hazır') { if (my !== tur) return; durum.textContent += ch; await bekle(26); }
       durum.appendChild(el('span', 'hy-imlec'));
       const bt = el('a', 'hy-basla', '✦ Başlat'); bt.href = (document.body.dataset.kok || '') + 'bilincalti-taramasi/'; hy.appendChild(bt);
       return;   // tarama artık ayrı sayfada (bilincalti-taramasi/)

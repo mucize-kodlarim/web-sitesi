@@ -110,7 +110,7 @@
 </main>
 <div id="alt"></div>
 <script src="../assets/js/veri.js?v=20261020a"></script>
-<script src="../assets/js/site.js?v=20261105a"></script>
+<script src="../assets/js/site.js?v=20261105b"></script>
 <script src="harita.js?v=20261023a"></script>
 <script>
 (() => {
@@ -169,7 +169,7 @@
 
   async function tara() {
     const s = ++surum;
-    const SEV = ['öz benlik', 'genetik', 'geçmiş', 'ruhsal'];
+    const SEV = ['Anne karnı', 'Çocukluk', 'Atalar', 'Beden', 'Ruh'];
     goster(`${ust('bilinçaltı taranıyor', '4 / 5')}
       <h2>Bilinçaltın <em>taranıyor…</em></h2>
       <video class="hk-kafa" src="../assets/img/kafa-tarama.mp4" poster="../assets/img/kafa-tarama.jpg" ${yavas ? '' : 'autoplay'} muted playsinline aria-hidden="true"></video>
@@ -180,7 +180,7 @@
     for (let p = 0; p <= 100; p += 2) {
       if (s !== surum) return;
       c.style.width = p + '%'; y.textContent = '%' + p;
-      const i = Math.min(3, Math.floor(p / 25));
+      const i = Math.min(SEV.length - 1, Math.floor(p * SEV.length / 100));
       ks.forEach((e, j) => { e.className = j < i || p === 100 ? 'tamam' : j === i ? 'simdi' : ''; });
       await bekle(105);
     }
