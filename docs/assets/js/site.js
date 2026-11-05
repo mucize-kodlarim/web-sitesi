@@ -282,7 +282,7 @@
       if (atla) { bulundu(); listele(false); return; }
       for (const ch of '> bilinçaltı taramaya hazır') { if (my !== tur) return; durum.textContent += ch; await bekle(26); }
       durum.appendChild(el('span', 'hy-imlec'));
-      const bt = el('a', 'hy-basla', '✦ Taramayı başlat'); bt.href = (document.body.dataset.kok || '') + 'bilincalti-taramasi/'; hy.appendChild(bt);
+      const bt = el('a', 'hy-basla', '✦ Başlat'); bt.href = (document.body.dataset.kok || '') + 'bilincalti-taramasi/'; hy.appendChild(bt);
       return;   // tarama artık ayrı sayfada (bilincalti-taramasi/)
       await new Promise(r => { bt.onclick = r; });
       if (my !== tur) return;
