@@ -977,3 +977,8 @@ body.ses-pano-acik #mucize-assistant-widget-host{display:none !important}
 /* Melike 2026-11-05: müzik düğmesinin adı "Frekanslar" — daha uzun ad kutuya sığsın */
 .ses-btn .ses-rozet .yazi{font-size:19px}
 @media (max-width:640px){.ses-btn .ses-rozet .yazi{font-size:11px;letter-spacing:0}}
+/* Melike 2026-11-05: üst menüye "Frekanslar" eklendi; menü sığsın diye sıkı düzen her genişlikte kullanılır,
+   yazılar tek satırda kalır, 1200 pikselin altında üç çizgili menüye geçilir */
+.links>a,.dd>button{white-space:nowrap}
+.links{gap:10px;font-size:13.5px}.links>a,.dd>button{gap:6px}.nav-ik{width:20px;height:20px}.nav-ik svg{width:13px;height:13px}.nav-cta{padding:12px 16px;font-size:13px}.nav .bar{gap:14px}
+@media (max-width:1200px){.links,.nav .btn{display:none}.menu-t{display:block}}

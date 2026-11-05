@@ -46,13 +46,14 @@
           <div class="mega">
             <div><h6>ThetaHealing · modül yolu</h6>${theta.map(mItem).join('')}</div>
             <div><h6>Diğer seminerler</h6>${diger.map(mItem).join('')}
-              <a href="${L('seminerler/')}#takvim" style="--c:var(--gold)"><i></i><span>Takvim<small>tarih · ücret · kontenjan</small></span></a>
+              <a href="${L('seminerler/')}#takvim" style="--c:var(--gold)"><i></i><span>Etkinlik Takvimi<small>tarih · ücret · kontenjan</small></span></a>
               <a href="${L('seminerler/')}" style="--c:var(--muted)"><i></i><span>Tüm seminerler<small>hepsi tek sayfada</small></span></a></div>
           </div></div>
         <div class="dd"><button type="button" aria-expanded="false">${ik('danis')}Danışmanlık</button>
           <div class="mega sm"><div><h6>Birebir seanslar</h6>${DN.map(mItem).join('')}
             <a href="${L('danismanliklar/')}" style="--c:var(--muted)"><i></i><span>Tüm danışmanlıklar<small>karşılaştır</small></span></a></div></div></div>
-        <a href="${L('seminerler/')}#takvim" data-s="takvim">${ik('takvim')}Takvim</a>
+        <a href="${L('seminerler/')}#takvim" data-s="takvim">${ik('takvim')}Etkinlik Takvimi</a>
+        <a href="#" data-frekans>${ik('frekans')}Frekanslar</a>
         <a href="${L('hakkimda/')}" data-s="hakkimda">${ik('hakkimda')}Hakkımda</a>
         <a href="${L('blog-yazilari/')}" data-s="blog">${ik('blog')}Blog</a>
         <a href="${L('iletisim/')}" data-s="iletisim">${ik('iletisim')}İletişim</a>
@@ -67,7 +68,7 @@
     <h6>${ik('seminer')}Diğer seminerler</h6>${diger.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>sertifikalı</small></a>`).join('')}
     <h6>${ik('danis')}Danışmanlık</h6>${DN.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>birebir</small></a>`).join('')}
     <h6>Keşfet</h6>
-    <a class="l" href="${L('seminerler/')}#takvim"><span class="l-ad">${ik('takvim')}Takvim</span> <small>tarih · ücret</small></a>
+    <a class="l" href="${L('seminerler/')}#takvim"><span class="l-ad">${ik('takvim')}Etkinlik Takvimi</span> <small>tarih · ücret</small></a>
     <a class="l" href="#" data-frekans><span class="l-ad">${ik('frekans')}Frekanslar</span> <small>müzik</small></a>
     <a class="l" href="${L('hakkimda/')}"><span class="l-ad">${ik('hakkimda')}Hakkımda</span> <small>Melike Kaan</small></a>
     <a class="l" href="${L('blog-yazilari/')}"><span class="l-ad">${ik('blog')}Blog</span> <small>yazılar</small></a>
