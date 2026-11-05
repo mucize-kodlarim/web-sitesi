@@ -34,7 +34,8 @@
     hakkimda:['#f3d9a4', '<path d="M12 18c-3.5 0-6-2-6.5-4.5 2 .3 3.8 1.2 4.6 2.4M12 18c3.5 0 6-2 6.5-4.5-2 .3-3.8 1.2-4.6 2.4M12 18c-1.8-2-2.4-5.4 0-9 2.4 3.6 1.8 7 0 9z"/>'],
     blog:    ['#c9a6e8', '<path d="M18 5c-6 0-10 4.5-11 12M18 5c.5 5-3 9-8.5 9.5M8.5 13.5 6 19"/>'],
     takvim:  ['#f0b98a', '<rect x="5" y="6.5" width="14" height="12.5" rx="2.5"/><path d="M5 10.5h14M9 4.5v4M15 4.5v4"/><path d="M9 14h1.5M13.5 14H15" stroke-width="1.8"/>'],
-    iletisim:['#bfe0a6', '<path d="M5 6.5h14v9H10l-3.5 3v-3H5z"/><path d="M8.5 10.5h7M8.5 13h4.5"/>']
+    iletisim:['#bfe0a6', '<path d="M5 6.5h14v9H10l-3.5 3v-3H5z"/><path d="M8.5 10.5h7M8.5 13h4.5"/>'],
+    frekans: ['#e8b4d8', '<path d="M3 12c1.4-4.5 2.8-4.5 4.2 0s2.8 4.5 4.2 0 2.8-4.5 4.2 0 2.8 4.5 4.2 0"/>']
   };
   const ik = k => `<span class="nav-ik" style="--ik:${IKS[k][0]}" aria-hidden="true"><svg viewBox="0 0 24 24">${IKS[k][1]}</svg></span>`;  if (ust) ust.outerHTML = `
   <header class="wrap nav">
@@ -67,6 +68,7 @@
     <h6>${ik('danis')}Danışmanlık</h6>${DN.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>birebir</small></a>`).join('')}
     <h6>Keşfet</h6>
     <a class="l" href="${L('seminerler/')}#takvim"><span class="l-ad">${ik('takvim')}Takvim</span> <small>tarih · ücret</small></a>
+    <a class="l" href="#" data-frekans><span class="l-ad">${ik('frekans')}Frekanslar</span> <small>müzik</small></a>
     <a class="l" href="${L('hakkimda/')}"><span class="l-ad">${ik('hakkimda')}Hakkımda</span> <small>Melike Kaan</small></a>
     <a class="l" href="${L('blog-yazilari/')}"><span class="l-ad">${ik('blog')}Blog</span> <small>yazılar</small></a>
     <a class="l" href="${L('iletisim/')}"><span class="l-ad">${ik('iletisim')}İletişim</span> <small>whatsapp · e-posta</small></a>
@@ -192,7 +194,7 @@
 
 
   /* ---------- arka plan sesi (assets/js/ses.js) ---------- */
-  const sesJs = document.createElement('script'); sesJs.src = K + 'assets/js/ses.js?v=20261103a'; document.body.appendChild(sesJs);
+  const sesJs = document.createElement('script'); sesJs.src = K + 'assets/js/ses.js?v=20261105a'; document.body.appendChild(sesJs);
 
   /* ---------- chatbot (Mucize Asistan, Replit) ---------- */
   const bot = document.createElement('script'); bot.src = 'https://mucize-kodlarim-asistan.replit.app/widget.js'; bot.defer = true; document.body.appendChild(bot);
@@ -387,6 +389,8 @@
   const mt = document.querySelector('.menu-t');
   if (mt) mt.addEventListener('click', () => { mn.classList.add('open'); mn.setAttribute('aria-hidden', 'false'); B.style.overflow = 'hidden'; B.classList.add('menu-acik'); });
   if (mn) { mn.querySelector('.x').addEventListener('click', closeM); mn.querySelectorAll('a').forEach(a => a.addEventListener('click', closeM)); }
+  /* Melike 2026-11-05: menüdeki "Frekanslar" sol alttaki Frekanslar (müzik) penceresini açar */
+  document.querySelectorAll('[data-frekans]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); const b = document.querySelector('.ses-btn'); if (b) setTimeout(() => b.click(), 50); }));
 
   /* ---------- aynı sayfadaki hedefe gidince parlama ---------- */
   document.querySelectorAll('a[href*="#"]').forEach(a => a.addEventListener('click', () => {

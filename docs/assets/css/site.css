@@ -974,3 +974,6 @@ body.ses-pano-acik #mucize-assistant-widget-host{display:none !important}
 }
 /* Melike 2026-11-05: "Senin yolun hangisi" kartlarında liste kalktı; yazı ile düğme arasına boşluk */
 #yollar .path p + .btn{margin-top:16px}
+/* Melike 2026-11-05: müzik düğmesinin adı "Frekanslar" — daha uzun ad kutuya sığsın */
+.ses-btn .ses-rozet .yazi{font-size:19px}
+@media (max-width:640px){.ses-btn .ses-rozet .yazi{font-size:11px;letter-spacing:0}}

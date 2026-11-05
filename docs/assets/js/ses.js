@@ -248,7 +248,7 @@
   /* ---------- düğme ---------- */
   const kutu = document.createElement('div');
   kutu.className = 'ses';
-  kutu.innerHTML = `<button class="ses-btn" type="button" aria-haspopup="dialog" aria-label="Müzik penceresini aç"><span class="ses-rozet" aria-hidden="true"><img class="ses-foto" src="${(document.body.dataset.kok || './')}assets/img/muzik-rozet.jpg" alt=""><span class="yazi">Müzik</span></span></button>`;
+  kutu.innerHTML = `<button class="ses-btn" type="button" aria-haspopup="dialog" aria-label="Frekanslar penceresini aç"><span class="ses-rozet" aria-hidden="true"><img class="ses-foto" src="${(document.body.dataset.kok || './')}assets/img/frekans-rozet.svg" alt=""><span class="yazi">Frekanslar</span></span></button>`;
   document.body.appendChild(kutu);
   const btn = kutu.querySelector('.ses-btn');
 
