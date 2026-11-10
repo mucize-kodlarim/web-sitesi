@@ -1018,3 +1018,5 @@ body.ses-pano-acik #mucize-assistant-widget-host{display:none !important}
 @media (max-width:640px){.afis-bolum{padding-top:46px}.afis{border-radius:16px}}
 @media (max-width:640px){.afis{width:76%}}
 #ayin-seminerleri{padding-bottom:20px}#ayin-seminerleri + section{padding-top:30px}
+.afis-takvim{text-align:center;margin:8px 0 46px}
+@media (max-width:640px){.afis-takvim{margin-bottom:32px}}
