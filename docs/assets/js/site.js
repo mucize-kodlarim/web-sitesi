@@ -160,7 +160,10 @@
       const ayAyni = !son || son.getMonth() === new Date(t.tarih + 'T00:00:00').getMonth();
       const buyuk = son && ayAyni ? `${+d.g}–${son.getDate()}` : +d.g;
       const dolu = t.kontenjan && !/açık|ücretsiz/i.test(t.kontenjan);
-      return `<div class="row"><div class="d"><b>${ayAyni ? buyuk : gunler(t)}</b>${ayAyni ? `<span>${ay(t.tarih)}</span>` : ''}<small>${t.gunler || d.gun}</small></div><div><h5><a href="${L(h.yol)}">${h.ad}</a></h5><p>${[t.yer, t.saat, t.not].filter(Boolean).join(' · ')}</p></div><span class="pill ${dolu ? 'w' : ''}">${t.kontenjan || 'kontenjan açık'}</span><a class="btn btn-ghost" href="${L('iletisim/')}?ilgi=${h.kod}#basvuru">Başvur</a></div>`;
+      /* Başvur → eğitimin kendi tanıtım sayfası (Melike Hanım 2026-11-10); o sayfadaysak forma gider */
+      const sayfa = h.yol ? new URL(L(h.yol), location.href).pathname.replace(/index\.html$/, '') : '';
+      const hedef = sayfa && sayfa !== location.pathname.replace(/index\.html$/, '') ? L(h.yol) : `${L('iletisim/')}?ilgi=${h.kod}#basvuru`;
+      return `<div class="row"><div class="d"><b>${ayAyni ? buyuk : gunler(t)}</b>${ayAyni ? `<span>${ay(t.tarih)}</span>` : ''}<small>${t.gunler || d.gun}</small></div><div><h5><a href="${L(h.yol)}">${h.ad}</a></h5><p>${[t.yer, t.saat, t.not].filter(Boolean).join(' · ')}</p></div><span class="pill ${dolu ? 'w' : ''}">${t.kontenjan || 'kontenjan açık'}</span><a class="btn btn-ghost" href="${hedef}">Başvur</a></div>`;
     }).join('');
   });
   document.querySelectorAll('[data-tarih]').forEach(el => {
@@ -179,7 +182,7 @@
     sel.innerHTML = '<option value="">Seç…</option>' +
       '<optgroup label="Seminerler">' + EG.map(h => `<option value="${h.kod}">${h.ad}</option>`).join('') + '</optgroup>' +
       '<optgroup label="Danışmanlık">' + DN.map(h => `<option value="${h.kod}">${h.ad}</option>`).join('') + '</optgroup>' +
-      '<option value="diger">Diğer / emin değilim</option>';
+      '<option value="diger">Bir sorum var (sorunuzu yazın)</option>';
     sel.value = q || f.dataset.ilgi || '';
     /* "Hızlı soru" WhatsApp kutusu, İlgilendiğin kutusunda seçilen konuyu sorar */
     const kutu = f.closest('.apply') && f.closest('.apply').querySelector('a.wa');
