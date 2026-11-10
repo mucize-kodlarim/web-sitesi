@@ -42,6 +42,7 @@
     <div class="bar">
       <a class="brand" href="${L('')}">${logo}Mucize Kodlarım</a>
       <nav class="links" aria-label="Ana menü">
+        <a href="${L('hakkimda/')}" data-s="hakkimda">${ik('hakkimda')}Hakkımda</a>
         <div class="dd"><button type="button" aria-expanded="false">${ik('seminer')}Seminerler</button>
           <div class="mega">
             <div><h6>ThetaHealing · modül yolu</h6>${theta.map(mItem).join('')}</div>
@@ -54,7 +55,6 @@
             <a href="${L('danismanliklar/')}" style="--c:var(--muted)"><i></i><span>Tüm danışmanlıklar<small>karşılaştır</small></span></a></div></div></div>
         <a href="${L('seminerler/')}#takvim" data-s="takvim">${ik('takvim')}Etkinlik Takvimi</a>
         <a href="#" data-frekans>${ik('frekans')}Frekanslar</a>
-        <a href="${L('hakkimda/')}" data-s="hakkimda">${ik('hakkimda')}Hakkımda</a>
         <a href="${L('blog-yazilari/')}" data-s="blog">${ik('blog')}Blog</a>
         <a href="${L('iletisim/')}" data-s="iletisim">${ik('iletisim')}İletişim</a>
       </nav>
@@ -64,13 +64,13 @@
   </header>
   <div class="mnav" id="mnav" aria-hidden="true">
     <div class="mtop"><span class="brand">Mucize Kodlarım</span><button class="x" type="button" aria-label="Menüyü kapat">✕</button></div>
+    <a class="l" href="${L('hakkimda/')}"><span class="l-ad">${ik('hakkimda')}Hakkımda</span> <small>Melike Kaan</small></a>
     <h6>${ik('seminer')}ThetaHealing seminerleri</h6>${theta.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>${h.modul}</small></a>`).join('')}
     <h6>${ik('seminer')}Diğer seminerler</h6>${diger.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>sertifikalı</small></a>`).join('')}
     <h6>${ik('danis')}Danışmanlık</h6>${DN.map(h => `<a class="l" href="${L(h.yol)}">${h.menuAd} <small>birebir</small></a>`).join('')}
     <h6>Keşfet</h6>
     <a class="l" href="${L('seminerler/')}#takvim"><span class="l-ad">${ik('takvim')}Etkinlik Takvimi</span> <small>tarih · ücret</small></a>
     <a class="l" href="#" data-frekans><span class="l-ad">${ik('frekans')}Frekanslar</span> <small>müzik</small></a>
-    <a class="l" href="${L('hakkimda/')}"><span class="l-ad">${ik('hakkimda')}Hakkımda</span> <small>Melike Kaan</small></a>
     <a class="l" href="${L('blog-yazilari/')}"><span class="l-ad">${ik('blog')}Blog</span> <small>yazılar</small></a>
     <a class="l" href="${L('iletisim/')}"><span class="l-ad">${ik('iletisim')}İletişim</span> <small>whatsapp · e-posta</small></a>
     <a class="btn btn-main" href="${L('iletisim/')}#basvuru">Ön Başvuru →</a>
