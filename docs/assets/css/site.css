@@ -1031,3 +1031,4 @@ body.ses-pano-acik #mucize-assistant-widget-host{display:none !important}
 .afis-zemin{position:absolute;inset:0;z-index:1}
 .afis-alan{z-index:2}
 .afis:has(.afis-zemin:hover){box-shadow:0 26px 70px rgba(0,0,0,.5),0 0 34px rgba(255,214,140,.45)}
+@media (min-width:641px) and (max-width:900px){.afis-uclu>.afis:last-child:nth-child(odd){grid-column:1 / -1;justify-self:center;width:calc(50% - 9px)}}
