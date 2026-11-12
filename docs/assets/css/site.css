@@ -1020,3 +1020,14 @@ body.ses-pano-acik #mucize-assistant-widget-host{display:none !important}
 #ayin-seminerleri{padding-bottom:20px}#ayin-seminerleri + section{padding-top:30px}
 .afis-takvim{text-align:center;margin:8px 0 46px}
 @media (max-width:640px){.afis-takvim{margin-bottom:32px}}
+/* üç afiş yan yana: Tanıtım · ThetaHealing · JAAS (Neziha 2026-11-12) */
+.afis-uclu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start;max-width:1080px;margin:0 auto}
+.afis-uclu .afis{width:100%;margin:0}
+.afis-tum{display:block;transition:transform .3s,box-shadow .3s}
+.afis-tum:hover,.afis-tum:focus-visible{transform:translateY(-4px);box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 34px rgba(255,214,140,.5);outline:none}
+@media (max-width:900px){.afis-uclu{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}}
+@media (max-width:640px){.afis-uclu{grid-template-columns:1fr;gap:22px}.afis-uclu .afis{width:80%;margin:0 auto}}
+/* ThetaHealing afişi: şeritler dışı Seminerler sayfasını açar */
+.afis-zemin{position:absolute;inset:0;z-index:1}
+.afis-alan{z-index:2}
+.afis:has(.afis-zemin:hover){box-shadow:0 26px 70px rgba(0,0,0,.5),0 0 34px rgba(255,214,140,.45)}
